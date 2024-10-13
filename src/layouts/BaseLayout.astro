@@ -2,15 +2,14 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS } from "../consts";
-// import "@fontsource-variable/raleway";
-// import '@fontsource/poppins';
+import "@fontsource/fira-sans";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription, keywords } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
   <head>
     <BaseHead
       title={siteTitle || SITE_TITLE}
@@ -28,4 +27,3 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
     <!-- <script src="../scripts/animate-on-scroll.js"></script> -->
   </body>
 </html>
- 

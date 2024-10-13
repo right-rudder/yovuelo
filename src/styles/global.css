@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply text-center font-bold py-4 px-14 bg-main-blue w-fit text-white rounded-full duration-300 hover:bg-main-blue/80;
+  }
+  .btn-secondary {
+    @apply text-center font-bold py-4 px-14 bg-transparent w-fit border-white border text-white rounded-full duration-300 hover:bg-white/30;
+  }
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}

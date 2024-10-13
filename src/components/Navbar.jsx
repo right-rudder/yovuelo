@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import blueLogo from "../assets/ifly-logo-azul.png";
+import whiteLogo from "../assets/ifly-logo-blanco.png";
 
 import {
   FACEBOOK_URL,
@@ -52,11 +54,11 @@ const Navbar = ({ pathname }) => {
           item.link + "/" === pathname ||
           item.subsubmenu?.some(
             (subItem) =>
-              subItem.link === pathname || subItem.link + "/" === pathname
-          )
+              subItem.link === pathname || subItem.link + "/" === pathname,
+          ),
       ) ||
       menuItem?.subsubmenu?.some(
-        (item) => item.link === pathname || item.link + "/" === pathname
+        (item) => item.link === pathname || item.link + "/" === pathname,
       ) ||
       menuItem.link === pathname ||
       menuItem.link + "/" === pathname;
@@ -77,11 +79,11 @@ const Navbar = ({ pathname }) => {
   };
 
   return (
-    <nav className="w-full h-0 sticky top-0 z-50 font-stock tracking-wider">
+    <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
         className={`${
           navBar || openMobile
-            ? "bg-dark-blue/80 backdrop-blur border-dark-blue/80"
+            ? "bg-main-black/80 backdrop-blur border-main-black/80"
             : "bg-transparent border-white/20"
         } duration-300`}
       >
@@ -91,15 +93,8 @@ const Navbar = ({ pathname }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <div className="absolute bg-gradient-to-br from-red-500 to-red-700 top-0 -left-[77rem] lg:-left-[73rem] h-20 lg:h-28 w-[90rem]"></div>
-              <a
-                href="/"
-                className="uppercase leading-none flex flex-col text-white z-50 font-bold text-4xl tracking-wider ml-3 lg:ml-8"
-              >
-                <p className="font-sans2">Alto</p>
-                <p className="text-sm lg:text-xl font-stock tracking-loose font-semibold text-gray-800">
-                  Flight Academy
-                </p>
+              <a href="/">
+                <img src={blueLogo.src} alt="iFly logo" className="w-36" />
               </a>
               <div className="hidden lg:block">
                 <ul className="flex gap-5 xl:gap-10 items-center">
@@ -108,7 +103,7 @@ const Navbar = ({ pathname }) => {
                       key={index}
                       className={`${
                         isActive(item, pathname)
-                          ? "underline decoration-red-600 decoration-4 underline-offset-[10px]"
+                          ? "underline decoration-main-blue decoration-2 underline-offset-[10px]"
                           : ""
                       } relative group last:no-underline`}
                       onMouseEnter={() => setHoveredIndex(index)}
@@ -117,18 +112,18 @@ const Navbar = ({ pathname }) => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-white font-bold text-lg duration-300 hover:underline decoration-red-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap group-last:hover:text-dark-blue group-last:bg-red-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:hover:bg-white group-last:hover:no-underline"
+                          className="text-white font-semibold text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap group-last:btn-primary group-last:hover:no-underline group-last:px-10"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-bold cursor-default text-white text-lg duration-300 hover:underline decoration-red-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap">
+                        <span className="font-semibold cursor-default text-white text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute z-10 top-12 bg-dark-blue whitespace-nowrap text-white left-0 duration-500 ${
+                          className={`absolute z-10 top-12 bg-main-black whitespace-nowrap text-white left-0 duration-500 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 opacity-0 overflow-hidden"
@@ -138,8 +133,10 @@ const Navbar = ({ pathname }) => {
                             <li
                               key={subIndex}
                               className={`${
-                                isActive(subitem, pathname) ? "bg-red-700" : ""
-                              } relative hover:bg-red-600`}
+                                isActive(subitem, pathname)
+                                  ? "bg-main-blue"
+                                  : ""
+                              } relative hover:bg-main-blue/90`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -156,7 +153,7 @@ const Navbar = ({ pathname }) => {
                               {subitem.subsubmenu &&
                                 subitem.subsubmenu.length > 0 && (
                                   <ul
-                                    className={`absolute z-20 top-0 bg-dark-blue whitespace-nowrap left-full duration-500 ${
+                                    className={`absolute z-20 top-0 bg-main-black whitespace-nowrap left-full duration-500 ${
                                       subHoveredIndex === subIndex
                                         ? "h-auto w-auto opacity-100"
                                         : "h-0 w-0 opacity-0 overflow-hidden"
@@ -168,9 +165,9 @@ const Navbar = ({ pathname }) => {
                                           key={subsubIndex}
                                           className={`${
                                             isActive(subsubitem, pathname)
-                                              ? "bg-red-700"
+                                              ? "bg-main-blue"
                                               : ""
-                                          } relative hover:bg-red-600`}
+                                          } relative hover:bg-main-blue/90`}
                                         >
                                           <a
                                             href={subsubitem.link}
@@ -179,7 +176,7 @@ const Navbar = ({ pathname }) => {
                                             {subsubitem.name}
                                           </a>
                                         </li>
-                                      )
+                                      ),
                                     )}
                                   </ul>
                                 )}
@@ -244,7 +241,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-h-screen" : "max-h-0 delay-300"
-        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-dark-blue z-50 top-0`}
+        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-main-black z-50 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-end pl-5 pr-[26px] py-6">
@@ -268,20 +265,19 @@ const Navbar = ({ pathname }) => {
 
         <a
           href="/"
-          className="text-white px-10 w-fit block leading-none uppercase font-bold text-lg z-40 relative"
+          className="text-white px-10 w-fit block leading-none uppercase font-semibold text-lg z-40 relative"
         >
-          <h1 className="text-4xl">Alto</h1>
-          <h2 className="text-dark-blue font-medium">Flight Academy</h2>
+          <img src={whiteLogo.src} alt="iFly logo" className="w-32" />
         </a>
 
         <div
-          className={`absolute w-60 h-20 bg-red-700 top-16 z-30 duration-300  ${
+          className={`absolute w-60 h-20 bg-main-blue top-14 z-30 duration-300  ${
             openMobile ? "translate-x-0 delay-300" : "-translate-x-full "
           }`}
         ></div>
 
         <ul className="px-4 pb-3 mt-5 pt-2 flex flex-col">
-          {mobileNavbarLinks.map((item, index) => (
+          {navbarLinks.map((item, index) => (
             <li
               key={index}
               className="relative group"
@@ -290,24 +286,24 @@ const Navbar = ({ pathname }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="font-bold p-5 block text-white text-lg duration-300 border-main-red whitespace-nowrap group-last:bg-red-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
+                  className="font-semibold p-5 block text-white text-lg duration-300 border-main-blue whitespace-nowrap group-last:bg-main-blue group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
               ) : (
-                <div className="font-bold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-red whitespace-nowrap">
+                <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue whitespace-nowrap">
                   <p>{item.name}</p>
                   <div
                     className={`p-1 pointer-events-none duration-300 rounded-full ${
                       hoveredIndex === index
                         ? "bg-white rotate-90"
-                        : "bg-red-700 -rotate-90"
+                        : "bg-main-blue -rotate-90"
                     } 
                     `}
                   >
                     <IoIosArrowForward
                       className={`${
-                        hoveredIndex === index ? "text-red-700" : "text-white"
+                        hoveredIndex === index ? "text-main-blue" : "text-white"
                       } size-5`}
                     />
                   </div>
@@ -315,7 +311,7 @@ const Navbar = ({ pathname }) => {
               )}
               {item.submenu && item.submenu.length > 0 && (
                 <ul
-                  className={`z-10 ml-5 bg-dark-blue whitespace-nowrap text-white left-0 duration-500 overflow-hidden ${
+                  className={`z-10 ml-5 bg-main-black whitespace-nowrap text-white left-0 duration-500 overflow-hidden ${
                     hoveredIndex === index ? "max-h-[28rem]" : "max-h-0"
                   }`}
                 >
@@ -326,24 +322,27 @@ const Navbar = ({ pathname }) => {
                       onClick={(event) => handleSubItemClick(event, subIndex)}
                     >
                       {subitem.link ? (
-                        <a className="p-5 block font-bold" href={subitem.link}>
+                        <a
+                          className="p-5 block font-semibold"
+                          href={subitem.link}
+                        >
                           {subitem.name}
                         </a>
                       ) : (
-                        <div className="font-bold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-red whitespace-nowrap">
+                        <div className="font-semibold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-blue whitespace-nowrap">
                           <p>{subitem.name}</p>
                           <div
                             className={`p-1 pointer-events-none duration-300 rounded-full ${
                               subHoveredIndex === subIndex
                                 ? "bg-white rotate-90"
-                                : "bg-red-700 -rotate-90"
+                                : "bg-main-blue -rotate-90"
                             } 
                     `}
                           >
                             <IoIosArrowForward
                               className={`${
                                 subHoveredIndex === subIndex
-                                  ? "text-red-700"
+                                  ? "text-main-blue"
                                   : "text-white"
                               } size-5`}
                             />
@@ -353,7 +352,7 @@ const Navbar = ({ pathname }) => {
 
                       {subitem.subsubmenu && subitem.subsubmenu.length > 0 && (
                         <ul
-                          className={`z-20 ml-8 bg-dark-blue whitespace-nowrap left-full duration-500 overflow-hidden ${
+                          className={`z-20 ml-8 bg-main-black whitespace-nowrap left-full duration-500 overflow-hidden ${
                             subHoveredIndex === subIndex
                               ? "max-h-32"
                               : "max-h-0"
@@ -363,7 +362,7 @@ const Navbar = ({ pathname }) => {
                             <li key={subsubIndex} className="relative">
                               <a
                                 href={subsubitem.link}
-                                className="block p-5 font-bold"
+                                className="block p-5 font-semibold"
                               >
                                 {subsubitem.name}
                               </a>
@@ -385,7 +384,7 @@ const Navbar = ({ pathname }) => {
               href={`mailto:${EMAIL_ADDRESS}`}
               className="border p-2 w-fit border-white rounded-full bg-white cursor-pointer"
             >
-              <MdEmail className="size-3 text-red-700" />
+              <MdEmail className="size-3 text-main-blue" />
             </a>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>
@@ -394,7 +393,7 @@ const Navbar = ({ pathname }) => {
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
             >
-              <FaPhone className="size-3 text-red-700" />
+              <FaPhone className="size-3 text-main-blue" />
             </a>
             <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
@@ -403,7 +402,7 @@ const Navbar = ({ pathname }) => {
             <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Facebook</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-main-blue"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -418,7 +417,7 @@ const Navbar = ({ pathname }) => {
             <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-main-blue"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -433,7 +432,7 @@ const Navbar = ({ pathname }) => {
             <a href={TIKTOK_URL} target="_blank">
               <span className="sr-only">YouTube</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-main-blue"
                 fill="currentColor"
                 viewBox="0 0 512 512"
                 id="icons"

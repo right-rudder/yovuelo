@@ -89,8 +89,8 @@ export const mobileNavbarLinks = [
     ],
   },
   {
-    name: "CONTACT US",
-    link: "/contact",
+    name: "Contacto",
+    link: "/contacto",
     submenu: [],
   },
 ];
