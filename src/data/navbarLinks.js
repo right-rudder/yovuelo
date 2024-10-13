@@ -51,7 +51,7 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "iFly",
+    name: "¿Quiénes somos?",
     submenu: [
       {
         name: "Historia",

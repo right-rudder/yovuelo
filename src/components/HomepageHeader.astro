@@ -4,7 +4,7 @@ import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
 ---
 
 <header
-  class="relative isolate pt-14 overflow-hidden h-[60vh] lg:h-screen text-white flex
+  class="relative isolate pt-14 overflow-hidden h-screen sm:h-[60vh] lg:h-screen text-white flex
     items-center"
 >
   <Image
@@ -19,22 +19,26 @@ import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
   <div class="flex w-full max-w-7xl mx-auto px-5">
     <div class="flex flex-col gap-4 lg:gap-8 mx-auto items-center">
       <h1
-        class="text-5xl max-w-xl lg:text-7xl font-medium text-center lg:max-w-3xl"
+        class="text-4xl max-w-xl lg:text-7xl font-medium text-center lg:max-w-3xl"
       >
         Primera Universidad Aeronaútica en México
       </h1>
       <h2
-        class="text-3xl max-w-xl lg:text-3xl text-center lg:max-w-2xl text-gray-200"
+        class="text-xl max-w-xl lg:text-3xl text-center lg:max-w-2xl text-gray-200"
       >
         Conviértete en piloto profesional con la mejor formación académica y
         práctica.
       </h2>
-      <div class="flex gap-5">
-        <a href="/intro-flight" target="_blank" class="btn-primary"
-          >Registrate</a
+      <div class="flex gap-5 flex-col sm:flex-row">
+        <a
+          href="/intro-flight"
+          target="_blank"
+          class="btn-primary w-full sm:w-fit">Regístrate</a
         >
-        <a href="/intro-flight" target="_blank" class="btn-secondary"
-          >Más información</a
+        <a
+          href="/intro-flight"
+          target="_blank"
+          class="btn-secondary w-full sm:w-fit">Más Información</a
         >
       </div>
     </div>
