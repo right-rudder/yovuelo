@@ -1,15 +1,208 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HomepageHeader from '../components/HomepageHeader.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomepageHeader from "../components/HomepageHeader.astro";
+import { Image } from "astro:assets";
+import students from "../assets/cuatro-estudiantes-en-la-universidad-de-ifly.webp";
+import CounterCard from "../components/CounterCard";
+import { stats } from "../data/stats";
+import { FaCheck } from "react-icons/fa";
+import iflyStudents from "../assets/estudiantes-de-ifly-recibiendo-medalla.webp";
+import graduatedStudents from "../assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import { programs } from "../data/programs";
+import ProgramCard from "../components/ProgramCard.astro";
 ---
 
-<BaseLayout
-  siteTitle="iFly"
->
-	<HomepageHeader slot="header" />
-	<div class="h-screen bg-black"></div>
+<BaseLayout siteTitle="iFly">
+  <HomepageHeader slot="header" />
+
+  <section>
+    <div
+      class="max-w-7xl mx-auto px-10 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Bienvenido a iFly
+        </h2>
+        <h3 class="lg:text-5xl">
+          Somos la primera universidad aeronáutica para pilotos aviadores en
+          México
+        </h3>
+        <p class="text-main-black/70">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          recusandae sequi dignissimos fugit, tenetur numquam eos ducimus autem
+          vel quia ut beatae corporis nisi possimus impedit non itaque dolore
+          maxime?
+        </p>
+        <a href="" class="btn-primary">Sobre Nosotros</a>
+      </div>
+      <div class="flex-1 relative h-fit">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <CounterCard
+          client:only="react"
+          value={stat.value}
+          title={stat.title}
+        />
+      ))
+    }
+  </section>
+
+  <section>
+    <div class="max-w-7xl mx-auto px-10 py-24 flex flex-col lg:flex-row gap-20">
+      <div class="flex-1 relative">
+        <Image
+          src={iflyStudents}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover top-0 left-0"
+        />
+        <Image
+          src={graduatedStudents}
+          alt="Estudiante en iFly"
+          class="rounded-xl mt-10 lg:mt-0 z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover bottom-0 right-0"
+        />
+        <div
+          class="hidden lg:block lg:absolute inset-20 border-2 border-main-blue rounded-xl"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          ¿Por qué estudiar en iFly?
+        </h2>
+        <h3 class="lg:text-5xl">
+          Te ofrecemos una preparación formidable para cumplir tu sueño de volar
+          profesionalmente
+        </h3>
+        <p class="text-main-black/70">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          recusandae sequi dignissimos fugit, tenetur numquam eos ducimus autem
+          vel quia ut beatae corporis nisi possimus impedit non itaque dolore
+          maxime?
+        </p>
+        <ul class="grid grid-cols-2 gap-4 font-medium leading-loose">
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/private-pilot">Professional teacher</a>
+            </p>
+          </li>
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/instrument-rating">Have heen certified</a
+              >
+            </p>
+          </li>
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/commercial-pilot"
+                >Quality of our research</a
+              >
+            </p>
+          </li>
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/multi-engine-rating">Trustworthy</a>
+            </p>
+          </li>
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/flight-instructor">High integrity</a>
+            </p>
+          </li>
+          <li class="flex gap-2 items-center group">
+            <div
+              class="p-2 bg-main-black rounded-full group-hover:bg-dark-blue"
+            >
+              <FaCheck className="size-3 text-white" />
+            </div>
+            <p class="group-hover:underline">
+              <a href="flight-training/airline-transport-pilot">
+                Breadth of our capabilities</a
+              >
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-7xl mx-auto px-10 py-24 flex flex-col gap-20 items-center lg:items-stretch"
+    >
+      <div class="flex justify-between items-end gap-20">
+        <div class="flex justify-center flex-col gap-5 max-w-xl">
+          <h2 class="uppercase text-main-black font-bold tracking-widest">
+            Nuestros programas
+          </h2>
+          <h3 class="text-4xl lg:text-5xl">
+            Conoce nuestros programas de estudio
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, recusandae sequi dignissimos fugit
+          </p>
+        </div>
+        <a href="#" class="btn-secondary hidden lg:block">Ver Todos</a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {
+          programs
+            .slice(0, 3)
+            .map((program) => (
+              <ProgramCard
+                title={program.title}
+                description={program.description}
+                imagePath={program.image}
+                url={program.url}
+              />
+            ))
+        }
+      </div>
+      <a href="#" class="btn-secondary lg:hidden w-full max-w-lg">Ver Todos</a>
+    </div>
+  </section>
 </BaseLayout>
