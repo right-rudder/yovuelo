@@ -9,31 +9,31 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Aviation Management (Licenciatura)",
-        link: "/flight-training/private-pilot",
+        link: "/programas/aviation-management",
       },
       {
         name: "Pro Pilot (TSU)",
-        link: "/flight-training/instrument-rating",
+        link: "/programas/pro-pilot",
       },
       {
         name: "Codet Pilot (Piloto Privado)",
-        link: "/flight-training/commercial-pilot",
+        link: "/programas/codet-pilot",
       },
       {
         name: "Sobrecargo de Aviación",
-        link: "/flight-training/flight-instructor",
+        link: "/programas/sobrecargo-de-aviacion",
       },
       {
         name: "Oficial de Operaciones (Dispatcher)",
-        link: "/flight-training/multi-engine-rating",
+        link: "/programas/oficial-de-operaciones",
       },
       {
         name: "Técnico en Mantenimiento",
-        link: "/flight-training/airline-transport-pilot",
+        link: "/programas/tecnico-en-mantenimiento",
       },
       {
         name: "Cursos Complementarios",
-        link: "/flight-training/airline-transport-pilot",
+        link: "/programas/cursos-complementarios",
       },
     ],
   },
@@ -42,11 +42,11 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Aviones",
-        link: "/flight-training/private-pilot",
+        link: "/flota/aviones",
       },
       {
         name: "Simuladores",
-        link: "/flight-training/instrument-rating",
+        link: "/flota/simuladores",
       },
     ],
   },

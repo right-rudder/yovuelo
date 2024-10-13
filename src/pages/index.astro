@@ -12,8 +12,9 @@ import { stats } from "../data/stats";
 import { FaCheck } from "react-icons/fa";
 import iflyStudents from "../assets/estudiantes-de-ifly-recibiendo-medalla.webp";
 import graduatedStudents from "../assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
-import { programs } from "../data/programs";
+import programs from "../data/programs";
 import ProgramCard from "../components/ProgramCard.astro";
+import studentInHangar from "../assets/estudiante-de-ifly-en-hangar.webp";
 ---
 
 <BaseLayout siteTitle="iFly">
@@ -180,7 +181,7 @@ import ProgramCard from "../components/ProgramCard.astro";
           <h3 class="text-4xl lg:text-5xl">
             Conoce nuestros programas de estudio
           </h3>
-          <p>
+          <p class="lg:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Accusantium, recusandae sequi dignissimos fugit
           </p>
@@ -194,15 +195,47 @@ import ProgramCard from "../components/ProgramCard.astro";
             .slice(0, 3)
             .map((program) => (
               <ProgramCard
-                title={program.title}
-                description={program.description}
-                imagePath={program.image}
-                url={program.url}
+                title={program.data.title}
+                description={program.data.description}
+                imagePath={program.data.headerImage}
+                url={program.data.url}
               />
             ))
         }
       </div>
       <a href="#" class="btn-secondary lg:hidden w-full max-w-lg">Ver Todos</a>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-7xl mx-auto px-10 py-24 flex flex-col-reverse lg:flex-row -space-x-20 items-center"
+    >
+      <div class="flex-1">
+        <Image
+          src={studentInHangar}
+          alt="Estudiante en hangar de iFly"
+          class="rounded-xl z-10 relative lg:h-[34rem] object-cover"
+        />
+      </div>
+      <div
+        class="flex-1 flex justify-center flex-col gap-5 text-center bg-white border-2 border-main-blue p-14 rounded-xl z-10"
+      >
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Testimonial
+        </h2>
+        <h3 class="lg:text-5xl">
+          Conoce la experiencia de nuestros estudiantes
+        </h3>
+        <quote class="text-main-black/70">
+          "iFly es la familia que me vió nacer como piloto aviador profesional y
+          me ayudó a cumplir uno de mis más grandes sueños, es para mí un placer
+          y un orgullo haberme formado en esta gran familia."
+        </quote>
+        <cite class="text-main-black/90"
+          >- Roberto Novelo Cicero (Piloto aviador)</cite
+        >
+      </div>
     </div>
   </section>
 </BaseLayout>
