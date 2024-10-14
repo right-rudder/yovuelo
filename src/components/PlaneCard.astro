@@ -6,9 +6,9 @@ const { planeData } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
 );
-if (!images[planeData.imagePath]) {
+if (!images[planeData.headerImage]) {
   throw new Error(
-    `"${planeData.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+    `"${planeData.headerImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
   );
 }
 ---
@@ -19,7 +19,7 @@ if (!images[planeData.imagePath]) {
   id={planeData.name}
 >
   <Image
-    src={images[planeData.imagePath]()}
+    src={images[planeData.headerImage]()}
     alt={planeData.name}
     class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
   />
