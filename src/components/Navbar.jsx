@@ -123,7 +123,7 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute z-10 top-12 bg-main-black whitespace-nowrap text-white left-0 duration-500 ${
+                          className={`absolute z-10 top-12 bg-main-black rounded-xl overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 opacity-0 overflow-hidden"
@@ -136,12 +136,15 @@ const Navbar = ({ pathname }) => {
                                 isActive(subitem, pathname)
                                   ? "bg-main-blue"
                                   : ""
-                              } relative hover:bg-main-blue/90`}
+                              } relative hover:bg-main-blue/90 duration-300`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
                               {subitem.link ? (
-                                <a className="p-3 block" href={subitem.link}>
+                                <a
+                                  className="py-4 px-6 block"
+                                  href={subitem.link}
+                                >
                                   {subitem.name}
                                 </a>
                               ) : (

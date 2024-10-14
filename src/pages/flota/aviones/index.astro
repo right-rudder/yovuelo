@@ -1,0 +1,44 @@
+---
+import Header from "../../../components/Header.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import programs from "../../../data/programs";
+import { Image } from "astro:assets";
+import PlaneCard from "../../../components/PlaneCard.astro";
+import aviones from "../../../data/aviones";
+
+const data = {
+  siteTitle: "iFly",
+  siteDescription:
+    "iFly es la primera universidad aeronáutica para pilotos aviadores en México",
+  headerImage: "/src/assets/flota.webp",
+  headerAlt: "Estudiantes de iFly recibiendo medalla",
+  title: "Nuestra Flota de Aviones",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div class="max-w-7xl mx-auto px-5 py-24">
+      <div class="max-w-4xl flex flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          La flota de iFly
+        </h2>
+        <h3 class="lg:text-5xl">Explora nuestra flota de aviones</h3>
+        <p class="text-main-black/70">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          recusandae sequi dignissimos fugit, tenetur numquam eos ducimus autem
+          vel quia ut beatae corporis nisi possimus impedit non itaque dolore
+          maxime?
+        </p>
+      </div>
+
+      <div
+        class="grid gap-8 mt-5 lg:grid-cols-2 xl:grid-cols-3 max-w-lg lg:max-w-none mx-auto"
+      >
+        {aviones.map((plane) => <PlaneCard planeData={plane.data} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

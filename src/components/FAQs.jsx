@@ -2,8 +2,6 @@ import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 const FAQs = () => {
-  const [openQuestion, setOpenQuestion] = useState(null);
-
   const faqs = [
     {
       question: "¿Cuáles son los requerimientos o prerequisitos?",

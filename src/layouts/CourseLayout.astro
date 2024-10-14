@@ -75,7 +75,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         </h2>
         <p class="text-lg">
           Empieza tu a estudiar hoy en iFly Universidad Aeronáutica y toma el
-          primer paso en tu carrera como piloto.
+          primer paso en tu carrera.
         </p>
         <p class="text-lg">
           Llena el siguiente formulario y te contactaremos para agendar una una
@@ -92,14 +92,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             <input
               type="text"
               name="first-name"
-              placeholder="Your first name"
+              placeholder="Nombre/s"
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-full"
               required
             />
             <input
               type="text"
               name="last-name"
-              placeholder="Your last name"
+              placeholder="Apellido/s"
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-full"
               required
             />
@@ -109,7 +109,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               id="email"
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder="Email"
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-full"
               required
             />
@@ -122,7 +122,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             <input
               type="tel"
               name="phone"
-              placeholder="Your phone number"
+              placeholder="Teléfono"
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-full"
               required
             />
@@ -140,7 +140,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           <textarea
             id="more-info"
             name="more-info"
-            placeholder="How far along are you in your training?"
+            placeholder="Comentario"
             class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-xl min-h-24"
           ></textarea>
 
@@ -155,13 +155,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               for="agree-data-collection"
               class="text-gray-500 text-sm lg:text-base"
             >
-              I agree to the terms & conditions provided by the company. By
-              providing my phone number, I agree to receive text messages from
-              Alto Flight Academy.
+              Acepto los términos y condiciones proporcionados por la empresa.
+              Al proporcionar mi número de teléfono, acepto recibir mensajes de
+              texto de iFly Universidad Aeronáutica.
             </label>
           </div>
           <button id="submit-button" disabled type="submit" class="btn-primary"
-            >Sign up now</button
+            >Enviar</button
           >
         </form>
       </div>

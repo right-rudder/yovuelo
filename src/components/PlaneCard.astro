@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import { IoIosArrowForward } from "react-icons/io";
+const { planeData } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[planeData.imagePath]) {
+  throw new Error(
+    `"${planeData.imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+}
+---
+
+<a
+  href={`/flota/aviones/${planeData.slug}`}
+  class="flex flex-col group relative overflow-hidden rounded-xl text-white"
+  id={planeData.name}
+>
+  <Image
+    src={images[planeData.imagePath]()}
+    alt={planeData.name}
+    class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
+  />
+  <div
+    class="absolute w-full h-full bg-gradient-to-t from-main-black via-transparent from-10%"
+  >
+  </div>
+
+  <div
+    class="w-full px-5 pb-1 z-10 absolute bottom-0 left-0 flex items-center justify-between"
+  >
+    <h3 class="font-medium duration-700 uppercase whitespace-nowrap">
+      <span class="text-xl sm:text-3xl">{planeData.name}</span>
+      <span class="sm:text-lg">{planeData.model}</span>
+    </h3>
+    <IoIosArrowForward className="size-6" />
+  </div>
+</a>
