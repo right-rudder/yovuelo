@@ -1,0 +1,170 @@
+---
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import personal from "../data/personal";
+import TeamMemberCard from "../components/TeamMemberCard.astro";
+import programs from "../data/programs";
+import { Image } from "astro:assets";
+
+import students from "../assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import CounterCard from "../components/CounterCard";
+import { FaTelegramPlane } from "react-icons/fa";
+import { GiPlanetConquest } from "react-icons/gi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import studentInHangar from "../assets/estudiante-de-piloto-aviador.jpg";
+import ProgramCard from "../components/ProgramCard.astro";
+
+const data = {
+  siteTitle: "iFly",
+  siteDescription:
+    "iFly es la primera universidad aeronáutica para pilotos aviadores en México",
+  headerImage: "/src/assets/ifly-personal.jpg",
+  headerAlt: "Personal de iFly",
+  title: "¿Por qué convertirte en piloto?",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section class="bg-main-black/5">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative aspect-square object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue -translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          ¿Por qué convertirte en piloto?
+        </h2>
+        <h3 class="lg:text-5xl">
+          ¿Qué puedes esperar al convertirte en piloto?
+        </h3>
+        <p class="text-main-black/70 text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          recusandae sequi dignissimos fugit.
+        </p>
+        <ul class="flex flex-col gap-5">
+          <li class="flex gap-5">
+            <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+              <GiPlanetConquest className="text-white size-6" />
+            </div>
+            <div>
+              <p class="text-main-black/80 text-2xl font-medium">Oportunidad</p>
+              <p class="text-main-black/70 text-lg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt quae iure quibusdam illum voluptatum itaque adipisci
+                exercitationem quo.
+              </p>
+            </div>
+          </li>
+          <li class="flex gap-5">
+            <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+              <BsGraphUpArrow className="text-white size-6" />
+            </div>
+            <div>
+              <p class="text-main-black/80 text-2xl font-medium">Crecimiento</p>
+              <p class="text-main-black/70 text-lg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt quae iure quibusdam illum voluptatum itaque adipisci
+                exercitationem quo.
+              </p>
+            </div>
+          </li>
+          <li class="flex gap-5">
+            <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+              <FaTelegramPlane className="text-white size-6" />
+            </div>
+            <div>
+              <p class="text-main-black/80 text-2xl font-medium">Libertad</p>
+              <p class="text-main-black/70 text-lg">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt quae iure quibusdam illum voluptatum itaque adipisci
+                exercitationem quo.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <a href="" class="btn-primary">Regístrate</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-black/5 pb-12">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row lg:-space-x-20 -space-y-20 lg:space-y-0 items-center"
+    >
+      <div
+        class="flex-1 flex justify-center flex-col gap-5 text-center mx-5 sm:mx-10 lg:mx-0 bg-white shadow-md p-5 lg:p-14 rounded-xl z-10"
+      >
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Palabras de nuestros estudiantes
+        </h2>
+        <h3 class="text-lg sm:text-3xl lg:text-5xl">
+          ¿Qué dicen nuestros estudiantes?
+        </h3>
+        <quote class="text-main-black/70">
+          "Formarme como piloto en iFly fue una de las mejores decisiones que he
+          tomado en mi vida y una gran experiencia. Si me preguntaran de nuevo
+          la elegiría sin pensarlo, ya que me permitió sentar bases sólidas en
+          mi formación como piloto desde el punto de vista académico y
+          personal."
+        </quote>
+        <cite class="text-main-black/90"
+          >- Eduardo Lugán Aldaz (Piloto aviador)</cite
+        >
+      </div>
+      <div class="flex-1 translate-y-20 lg:translate-y-0 relative">
+        <Image
+          src={studentInHangar}
+          alt="Estudiante de piloto aviador"
+          class="rounded-xl relative lg:h-[34rem] object-cover"
+        />
+        <div
+          class="size-80 border-2 border-main-blue rounded-xl absolute -bottom-12 -left-28 -z-10 hidden lg:block"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue scroll-my-24" id="programas">
+    <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
+      <div class="text-center flex flex-col gap-5 max-w-3xl mx-auto text-white">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Nuestros programas
+        </h2>
+        <h3 class="text-4xl lg:text-6xl">
+          Explora nuestros programas de estudio y conviértete en piloto
+        </h3>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+          recusandae sequi dignissimos fugit, tenetur numquam eos ducimus autem
+          vel quia ut beatae corporis nisi possimus impedit non itaque dolore
+          maxime?
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
+        {
+          programs.map((program) => (
+            <ProgramCard
+              title={program.data.title}
+              description={program.data.description}
+              imagePath={program.data.headerImage}
+              url={program.data.url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
