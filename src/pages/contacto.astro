@@ -1,0 +1,176 @@
+---
+import ContactUsHeader from "../components/ContactUsHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+import students from "../assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import CounterCard from "../components/CounterCard";
+import personal from "../data/personal";
+import TeamMemberCard from "../components/TeamMemberCard.astro";
+import { FaRegMap } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { MdOutlineEmail } from "react-icons/md";
+
+import { FaTelegramPlane } from "react-icons/fa";
+import { GiPlanetConquest } from "react-icons/gi";
+import {
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+} from "../consts";
+
+const data = {
+  siteTitle: "iFly",
+  siteDescription:
+    "iFly es la primera universidad aeronáutica para pilotos aviadores en México",
+  headerImage: "/src/assets/ifly-personal.jpg",
+  headerAlt: "Personal de iFly",
+  title: "Contáctanos",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <ContactUsHeader slot="header" data={data} />
+
+  <section class="relative py-44 bg-main-black/5">
+    <div
+      class="max-w-xl lg:max-w-6xl mx-auto text-main-black/90 rounded-2xl shadow-md p-20 absolute bottom-24 left-10 right-10 bg-white"
+    >
+      <div class="flex flex-col lg:flex-row gap-10">
+        <div class="lg:flex-1 flex flex-col gap-10">
+          <h2 class="font-medium text-5xl text-main-black/90">
+            Ponte en contacto
+          </h2>
+          <p class="text-lg text-main-black/70">
+            ¿Estás interesado en conocer más sobre nuestros programas de
+            entrenamiento? ¿Quieres saber más sobre iFly y cómo podemos ayudarte
+            a alcanzar tus metas de convertirte en piloto aviador? ¡Contáctanos!
+          </p>
+          <ul class="flex flex-col gap-5">
+            <li class="flex gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <FaRegMap className="text-white size-6" />
+              </div>
+              <div>
+                <p class="text-main-black/80 text-2xl font-medium">Address</p>
+                <p class="text-main-black/70 text-lg">
+                  {ADDRESS_LINE_1}
+                  <br />
+                  {ADDRESS_LINE_2}
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <FaPhone className="text-white size-6" />
+              </div>
+              <div>
+                <p class="text-main-black/80 text-2xl font-medium">Phone</p>
+                <p class="text-main-black/70 text-lg">
+                  {PHONE_NUMBER}
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <MdOutlineEmail className="text-white size-6" />
+              </div>
+              <div>
+                <p class="text-main-black/80 text-2xl font-medium">Email</p>
+                <p class="text-main-black/70 text-lg">
+                  {EMAIL_ADDRESS}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:flex-1">
+          <form
+            id="training-course-form"
+            class="flex flex-col max-w-4xl mx-auto gap-5 my-5 lg:my-0 bg-white rounded-lg shadow-sm"
+          >
+            <div class="flex flex-col lg:flex-row gap-5">
+              <input
+                type="text"
+                name="first-name"
+                placeholder="Nombre/s"
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+              <input
+                type="text"
+                name="last-name"
+                placeholder="Apellido/s"
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+            </div>
+            <div class="flex flex-col lg:flex-row gap-5">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+              <input
+                type="email"
+                name="confirm-email"
+                placeholder="Confirm email"
+                class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Teléfono"
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+            </div>
+
+            <input
+              id="interested-in"
+              name="interested-in"
+              type="text"
+              value={data.hiddenField}
+              class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              required
+            />
+
+            <textarea
+              id="more-info"
+              name="more-info"
+              placeholder="Comentario"
+              class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-24"
+            ></textarea>
+
+            <div class="flex gap-3">
+              <input
+                type="checkbox"
+                name="agree-data-collection"
+                id="agree-data-collection"
+              />
+
+              <label
+                for="agree-data-collection"
+                class="text-gray-500 text-sm lg:text-base"
+              >
+                Acepto los términos y condiciones proporcionados por la empresa.
+                Al proporcionar mi número de teléfono, acepto recibir mensajes
+                de texto de iFly Universidad Aeronáutica.
+              </label>
+            </div>
+            <button
+              id="submit-button"
+              disabled
+              type="submit"
+              class="btn-primary">Enviar</button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
