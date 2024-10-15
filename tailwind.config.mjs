@@ -10,6 +10,9 @@ export default {
         "main-purple": "#b252a0",
         "main-orange": "#f58632",
       },
+      backgroundImage: {
+        "our-story": "url('/src/assets/avion-de-ifly-volando.webp')",
+      },
     },
   },
   plugins: [],

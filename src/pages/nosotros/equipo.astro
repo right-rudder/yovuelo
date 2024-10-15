@@ -1,0 +1,32 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import programs from "../../data/programs";
+import { Image } from "astro:assets";
+
+import students from "../../assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import CounterCard from "../../components/CounterCard";
+import personal from "../../data/personal";
+import TeamMemberCard from "../../components/TeamMemberCard.astro";
+
+const data = {
+  siteTitle: "iFly",
+  siteDescription:
+    "iFly es la primera universidad aeronáutica para pilotos aviadores en México",
+  headerImage: "/src/assets/ifly-personal.jpg",
+  headerAlt: "Personal de iFly",
+  title: "Conoce a Nuestro Personal",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-sm lg:max-w-6xl mx-auto px-5 pt-24 pb-12 grid lg:grid-cols-3 gap-x-6"
+    >
+      {personal.map((person) => <TeamMemberCard {...person} />)}
+    </div>
+  </section>
+</BaseLayout>

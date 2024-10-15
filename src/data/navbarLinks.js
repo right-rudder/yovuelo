@@ -55,19 +55,19 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Historia",
-        link: "/about/our-story",
+        link: "/nosotros/historia",
       },
       {
         name: "Equipo",
-        link: "/about/our-team",
+        link: "/nosotros/equipo",
       },
       {
         name: "Campus",
-        link: "/about/our-fleet",
+        link: "/nosotros/campus",
       },
       {
         name: "Taller de Mantenimiento",
-        link: "/about/learning-center",
+        link: "/nosotros/taller-de-mantenimiento",
       },
     ],
   },
