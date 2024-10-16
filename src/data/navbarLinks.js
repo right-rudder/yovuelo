@@ -65,10 +65,6 @@ export const navbarLinks = [
         name: "Campus",
         link: "/nosotros/campus",
       },
-      {
-        name: "Taller de Mantenimiento",
-        link: "/nosotros/taller-de-mantenimiento",
-      },
     ],
   },
   {
