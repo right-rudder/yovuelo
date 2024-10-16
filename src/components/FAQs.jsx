@@ -5,19 +5,19 @@ const FAQs = () => {
   const faqs = [
     {
       question: "¿Cuáles son los requerimientos o prerequisitos?",
-      answer: "No hay requerimientos previos para este curso.",
+      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       question: "¿Cuál es la duración del curso?",
-      answer: "El curso tiene una duración de 6 meses.",
+      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       question: "¿Qué puedo esperar el primer día de clases?",
-      answer: "El primer día de clases se realizará una introducción al curso.",
+      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       question: "¿Qué puedo esperar al finalizar el curso?",
-      answer: "Al finalizar el curso, se realizará una evaluación final.",
+      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
 
@@ -33,13 +33,13 @@ const FAQs = () => {
 
   return (
     <div className="mt-10 flex flex-col gap-5 max-w-3xl">
-      <h3 className="text-3xl lg:text-4xl">Preguntas Frecuentes</h3>
+      <h3 className="text-4xl lg:text-5xl">Preguntas Frecuentes</h3>
       <div className="flex flex-col gap-5 md:ml-10">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-main-black/30 pb-2">
             <button
               onClick={() => toggleFAQ(index)}
-              className="text-lg w-full text-left flex justify-between text-main-black/90 hover:text-main-blue"
+              className="text-xl w-full text-left flex justify-between text-main-black/90 hover:text-main-blue"
             >
               {faq.question}
               <IoIosArrowForward
