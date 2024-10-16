@@ -21,6 +21,7 @@ import {
   EMAIL_ADDRESS,
 } from "../consts";
 import FAQs from "../components/FAQs";
+import GeneralFAQs from "../components/GeneralFAQs";
 
 const data = {
   siteTitle: "iFly",
@@ -166,6 +167,12 @@ const data = {
           </form>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="bg-main-black/5">
+    <div class="max-w-7xl mx-auto flex justify-center">
+      <GeneralFAQs client:visible />
     </div>
   </section>
 
