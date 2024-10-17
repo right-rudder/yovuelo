@@ -16,9 +16,10 @@ const sobrecargoDeAviacion = {
       "Enrolling in our ATP ground school is the first step towards achieving your dreams of flying for major airlines. Our group classes, held at Sundance Airport KHSD in Oklahoma City, OK, provide in-depth instruction on all aspects of ATP training, preparing you for success in both the written and practical exams administered by the FAA. With our comprehensive syllabus and experienced instructors, you'll be equipped with the knowledge and confidence to excel in the world of commercial aviation.",
       "To enroll in our ATP ground school, the cost is $645. This investment in your future as a professional pilot will open doors to exciting career opportunities and pave the way for a successful aviation career. Contact us today to learn more about our ATP ground school program and take the first step towards realizing your ambitions in the airline industry. Join Alto Flight Academy and embark on your journey towards becoming a certified airline transport pilot!",
     ],
-    headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
+    headerImage: "/src/assets/piloto-con-sobrecargos-de-aviacion.jpg",
     headerAlt: "American Airlines Jet in Yukon Oklahoma",
-    primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
+    primaryImage:
+      "/src/assets/sobrecargo-de-aviacion-frente-a-un-pipistrel.jpg",
     primaryAlt: "Inside boeing 737 airliner jet",
     secondaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
     secondaryAlt: "Hal Harris in front of citation jet after type rating",

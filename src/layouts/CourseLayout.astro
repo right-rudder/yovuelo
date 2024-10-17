@@ -17,7 +17,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <Image
         src={images[data.primaryImage]()}
         alt={data.primaryAlt}
-        class="rounded-xl aspect-video object-cover"
+        class="rounded-xl aspect-video object-cover w-full"
       />
       <div class="flex flex-col gap-5 mt-10">
         <h2 class="text-5xl">Sobre el programa</h2>

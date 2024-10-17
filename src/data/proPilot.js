@@ -18,7 +18,7 @@ const proPilot = {
     ],
     headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
     headerAlt: "American Airlines Jet in Yukon Oklahoma",
-    primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
+    primaryImage: "/src/assets/pilotos-de-avion-en-cabina.jpg",
     primaryAlt: "Inside boeing 737 airliner jet",
     secondaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
     secondaryAlt: "Hal Harris in front of citation jet after type rating",
