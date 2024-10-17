@@ -9,7 +9,7 @@ import {
   ADDRESS_LINE_2,
   FACEBOOK_URL,
   INSTAGRAM_URL,
-  TIKTOK_URL,
+  WHATSAPP_URL,
   SITE_TITLE,
 } from "../consts";
 import { Image } from "astro:assets";
@@ -17,6 +17,8 @@ import whiteLogo from "../assets/ifly-logo-blanco.png";
 const today = new Date();
 import { navbarLinks } from "../data/navbarLinks";
 const { pathname } = Astro.url;
+import programs from "../data/programs";
+import { FaWhatsapp } from "react-icons/fa6";
 ---
 
 <footer class="bg-main-black pt-24 px-5">
@@ -73,20 +75,22 @@ const { pathname } = Astro.url;
             </svg>
           </a>
           <a
-            href={TIKTOK_URL}
+            href={WHATSAPP_URL}
             target="_blank"
             class="text-gray-400 hover:text-main-blue duration-200"
           >
-            <span class="sr-only">YouTube</span>
+            <span class="sr-only">Whatsapp</span>
             <svg
               class="size-6"
               fill="currentColor"
-              viewBox="0 0 512 512"
-              id="icons"
               xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
             >
               <path
-                d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"
+                fill="currentColor"
+                d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
               ></path>
             </svg>
           </a>
@@ -94,89 +98,53 @@ const { pathname } = Astro.url;
       </div>
 
       <div class="flex flex-col gap-3">
-        <h3 class="font-semibold pb-5">New to Flying?</h3>
+        <h3 class="font-semibold pb-5">Programas</h3>
+        <ul class="flex flex-col gap-2 text-gray-400">
+          {
+            programs.map((program) => (
+              <li>
+                <a
+                  href={program.data.url}
+                  class="hover:text-main-blue duration-200 font-medium"
+                >
+                  {program.data.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="flex flex-col gap-3 lg:min-w-36">
+        <h3 class="font-semibold pb-5">Sobre iFly</h3>
         <ul class="flex flex-col gap-2 text-gray-400">
           <li>
             <a
-              href="/why-become-a-pilot"
+              href="/nosotros/historia"
               class="hover:text-main-blue duration-200 font-medium"
             >
-              Why Become a Pilot
+              Historia
             </a>
           </li>
           <li>
             <a
-              href="/intro-flight"
+              href="/nosotros/equipo"
               class="hover:text-main-blue duration-200 font-medium"
             >
-              Your First Flight Lesson
+              Equipo
             </a>
           </li>
           <li>
             <a
-              href="/ground-school/private-pilot"
+              href="/contacto"
               class="hover:text-main-blue duration-200 font-medium"
             >
-              Private Pilot Ground School
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about/learning-center"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              Learning Center
+              Contáctanos
             </a>
           </li>
         </ul>
       </div>
       <div class="flex flex-col gap-3">
-        <h3 class="font-semibold pb-5">Quick Links</h3>
-        <ul class="flex flex-col gap-2 text-gray-400">
-          <li>
-            <a
-              href="/about/our-story"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about/our-team"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              Our Team
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about/our-fleet"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              Our Fleet
-            </a>
-          </li>
-          <li>
-            <a
-              href="/acquisitions-sales"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              Aircraft Sales and Acquisition
-            </a>
-          </li>
-          <li>
-            <a
-              href="/contact"
-              class="hover:text-main-blue duration-200 font-medium"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-3">
-        <h3 class="font-semibold pb-5">Contact</h3>
+        <h3 class="font-semibold pb-5">Contacto</h3>
         <ul class="flex flex-col gap-1 text-gray-400 font-medium">
           <li class="flex gap-2 group items-center">
             <MdEmail
@@ -194,6 +162,15 @@ const { pathname } = Astro.url;
             <a
               class="group-hover:text-main-blue duration-200"
               href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
+            >
+          </li>
+          <li class="flex gap-2 group items-center">
+            <FaWhatsapp
+              className="size-4 group-hover:text-main-blue duration-200"
+            />
+            <a
+              class="group-hover:text-main-blue duration-200"
+              href={WHATSAPP_URL}>(999) 286-9385</a
             >
           </li>
           <li class="flex gap-2 group max-w-sm">

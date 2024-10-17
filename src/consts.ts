@@ -8,5 +8,5 @@ export const ADDRESS_LINE_1 =
 export const ADDRESS_LINE_2 = "Mérida, Yucatán, México";
 export const FACEBOOK_URL = "https://www.facebook.com/iFlyAviacion/";
 export const INSTAGRAM_URL = "https://www.instagram.com/iflyaviacion/";
-export const TIKTOK_URL = "https://www.tiktok.com/@iflyaviacion";
+export const WHATSAPP_URL = "https://wa.link/9dtp2r";
 export const EMAIL_ADDRESS = "info@ifly.com";
