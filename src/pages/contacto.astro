@@ -53,40 +53,80 @@ const data = {
             alcanzar tus metas de convertirte en piloto aviador? ¡Contáctanos!
           </p>
           <ul class="flex flex-col gap-5">
-            <li class="flex gap-5">
-              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-                <FaRegMap className="text-white size-6" />
-              </div>
-              <div>
-                <p class="text-main-black/80 text-2xl font-medium">Dirección</p>
-                <p class="text-main-black/70 text-lg">
-                  {ADDRESS_LINE_1}
-                  <br />
-                  {ADDRESS_LINE_2}
-                </p>
-              </div>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/xnquhkZFTguttGxo8"
+                target="_blank"
+                class="group flex gap-5"
+              >
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-white duration-300 border-main-blue border"
+                >
+                  <FaRegMap
+                    className="text-white size-6 group-hover:text-main-blue duration-300"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Dirección
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {ADDRESS_LINE_1}
+                    <br />
+                    {ADDRESS_LINE_2}
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href=`tel:${PHONE_NUMBER}` class="group flex gap-5">
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-white duration-300 border-main-blue border"
+                >
+                  <FaPhone
+                    className="text-white size-6 group-hover:text-main-blue duration-300"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Teléfono
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {PHONE_NUMBER}
+                  </p>
+                </div>
+              </a>
             </li>
             <li class="flex gap-5">
-              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-                <FaPhone className="text-white size-6" />
-              </div>
-              <div>
-                <p class="text-main-black/80 text-2xl font-medium">Teléfono</p>
-                <p class="text-main-black/70 text-lg">
-                  {PHONE_NUMBER}
-                </p>
-              </div>
-            </li>
-            <li class="flex gap-5">
-              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-                <MdOutlineEmail className="text-white size-6" />
-              </div>
-              <div>
-                <p class="text-main-black/80 text-2xl font-medium">Email</p>
-                <p class="text-main-black/70 text-lg">
-                  {EMAIL_ADDRESS}
-                </p>
-              </div>
+              <a href=`mailto:${EMAIL_ADDRESS}` class="group flex gap-5">
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-white duration-300 border-main-blue border"
+                >
+                  <MdOutlineEmail
+                    className="text-white size-6 group-hover:text-main-blue duration-300"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Email
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {EMAIL_ADDRESS}
+                  </p>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
@@ -174,6 +214,16 @@ const data = {
     <div class="max-w-7xl mx-auto flex justify-center">
       <GeneralFAQs client:visible />
     </div>
+  </section>
+
+  <section class="bg-main-black/5">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.313660567794!2d-89.62238082398032!3d21.020132088073378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5677ea05704dd9%3A0x1b8f1df0d8d348b!2siFly%20Universidad%20Aeron%C3%A1utica!5e0!3m2!1sen!2sgt!4v1729229190846!5m2!1sen!2sgt"
+      class="w-full h-[30rem] pt-20"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <section class="bg-main-black/5">
