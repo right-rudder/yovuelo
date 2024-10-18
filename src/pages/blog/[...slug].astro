@@ -12,6 +12,9 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { title, description, pubDate, heroImage } = post.data;
+if (!heroImage) {
+  throw new Error("Hero image is not defined in the post data.");
+}
 const { Content } = await post.render();
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
