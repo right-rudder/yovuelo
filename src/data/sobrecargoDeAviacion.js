@@ -4,9 +4,9 @@ const sobrecargoDeAviacion = {
     description: "lorem ipsum dolor sit amet consectetur adipiscing elit",
     url: "/programas/sobrecargo-de-aviacion",
     slug: "sobrecargo-de-aviacion",
-    siteTitle: "ATP Ground School | Flight School Oklahoma City",
+    siteTitle: "Curso de Sobrecargo de Aviación - iFly Universidad Aeronáutica",
     siteDescription:
-      "Enroll in our ATP ground school.  btaining your ATP is considered to be the pinnacle of your ab-initio pilot training.  Having your ATP is a minimum requirement to fly in the airlines and corporate aviation.  Begin your airline pilot career today and enroll at Alto Flight Academy,  Your premier flight school in Yukon, OK.",
+      "órmate como Sobrecargo de Aviación en iFly. Aprende todos los procedimientos y normas de seguridad para ser un sobrecargo certificado, con reconocimiento nacional e internacional.",
     price: "$1350",
     intro: [
       "If you are an experienced pilot with aspirations of advancing your career to the highest level of aviation, obtaining your Airline Transport Pilot (ATP) certificate is the next logical step. The ATP certificate is the pinnacle of achievement in the aviation world, enabling you to serve as the captain or first officer of large commercial aircraft operated by airlines worldwide. At Alto Flight Academy, we understand the significance of this certification and offer a comprehensive ATP ground school program to prepare pilots for the challenges and responsibilities that come with it.",
