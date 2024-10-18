@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import BlogPostCard from "../../components/BlogPostCard.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+);
+
+const headerData = {
+  title: "Blog de iFly",
+  headerImage: "/src/assets/avion-cessna-172.webp",
+  headerAlt: "Cessna 172 en iFly",
+};
+---
+
+<BaseLayout
+  siteTitle="Blog de Aviación - Noticias, Consejos y Actualizaciones del Mundo Aeronáutico"
+  siteDescription="Descubre las últimas noticias, consejos y actualizaciones del mundo de la aviación en nuestro blog. Explora contenido sobre aviones, tecnología aeronáutica y tendencias del sector para pilotos y entusiastas."
+>
+  <Header slot="header" data={headerData} />
+  <section class="py-24 px-5 bg-main-black/5">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
+        {
+          posts.map((post) => (
+            <BlogPostCard
+              imagePath={post.data.heroImage}
+              title={post.data.title}
+              date={post.data.pubDate}
+              blogUrl={`/blog/${post.slug}/`}
+              description={post.data.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
