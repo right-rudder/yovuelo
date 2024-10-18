@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import parse from "html-react-parser"; // Import the html-react-parser
 
 const GeneralFAQs = () => {
   const faqs = [
@@ -66,10 +67,9 @@ const GeneralFAQs = () => {
                 openQuestions[index] ? "max-h-48" : "max-h-0"
               }`}
             >
-              <p
-                className="text-main-black/60 text-xl pl-5"
-                dangerouslySetInnerHTML={{ __html: faq.answer }}
-              ></p>
+              <div className="text-main-black/60 text-xl pl-5">
+                {parse(faq.answer)}
+              </div>
             </div>
           </div>
         ))}
