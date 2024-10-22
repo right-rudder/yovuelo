@@ -1,8 +1,9 @@
 ---
 import programs from "../data/programs.js";
+const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
 ---
 
-<section class="py-24 px-5 scroll-my-24 bg-main-blue" id="sign-up-form">
+<section class="py-24 px-5 scroll-my-24 bg-main-blue">
   <div class="max-w-xl lg:max-w-7xl mx-auto text-white">
     <div class="flex flex-col lg:flex-row gap-10">
       <div class="lg:flex-1 flex flex-col gap-5">
@@ -20,6 +21,7 @@ import programs from "../data/programs.js";
       </div>
       <div class="lg:flex-1 relative">
         <form
+          id="form"
           class="flex flex-col max-w-4xl mx-auto gap-5 my-5 lg:my-0 bg-white p-10 rounded-xl shadow-md lg:absolute bottom-0 right-0"
         >
           <div class="flex flex-col lg:flex-row gap-5">
@@ -65,7 +67,7 @@ import programs from "../data/programs.js";
           <select
             id="interested-in"
             name="interested-in"
-            class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg text-gray-400 bg-white"
+            class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg text-gray-600 bg-white"
             required
           >
             <option value="" disabled selected>
@@ -87,7 +89,7 @@ import programs from "../data/programs.js";
             id="more-info"
             name="more-info"
             placeholder="Comentario"
-            class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-24"
+            class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-24 text-main-black"
           ></textarea>
 
           <div class="flex gap-3">
@@ -106,7 +108,11 @@ import programs from "../data/programs.js";
               texto de iFly Universidad Aeronáutica.
             </label>
           </div>
-          <button id="submit-button" disabled type="submit" class="btn-primary"
+          <button
+            id="submit-button"
+            disabled
+            type="submit"
+            class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
             >Enviar</button
           >
         </form>
@@ -114,3 +120,83 @@ import programs from "../data/programs.js";
     </div>
   </div>
 </section>
+
+<script define:vars={{ PROGRAM_FORM_WEBHOOK_URL }}>
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    }
+  });
+
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const form = document.getElementById("form");
+
+    // Check if the contactUs form element exists
+    if (form !== null) {
+      // Add submit event listener to the contactUs form
+      form.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(form);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          form.action = PROGRAM_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/confirmacion-de-contacto";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Form element not found.");
+    }
+  });
+</script>
