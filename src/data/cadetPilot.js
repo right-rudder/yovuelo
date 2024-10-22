@@ -1,13 +1,13 @@
-const codetPilot = {
+const cadetPilot = {
   data: {
-    title: "Codet Pilot (Piloto Privado)",
+    title: "Cadet Pilot (Piloto Privado)",
     description:
-      "La carrera de Codet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
-    url: "/carreras/codet-pilot",
-    slug: "codet-pilot",
-    siteTitle: "Codet Pilot - Carrera de Formación de Pilotos Privados",
+      "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+    url: "/carreras/cadet-pilot",
+    slug: "cadet-pilot",
+    siteTitle: "Cadet Pilot - Carrera de Formación de Pilotos Privados",
     siteDescription:
-      "La carrera de Codet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+      "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
 
     intro: [
       "Esta carrera te formará como piloto aviador privado de ala fija profesional con bases firmes de conocimientos teóricos y prácticos para operar una aeronave de manera eficiente y segura con fines privados, de transporte o recreativos siguiendo los reglamentos y manuales oficiales.",
@@ -47,4 +47,4 @@ const codetPilot = {
   },
 };
 
-export default codetPilot;
+export default cadetPilot;

@@ -16,8 +16,8 @@ export const navbarLinks = [
         link: "/carreras/pro-pilot",
       },
       {
-        name: "Codet Pilot (Piloto Privado)",
-        link: "/carreras/codet-pilot",
+        name: "Cadet Pilot (Piloto Privado)",
+        link: "/carreras/cadet-pilot",
       },
       {
         name: "Sobrecargo de Aviación",

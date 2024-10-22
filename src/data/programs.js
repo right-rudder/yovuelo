@@ -1,6 +1,6 @@
 import aviationManagement from "./aviationManagement";
 import proPilot from "./proPilot";
-import codetPilot from "./codetPilot";
+import cadetPilot from "./cadetPilot";
 import sobrecargoDeAviacion from "./sobrecargoDeAviacion";
 import oficialDeOperaciones from "./oficialDeOperaciones";
 import tecnicoEnMantenimiento from "./tecnicoEnMantenimiento";
@@ -8,7 +8,7 @@ import tecnicoEnMantenimiento from "./tecnicoEnMantenimiento";
 const programs = [
   aviationManagement,
   proPilot,
-  codetPilot,
+  cadetPilot,
   sobrecargoDeAviacion,
   oficialDeOperaciones,
   tecnicoEnMantenimiento,
