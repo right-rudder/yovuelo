@@ -15,7 +15,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const {
   title,
   description,
-  image = "/src/assets/avion-de-ifly-volando-sobre-ruinas-en-mexico.jpg",
+  image = "/src/assets/estudiante-en-ifly-mexico.jpg",
 } = Astro.props;
 ---
 
@@ -62,3 +62,78 @@ const {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "iFly Universidad Aeronáutica",
+    "description": "iFly Universidad Aeronáutica es la primera universidad aeronáutica en México. Con años de experiencia en la formación de pilotos y profesionales de la aviación, somos líderes en la educación aeronáutica.",
+    "keywords": "aviación, piloto, formación de pilotos, universidad aeronáutica, iFly, iFly Universidad Aeronáutica, escuela de aviación, escuela de pilotos, escuela de pilotos en México, escuela de aviación en México",
+    "image": "https://www.ifly.com.mx/estudiantes-frente-a-hangares-de-ifly.webp",
+    "logo": "https://www.ifly.com.mx/favicon.png",
+    "telephone": "(999) 920-1318",
+    "email": "info@iflymailer.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Edificio Plaza Península. Prolongación Paseo de Montejo x calle 47, Benito Juárez Norte",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "addressCountry": "MX",
+      "postalCode": "97119"
+    },
+    "currenciesAccepted": "USD, MXN",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
+    "areaServed": {
+      "@type": "Place",
+      "geo": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 21.02031728259662,
+          "longitude": -89.619806
+        },
+        "geoRadius": 9000
+      },
+      "name": "Mérida, Yucatán, México"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "14"
+    },
+    "url": "https://www.ifly.com.mx",
+    "priceRange": "$",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.02031728259662,
+      "longitude": -89.619806
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasMap": "https://maps.app.goo.gl/xnquhkZFTguttGxo8",
+    "photo": [
+      {
+        "@type": "ImageObject",
+        "url": "https://www.ifly.com.mx/estudiantes-frente-a-hangares-de-ifly.webp",
+        "description": "Estudiantes de iFly frente a los hangares de la universidad"
+      }
+    ],
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "serviceType": "Flight Instruction"
+      },
+      "priceCurrency": "MXN",
+      "price": "Varies"
+    }
+  }
+</script>

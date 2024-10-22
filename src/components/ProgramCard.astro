@@ -1,9 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import { IoPersonCircle } from "react-icons/io5";
-import { FaComments } from "react-icons/fa6";
-import { IoIosArrowRoundForward } from "react-icons/io";
 
 const { imagePath, title, url, description } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -29,7 +26,7 @@ if (!images[imagePath]) {
     class="flex flex-col py-8 gap-3 justify-between h-full bg-main-black px-8"
   >
     <div class="flex flex-col gap-3">
-      <h3 class="text-2xl lg:text-3xl font-semibold leading-tight">
+      <h3 class="text-2xl lg:text-3xl font-semibold leading-tight min-h-20">
         {title}
       </h3>
       <p class="line-clamp-3">{description}</p>
