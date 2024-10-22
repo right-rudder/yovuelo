@@ -1,26 +1,8 @@
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import parse from "html-react-parser";
 
-const FAQs = () => {
-  const faqs = [
-    {
-      question: "¿Cuáles son los requerimientos o prerequisitos?",
-      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      question: "¿Cuál es la duración del curso?",
-      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      question: "¿Qué puedo esperar el primer día de clases?",
-      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      question: "¿Qué puedo esperar al finalizar el curso?",
-      answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
-
+const FAQs = ({ faqs }) => {
   const [openQuestions, setOpenQuestions] = useState(
     new Array(faqs.length).fill(false),
   );
@@ -32,28 +14,30 @@ const FAQs = () => {
   };
 
   return (
-    <div className="mt-10 flex flex-col gap-5 max-w-3xl">
-      <h3 className="text-4xl lg:text-5xl">Preguntas Frecuentes</h3>
+    <div className="flex flex-col gap-5 max-w-3xl mt-10 lg:mt-0">
+      <h3 className="text-3xl lg:text-4xl">Preguntas Frecuentes</h3>
       <div className="flex flex-col gap-5 md:ml-10">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-main-black/30 pb-2">
             <button
               onClick={() => toggleFAQ(index)}
-              className="text-xl w-full text-left flex justify-between text-main-black/90 hover:text-main-blue"
+              className="text-xl w-full text-left flex justify-between py-3 text-main-black/90 hover:text-main-blue"
             >
               {faq.question}
               <IoIosArrowForward
                 className={`${
                   openQuestions[index] ? "-rotate-90" : "rotate-90"
-                } size-5 duration-200`}
+                } size-5 duration-200 shrink-0`}
               />
             </button>
             <div
               className={`duration-500 overflow-hidden ${
-                openQuestions[index] ? "max-h-20" : "max-h-0"
+                openQuestions[index] ? "max-h-48" : "max-h-0"
               }`}
             >
-              <p className="text-main-black/60 text-lg">{faq.answer}</p>
+              <div className="text-main-black/60 text-xl pl-5">
+                {parse(faq.answer)}
+              </div>
             </div>
           </div>
         ))}

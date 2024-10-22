@@ -1,45 +1,47 @@
 const proPilot = {
   data: {
     title: "Pro Pilot (TSU)",
-    description: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-    url: "/programas/pro-pilot",
+    description:
+      "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
+    url: "/carreras/pro-pilot",
     slug: "pro-pilot",
     siteTitle: "Pro Pilot - Técnico Superior Universitario en Aviación",
     siteDescription:
-      "Conviértete en Piloto Profesional con el programa Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
-    price: "$1350",
+      "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
     intro: [
-      "If you are an experienced pilot with aspirations of advancing your career to the highest level of aviation, obtaining your Airline Transport Pilot (ATP) certificate is the next logical step. The ATP certificate is the pinnacle of achievement in the aviation world, enabling you to serve as the captain or first officer of large commercial aircraft operated by airlines worldwide. At Alto Flight Academy, we understand the significance of this certification and offer a comprehensive ATP ground school program to prepare pilots for the challenges and responsibilities that come with it.",
-      "Our ATP ground school curriculum is meticulously designed to provide pilots with the advanced knowledge and skills required to excel in commercial airline operations. Our experienced instructors cover a wide range of topics, including advanced aerodynamics, airline regulations, high-altitude operations, crew resource management (CRM), and advanced aircraft systems. Through engaging lectures, interactive discussions, and practical exercises, we ensure that our students are well-prepared to meet the rigorous standards of ATP certification.",
-    ],
-    content: [
-      "Enrolling in our ATP ground school is the first step towards achieving your dreams of flying for major airlines. Our group classes, held at Sundance Airport KHSD in Oklahoma City, OK, provide in-depth instruction on all aspects of ATP training, preparing you for success in both the written and practical exams administered by the FAA. With our comprehensive syllabus and experienced instructors, you'll be equipped with the knowledge and confidence to excel in the world of commercial aviation.",
-      "To enroll in our ATP ground school, the cost is $645. This investment in your future as a professional pilot will open doors to exciting career opportunities and pave the way for a successful aviation career. Contact us today to learn more about our ATP ground school program and take the first step towards realizing your ambitions in the airline industry. Join Alto Flight Academy and embark on your journey towards becoming a certified airline transport pilot!",
+      "Esta carrera te formará como piloto aviador comercial de ala fija profesional que se guía por estándares altos y conocimientos precisos y actuales para operar una aeronave de manera eficiente y segura con fines privados o comerciales de acuerdo con los reglamentos oficiales vigentes.",
     ],
     headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
-    headerAlt: "American Airlines Jet in Yukon Oklahoma",
+    headerAlt: "Piloto en cabina de avión de iFly",
     primaryImage: "/src/assets/pilotos-de-avion-en-cabina.jpg",
-    primaryAlt: "Inside boeing 737 airliner jet",
-    secondaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
-    secondaryAlt: "Hal Harris in front of citation jet after type rating",
+    primaryAlt: "Piotos de avión en cabina preparándose para despegar",
     prerequisites: [
-      "Advanced aerodynamics and aircraft performance",
-      "Airline regulations and procedures",
-      "High-altitude operations",
-      "Crew resource management (CRM)",
-      "Advanced aircraft systems",
-      "Emergency procedures and decision-making",
-      "Practical airline scenarios and case studies",
-      "FAA ATP practical exam preparation",
+      "Ser mexicano/a",
+      "Mayor de 18 años",
+      "Comprobante de domicilio",
+      "Acta de nacimiento",
+      "CURP",
+      "INE / Pasaporte (vigente)",
+      "Certificado de estudios de bachillerato",
+      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
     ],
-    process: [
-      "Get in contact with us",
-      "Learn more about our ground school",
-      "Enroll into the next start date",
-      "Attend ground school and participate",
-      "Complete the final exam",
-      "Receive endorsement from a qualified instructor",
-      "Complete the FAA written exam",
+    faqs: [
+      {
+        question: "¿Cuál es la duración de la carrera?",
+        answer:
+          "<p>4 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>115 horas de vuelo visuales</li><li>15 horas de vuelo instrumentales</li><li>11 horas de vuelo bimotor</li><li>40 horas de simulador</li></ul>",
+      },
+      {
+        question: "¿Qué incluye la carrera?",
+        answer:
+          "<ul className='list-disc ml-5'><li>Teoría</li><li>141 horas de vuelo</li><li>40 horas de simulador</li></ul>",
+      },
+      {
+        question: "¿Qué credenciales obtengo al finalizar la carrera?",
+        answer:
+          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li><li>Título técnico superior universitario en piloto aviador comercial</li><li>Cédula profesional de piloto aviador comercial</li></ul>",
+      },
     ],
   },
 };

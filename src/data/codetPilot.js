@@ -1,45 +1,48 @@
 const codetPilot = {
   data: {
-    title: "Codet Pilot (TSU)",
-    description: "lorem ipsum dolor sit amet consectetur adipiscing elit",
-    url: "/programas/codet-pilot",
+    title: "Codet Pilot (Piloto Privado)",
+    description:
+      "La carrera de Codet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+    url: "/carreras/codet-pilot",
     slug: "codet-pilot",
-    siteTitle: "Codet Pilot - Programa de Formación de Pilotos Privados",
+    siteTitle: "Codet Pilot - Carrera de Formación de Pilotos Privados",
     siteDescription:
-      "El programa Codet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
-    price: "$1350",
+      "La carrera de Codet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+
     intro: [
-      "If you are an experienced pilot with aspirations of advancing your career to the highest level of aviation, obtaining your Airline Transport Pilot (ATP) certificate is the next logical step. The ATP certificate is the pinnacle of achievement in the aviation world, enabling you to serve as the captain or first officer of large commercial aircraft operated by airlines worldwide. At Alto Flight Academy, we understand the significance of this certification and offer a comprehensive ATP ground school program to prepare pilots for the challenges and responsibilities that come with it.",
-      "Our ATP ground school curriculum is meticulously designed to provide pilots with the advanced knowledge and skills required to excel in commercial airline operations. Our experienced instructors cover a wide range of topics, including advanced aerodynamics, airline regulations, high-altitude operations, crew resource management (CRM), and advanced aircraft systems. Through engaging lectures, interactive discussions, and practical exercises, we ensure that our students are well-prepared to meet the rigorous standards of ATP certification.",
-    ],
-    content: [
-      "Enrolling in our ATP ground school is the first step towards achieving your dreams of flying for major airlines. Our group classes, held at Sundance Airport KHSD in Oklahoma City, OK, provide in-depth instruction on all aspects of ATP training, preparing you for success in both the written and practical exams administered by the FAA. With our comprehensive syllabus and experienced instructors, you'll be equipped with the knowledge and confidence to excel in the world of commercial aviation.",
-      "To enroll in our ATP ground school, the cost is $645. This investment in your future as a professional pilot will open doors to exciting career opportunities and pave the way for a successful aviation career. Contact us today to learn more about our ATP ground school program and take the first step towards realizing your ambitions in the airline industry. Join Alto Flight Academy and embark on your journey towards becoming a certified airline transport pilot!",
+      "Esta carrera te formará como piloto aviador privado de ala fija profesional con bases firmes de conocimientos teóricos y prácticos para operar una aeronave de manera eficiente y segura con fines privados, de transporte o recreativos siguiendo los reglamentos y manuales oficiales.",
     ],
     headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-3.webp",
-    headerAlt: "American Airlines Jet in Yukon Oklahoma",
+    headerAlt: "Piloto en cabina de avión de iFly",
     primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-4.jpg",
-    primaryAlt: "Inside boeing 737 airliner jet",
-    secondaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-3.webp",
-    secondaryAlt: "Hal Harris in front of citation jet after type rating",
+    primaryAlt: "Piloto en cabina de avión de iFly",
     prerequisites: [
-      "Advanced aerodynamics and aircraft performance",
-      "Airline regulations and procedures",
-      "High-altitude operations",
-      "Crew resource management (CRM)",
-      "Advanced aircraft systems",
-      "Emergency procedures and decision-making",
-      "Practical airline scenarios and case studies",
-      "FAA ATP practical exam preparation",
+      "Ser mexicano/a",
+      "Mayor de 18 años",
+      "Comprobante de domicilio",
+      "Acta de nacimiento",
+      "CURP",
+      "INE / Pasaporte (vigente)",
+      "Certificado de estudios de bachillerato",
+      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
     ],
-    process: [
-      "Get in contact with us",
-      "Learn more about our ground school",
-      "Enroll into the next start date",
-      "Attend ground school and participate",
-      "Complete the final exam",
-      "Receive endorsement from a qualified instructor",
-      "Complete the FAA written exam",
+    faqs: [
+      {
+        question: "¿Cuál es la duración de la carrera?",
+        answer:
+          "<p>4 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
+      },
+      {
+        question: "¿Qué incluye la carrera?",
+        answer:
+          "<ul className='list-disc ml-5'><li>Teoría</li><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
+      },
+      {
+        question: "¿Qué credencial obtengo al finalizar la carrera?",
+        answer:
+          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li></ul>",
+      },
     ],
   },
 };

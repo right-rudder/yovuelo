@@ -5,31 +5,31 @@ export const navbarLinks = [
     submenu: [],
   },
   {
-    name: "Programas",
+    name: "Carreras",
     submenu: [
       {
         name: "Aviation Management (Licenciatura)",
-        link: "/programas/aviation-management",
+        link: "/carreras/aviation-management",
       },
       {
         name: "Pro Pilot (TSU)",
-        link: "/programas/pro-pilot",
+        link: "/carreras/pro-pilot",
       },
       {
         name: "Codet Pilot (Piloto Privado)",
-        link: "/programas/codet-pilot",
+        link: "/carreras/codet-pilot",
       },
       {
         name: "Sobrecargo de Aviación",
-        link: "/programas/sobrecargo-de-aviacion",
+        link: "/carreras/sobrecargo-de-aviacion",
       },
       {
         name: "Oficial de Operaciones (Dispatcher)",
-        link: "/programas/oficial-de-operaciones",
+        link: "/carreras/oficial-de-operaciones",
       },
       {
         name: "Técnico en Mantenimiento",
-        link: "/programas/tecnico-en-mantenimiento",
+        link: "/carreras/tecnico-en-mantenimiento",
       },
     ],
   },

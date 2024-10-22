@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import parse from "html-react-parser"; // Import the html-react-parser
+import parse from "html-react-parser";
 
 const GeneralFAQs = () => {
   const faqs = [
@@ -20,7 +20,7 @@ const GeneralFAQs = () => {
     },
     {
       question:
-        "¿Es necesario tener experiencia previa en aviación para inscribirse en los programas de iFly?",
+        "¿Es necesario tener experiencia previa en aviación para inscribirse en las carreras que ofrece iFly?",
       answer: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
@@ -59,7 +59,7 @@ const GeneralFAQs = () => {
               <IoIosArrowForward
                 className={`${
                   openQuestions[index] ? "-rotate-90" : "rotate-90"
-                } size-5 duration-200`}
+                } size-5 duration-200 shrink-0`}
               />
             </button>
             <div
