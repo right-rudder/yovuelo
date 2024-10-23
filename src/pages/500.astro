@@ -1,0 +1,37 @@
+---
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const data = {
+  siteTitle: "500 - Error del Servidor",
+  siteDescription:
+    "Ocurrió un error en el servidor. Por favor, intenta de nuevo más tarde.",
+  headerImage: "/src/assets/oficial-de-operaciones-revisando-avion.webp",
+  headerAlt: "Oficial de operaciones revisando avión",
+  title: "Error en el servidor",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+  <section class="flex justify-center px-5 py-32">
+    <div class="text-center flex flex-col gap-8">
+      <svg class="size-20 text-main-blue mx-auto" viewBox="0 0 32 32"
+        ><path
+          fill="currentColor"
+          d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2m5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z"
+        ></path></svg
+      >
+
+      <h1 class="font-bold text-4xl">Lo sentimos. Ocurrió un error.</h1>
+
+      <p>Por favor, vuelve a intentar más tarde.</p>
+
+      <div class="flex flex-row justify-center">
+        <a href="/">
+          <div class="btn-primary">Inicio</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
