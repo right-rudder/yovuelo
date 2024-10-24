@@ -1,6 +1,50 @@
 ---
-import programs from "../data/programs.js";
+import esPrograms from "../data/programs.js";
+import enPrograms from "../data/en/programs.js";
 const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
+const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
+
+const esData = {
+  title: "Toma el primer paso...",
+  firstParagraph:
+    "Empieza a estudiar hoy en iFly Universidad Aeronáutica y toma el primer paso en tu carrera.",
+  secondParagraph:
+    "Llena el formulario y un representante de iFly se pondrá en contacto contigo para darte más información sobre la carrera que te interesa.",
+  careerQuestion: "¿En qué carrera estás interesado?",
+  acceptTerms:
+    "Acepto los términos y condiciones proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir mensajes de texto de iFly Universidad Aeronáutica.",
+  submit: "Enviar",
+  placeholders: {
+    firstName: "Nombre/s",
+    lastName: "Apellido/s",
+    email: "Email",
+    confirmEmail: "Confirmar email",
+    phone: "Teléfono",
+    comment: "Comentario",
+  },
+};
+
+const enData = {
+  title: "Take the first step...",
+  firstParagraph:
+    "Start studying today at iFly Aeronautical University and take the first step in your career.",
+  secondParagraph:
+    "Fill out the form and an iFly representative will contact you to provide more information about the career you are interested in.",
+  careerQuestion: "What career are you interested in?",
+  acceptTerms:
+    "I accept the terms and conditions provided by the company. By providing my phone number, I agree to receive text messages from iFly Aeronautical University.",
+  submit: "Submit",
+  placeholders: {
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email",
+    confirmEmail: "Confirm email",
+    phone: "Phone",
+    comment: "Comment",
+  },
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
 ---
 
 <section class="py-24 px-5 scroll-my-24 bg-main-blue">
@@ -8,15 +52,13 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
     <div class="flex flex-col lg:flex-row gap-10">
       <div class="lg:flex-1 flex flex-col gap-5">
         <h2 class="font-extrabold text-5xl text-main-black">
-          Toma el primer paso...
+          {data.title}
         </h2>
         <p class="text-lg">
-          Empieza a estudiar hoy en iFly Universidad Aeronáutica y toma el
-          primer paso en tu carrera.
+          {data.firstParagraph}
         </p>
         <p class="text-lg">
-          Llena el formulario y un representante de iFly se pondrá en contacto
-          contigo para darte más información sobre la carrera que te interesa.
+          {data.secondParagraph}
         </p>
       </div>
       <div class="lg:flex-1 relative">
@@ -28,14 +70,14 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
             <input
               type="text"
               name="first-name"
-              placeholder="Nombre/s"
+              placeholder={data.placeholders.firstName}
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
               required
             />
             <input
               type="text"
               name="last-name"
-              placeholder="Apellido/s"
+              placeholder={data.placeholders.lastName}
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
               required
             />
@@ -45,7 +87,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
               id="email"
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={data.placeholders.email}
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
               required
             />
@@ -58,7 +100,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
             <input
               type="tel"
               name="phone"
-              placeholder="Teléfono"
+              placeholder={data.placeholders.phone}
               class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
               required
             />
@@ -71,7 +113,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
             required
           >
             <option value="" disabled selected>
-              ¿En qué carrera estás interesado?
+              {data.careerQuestion}
             </option>
             {
               programs.map((program) => (
@@ -88,7 +130,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
           <textarea
             id="more-info"
             name="more-info"
-            placeholder="Comentario"
+            placeholder={data.placeholders.comment}
             class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-24 text-main-black"
             required></textarea>
 
@@ -103,9 +145,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
               for="agree-data-collection"
               class="text-gray-500 text-sm lg:text-base"
             >
-              Acepto los términos y condiciones proporcionados por la empresa.
-              Al proporcionar mi número de teléfono, acepto recibir mensajes de
-              texto de iFly Universidad Aeronáutica.
+              {data.acceptTerms}
             </label>
           </div>
           <button
@@ -113,7 +153,7 @@ const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
             disabled
             type="submit"
             class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
-            >Enviar</button
+            >{data.submit}</button
           >
         </form>
       </div>

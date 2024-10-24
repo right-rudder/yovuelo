@@ -94,7 +94,7 @@ const Navbar = ({ pathname, lang }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <a href="/">
+              <a href={`${lang === "en" ? "/en" : "/"}`}>
                 <img src={blueLogo.src} alt="iFly logo" className="w-36" />
               </a>
               <div className="hidden lg:block">
@@ -268,7 +268,7 @@ const Navbar = ({ pathname, lang }) => {
         </div>
 
         <a
-          href="/"
+          href={`${lang === "en" ? "/en" : "/"}`}
           className="text-white px-10 w-fit block leading-none uppercase font-semibold text-lg z-40 relative"
         >
           <img src={whiteLogo.src} alt="iFly logo" className="w-32" />
