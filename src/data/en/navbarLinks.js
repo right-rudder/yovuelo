@@ -68,7 +68,7 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Contact",
+    name: "Contact Us",
     link: "/en/contact",
     submenu: [],
   },
