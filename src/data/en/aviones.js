@@ -4,11 +4,10 @@ const aviones = [
       name: "XB-RNM",
       slug: "XB-RNM",
       model: "PIPISTREL SW 121",
-      siteTitle:
-        "Pipistrel SW 121 - Avión de Entrenamiento de Alto Rendimiento",
+      siteTitle: "Pipistrel SW 121 - High-Performance Training Aircraft",
       title: "PIPISTREL SW 121",
       siteDescription:
-        "Conoce el Pipistrel SW 121, un avión de 2 asientos ideal para entrenamiento, equipado con lo último en tecnología aeronáutica, certificación EASA y comodidad.",
+        "Discover the Pipistrel SW 121, a 2-seat light aircraft perfect for training or personal travel, with advanced technology and EASA certification.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -20,7 +19,7 @@ const aviones = [
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
       description:
-        "El Pipistrel SW 121 es un avión de 2 asientos con certificación EASA Type más avanzado y asequible de su categoría. Con su cómodo interior, cabina de vidrio de doble pantalla, hélice CS, frenos de aire y piloto automático, es el avión de entrenamiento o de viaje personal ideal.",
+        "The Pipistrel SW 121 is a 2-seat aircraft with EASA Type certification, the most advanced and affordable in its category. With its comfortable interior, dual-screen glass cockpit, CS propeller, air brakes, and autopilot, it is the ideal training or personal travel aircraft.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -31,10 +30,11 @@ const aviones = [
       name: "XB-RNK",
       slug: "XB-RNK",
       model: "PIPISTREL SW 121",
-      siteTitle: "Pipistrel SW 121 - Avión Ligero de Alto Rendimiento",
+      siteTitle:
+        "Pipistrel SW 121 - Advanced Technology and EASA Certification",
       title: "PIPISTREL SW 121",
       siteDescription:
-        "Descubre el Pipistrel SW 121, un avión ligero de 2 asientos perfecto para entrenamiento o viajes, con avanzada tecnología y certificación EASA.",
+        "The Pipistrel SW 121 is the ideal aircraft for those seeking efficiency, comfort, and advanced technology in their personal or training flights.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -46,7 +46,7 @@ const aviones = [
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
       description:
-        "El Pipistrel SW 121 es un avión de 2 asientos con certificación EASA Type más avanzado y asequible de su categoría. Con su cómodo interior, cabina de vidrio de doble pantalla, hélice CS, frenos de aire y piloto automático, es el avión de entrenamiento o de viaje personal ideal.",
+        "The Pipistrel SW 121 is a 2-seat aircraft with EASA Type certification, the most advanced and affordable in its category. With its comfortable interior, dual-screen glass cockpit, CS propeller, air brakes, and autopilot, it is the ideal training or personal travel aircraft.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -58,9 +58,9 @@ const aviones = [
       slug: "XB-PXM",
       model: "PIPISTREL SW 121",
       title: "PIPISTREL SW 121",
-      siteTitle: "Pipistrel SW 121 - Eficiencia y Confort Aéreo",
+      siteTitle: "Pipistrel SW 121 - High-Performance and Advanced Technology",
       siteDescription:
-        "El Pipistrel SW 121 es el avión ideal para quienes buscan eficiencia, confort y tecnología avanzada en sus vuelos personales o de entrenamiento.",
+        "The Pipistrel SW 121 offers advanced technology, comfort, and versatility for pilots in training or those looking for a reliable personal aircraft.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -72,7 +72,7 @@ const aviones = [
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
       description:
-        "El Pipistrel SW 121 es un avión de 2 asientos con certificación EASA Type más avanzado y asequible de su categoría. Con su cómodo interior, cabina de vidrio de doble pantalla, hélice CS, frenos de aire y piloto automático, es el avión de entrenamiento o de viaje personal ideal.",
+        "The Pipistrel SW 121 is a 2-seat aircraft with EASA Type certification, the most advanced and affordable in its category. With its comfortable interior, dual-screen glass cockpit, CS propeller, air brakes, and autopilot, it is the ideal training or personal travel aircraft.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -84,10 +84,10 @@ const aviones = [
       slug: "XB-PXL",
       model: "PIPISTREL SW 121",
       siteTitle:
-        "Pipistrel SW 121 - Alto Rendimiento y Tecnología de Vanguardia",
+        "Pipistrel SW 121 - Advanced Technology and EASA Certification",
       title: "PIPISTREL SW 121",
       siteDescription:
-        "El Pipistrel SW 121 ofrece tecnología avanzada, confort y versatilidad para pilotos en entrenamiento o aquellos que buscan un avión personal confiable.",
+        "The Pipistrel SW 121 is the ideal aircraft for those seeking efficiency, comfort, and advanced technology in their personal or training flights.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -98,7 +98,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PXL.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Pipistrel SW 121 is a 2-seat aircraft with EASA Type certification, the most advanced and affordable in its category. With its comfortable interior, dual-screen glass cockpit, CS propeller, air brakes, and autopilot, it is the ideal training or personal travel aircraft.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -110,9 +111,9 @@ const aviones = [
       slug: "XB-PPY",
       model: "PIPISTREL SW 121",
       title: "PIPISTREL SW 121",
-      siteTitle: "Pipistrel SW 121 - Aeronave Certificada por EASA",
+      siteTitle: "Pipistrel SW 121 - Comfort and Technology in Flight",
       siteDescription:
-        "Pipistrel SW 121, una aeronave certificada por EASA, ofrece lo último en comodidad y tecnología para entrenamiento o vuelos personales.",
+        "The Pipistrel SW 121 offers comfort and advanced technology for pilots in training or those looking for a reliable personal aircraft.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -123,7 +124,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PPY.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Pipistrel SW 121 is a 2-seat aircraft with EASA Type certification, the most advanced and affordable in its category. With its comfortable interior, dual-screen glass cockpit, CS propeller, air brakes, and autopilot, it is the ideal training or personal travel aircraft.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -134,10 +136,10 @@ const aviones = [
       name: "XB-CHW",
       slug: "XB-CHW",
       model: "CESSNA 150G",
-      siteTitle: "Cessna 150G - Fiabilidad en Vuelo",
+      siteTitle: "Cessna 150G - Reliable and Efficient",
       title: "CESSNA 150G",
       siteDescription:
-        "El Cessna 150G es conocido por su fiabilidad y eficiencia, ideal para vuelos cortos y entrenamiento de pilotos en formación.",
+        "The Cessna 150G offers reliable and efficient performance for pilot training and personal flights.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -148,7 +150,8 @@ const aviones = [
       headerImage: "/src/assets/XB-CHW.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150G offers reliable and efficient performance for pilot training and personal flights.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -159,10 +162,10 @@ const aviones = [
       name: "XB-MMF",
       slug: "XB-MMF",
       model: "CESSNA 150K",
-      siteTitle: "Cessna 150K - Confiabilidad y Desempeño",
+      siteTitle: "Cessna 150K - Reliability and Exceptional Performance",
       title: "CESSNA 150K",
       siteDescription:
-        "El Cessna 150K ofrece confiabilidad y desempeño excepcionales para entrenamiento de pilotos y vuelos personales.",
+        "The Cessna 150K is known for its reliability and exceptional performance, making it an ideal choice for pilot training and personal flights.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -173,7 +176,8 @@ const aviones = [
       headerImage: "/src/assets/XB-MMF.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150K is known for its reliability and exceptional performance, making it an ideal choice for pilot training and personal flights.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -184,10 +188,10 @@ const aviones = [
       name: "XB-OXD",
       slug: "XB-OXD",
       model: "CESSNA 150L",
-      siteTitle: "Cessna 150L - Versatilidad y Eficiencia",
+      siteTitle: "Cessna 150L - Performance and Efficiency in the Air",
       title: "CESSNA 150L",
       siteDescription:
-        "El Cessna 150L destaca por su versatilidad y eficiencia en vuelos de entrenamiento y viajes personales.",
+        "Discover the Cessna 150L, a model designed for fast and safe flights, offering the latest in air efficiency and comfort.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -198,7 +202,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OXD.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150L is a model designed for fast and safe flights, offering the latest in air efficiency and comfort.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -209,10 +214,10 @@ const aviones = [
       name: "XB-OMA",
       slug: "XB-OMA",
       model: "CESSNA 150L",
-      siteTitle: "Cessna 150L - Rendimiento y Eficiencia Aérea",
+      siteTitle: "Cessna 150L - Performance and Efficiency in the Air",
       title: "CESSNA 150L",
       siteDescription:
-        "Descubre el Cessna 150L, un modelo diseñado para vuelos rápidos y seguros, ofreciendo lo último en eficiencia y confort aéreo.",
+        "Discover the Cessna 150L, a model designed for fast and safe flights, offering the latest in air efficiency and comfort.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -223,7 +228,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OMA.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150L is a model designed for fast and safe flights, offering the latest in air efficiency and comfort.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -234,10 +240,10 @@ const aviones = [
       name: "XB-PHV",
       slug: "XB-PHV",
       model: "CESSNA 150",
-      siteTitle: "Cessna 150 - Innovación y Confiabilidad en el Aire",
+      siteTitle: "Cessna 150 - Redefining Private Flight",
       title: "CESSNA 150",
       siteDescription:
-        "El Cessna 150 redefine el vuelo privado con una mezcla perfecta de innovación tecnológica y confiabilidad, ideal para pilotos exigentes.",
+        "The Cessna 150 is a versatile and reliable aircraft, perfect for private flights and pilot training.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -248,7 +254,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PHV.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150 is a versatile and reliable aircraft, perfect for private flights and pilot training.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -259,10 +266,10 @@ const aviones = [
       name: "XB-NTH",
       slug: "XB-NTH",
       model: "BEECHCRAFT D95A",
-      siteTitle: "Beechcraft D95A - Comodidad y Rendimiento en el Aire",
+      siteTitle: "Beechcraft D95A - Comfort and Performance",
       title: "BEECHCRAFT D95A",
       siteDescription:
-        "El Beechcraft D95A ofrece una combinación perfecta de comodidad y rendimiento, ideal para vuelos de corta y media distancia.",
+        "The Beechcraft D95A offers a perfect combination of comfort and performance, ideal for short and medium-distance flights.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -273,7 +280,8 @@ const aviones = [
       headerImage: "/src/assets/XB-NTH.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Beechcraft D95A offers a perfect combination of comfort and performance, ideal for short and medium-distance flights.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -284,10 +292,10 @@ const aviones = [
       name: "XB-OBA",
       slug: "XB-OBA",
       model: "CESSNA 172N",
-      siteTitle: "Cessna 172N - Confiabilidad y Precisión en Cada Vuelo",
+      siteTitle: "Cessna 172N - Precision and Reliability",
       title: "CESSNA 172N",
       siteDescription:
-        "El Cessna 172N es conocido por su confiabilidad y precisión, ofreciendo una experiencia de vuelo excepcional para pilotos y pasajeros.",
+        "The Cessna 172N is known for its reliability and precision, offering an exceptional flight experience for pilots and passengers.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -298,7 +306,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OBA.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 172N is known for its reliability and precision, offering an exceptional flight experience for pilots and passengers.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -309,10 +318,10 @@ const aviones = [
       name: "XB-POR",
       slug: "XB-POR",
       model: "CESSNA 150",
-      siteTitle: "Cessna 150 - Versatilidad en el Vuelo Privado",
+      siteTitle: "Cessna 150 - Versatility and Ease of Use",
       title: "CESSNA 150",
       siteDescription:
-        "El Cessna 150 ofrece versatilidad y facilidad de manejo, siendo una excelente opción para pilotos que buscan un avión ligero y eficiente.",
+        "The Cessna 150 is a versatile and easy-to-use aircraft, perfect for private flights and pilot training.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -323,7 +332,8 @@ const aviones = [
       headerImage: "/src/assets/XB-POR.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 150 is a versatile and easy-to-use aircraft, perfect for private flights and pilot training.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -334,10 +344,10 @@ const aviones = [
       name: "XB-PPO",
       slug: "XB-PPO",
       model: "CESSNA 172",
-      siteTitle: "Cessna 172 - El Avión Clásico de Entrenamiento y Recreación",
+      siteTitle: "Cessna 172 - Classic and Reliable",
       title: "CESSNA 172",
       siteDescription:
-        "El Cessna 172 es un avión clásico en el mundo de la aviación, utilizado tanto para entrenamiento como para vuelos recreativos debido a su gran maniobrabilidad.",
+        "The Cessna 172 is a classic aircraft in the world of aviation, used for both training and recreational flights due to its great maneuverability.",
       usableFuel: "38 gal",
       year: "1988",
       equipment: [
@@ -348,7 +358,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PPO.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "The Cessna 172 is a classic aircraft in the world of aviation, used for both training and recreational flights due to its great maneuverability.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",

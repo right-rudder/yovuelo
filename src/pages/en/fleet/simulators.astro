@@ -1,0 +1,198 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import cr12 from "~/assets/simulador-cr-12.jpg";
+import cat2 from "~/assets/simulador-pfc-cat-2.jpg";
+import a320 from "~/assets/simulador-airbus-a320.jpg";
+import solo from "~/assets/simulador-c-172-182.webp";
+import xalpha from "~/assets/simulador-x-alpha-200.webp";
+
+const data = {
+  siteTitle: "Simulator Training - iFly Aeronautical University",
+  siteDescription:
+    "iFly Aeronautical University offers the best flight simulators in the southeast. Our simulators are certified by the Federal Aviation Administration and the Mexican Civil Aviation Authority.",
+  headerImage: "/src/assets/simulador-airbus-a320.jpg",
+  headerAlt: "Airbus A320 simulator",
+  title: "Flight Simulators",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          CR-12 Simulator
+        </h2>
+        <p class="text-main-black/70">
+          We are the only university in the southeast authorized by the Federal
+          Civil Aviation Agency for certification of your degree exam at the
+          International Civil Aviation Training Center and by the United States
+          Federal Aviation Administration as an advanced trainer.
+        </p>
+        <p class="text-main-black/70">
+          It can be operated as a single-engine or multi-engine aircraft in
+          visual flight conditions or instrument conditions. The instructor will
+          be able to monitor the session's progress and provide feedback to the
+          student on their performance during the maneuvers carried out in the
+          session.
+        </p>
+        <a href="/contacto" class="btn-primary">Schedule a visit</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={cr12}
+          alt="CR-12 Simulator"
+          class="rounded-xl z-10 relative h-96 object-cover w-[40rem]"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase tracking-widest text-2xl text-main-black/80">
+          PFC – CAT II Simulator
+        </h2>
+        <p class="">
+          The CAT II is certified by the Federal Aviation Administration of the
+          United States and the Federal Civil Aviation Agency in Mexico.
+        </p>
+        <p class="">
+          The Precision Flight Control CAT II trainer allows simulation of
+          flight equivalent to a single-engine or twin-engine low-speed
+          aircraft, enabling our students to begin their practice under the
+          supervision and feedback of specialized instructors.
+        </p>
+        <a href="/contacto" class="btn-secondary">Schedule a visit</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={cat2}
+          alt="PFC – CAT II Simulator"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-white translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          A320 Synthetic Simulator
+        </h2>
+        <p class="text-main-black/70">
+          It is the best trainer of its kind, featuring a three-dimensional
+          visual system that provides pilots with an incredibly realistic
+          environment during their training. It also enables a clear
+          understanding of automated flight, the glass cockpit, and the precise
+          simulation of the A320 systems from both positions.
+        </p>
+        <p class="text-main-black/70">
+          We also offer introductory courses for the A320 simulator that can be
+          taken in pairs. At the end of your Pro Pilot course, you will have the
+          experience of flying a commercial aircraft.
+        </p>
+        <a href="/contacto" class="btn-primary">Schedule a visit</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={a320}
+          alt="A320 Synthetic Simulator"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase tracking-widest text-2xl text-main-black/80">
+          SOLO C-182RG Simulator
+        </h2>
+        <p class="">
+          All-in-one! Cessna Flight Deck. Flight training has never been so
+          beautiful. With its three screens and identical cockpit, it enhances
+          the flight realism, immersing you further into the experience. You can
+          fly a Cessna 172 or 182 as realistically as possible.
+        </p>
+        <p class="">
+          This is a state-of-the-art flight simulator designed to exceed FAA
+          requirements as a certified simulator.
+        </p>
+        <p>Fly like a real Cessna 172 and 182 pilot!</p>
+        <a href="/contacto" class="btn-secondary">Schedule a visit</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={solo}
+          alt="SOLO C-182RG Simulator"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-white translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          X-ALPHA 200 Simulator
+        </h2>
+        <p class="text-main-black/70">
+          The X-ALPHA is our flight simulator that uses virtual reality goggles,
+          allowing you to have a more immersive experience in your training. It
+          is manufactured in Slovenia.
+        </p>
+        <p class="text-main-black/70">
+          This simulator will prepare you to fly each of our Pipistrel Virus SW
+          121 safely and professionally.
+        </p>
+        <a href="/contacto" class="btn-primary">Schedule a visit</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={xalpha}
+          alt="X-ALPHA 200 Simulator"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -98,7 +98,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PXL.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Pipistrel SW 121 es un avión de 2 asientos con certificación EASA Type más avanzado y asequible de su categoría. Con su cómodo interior, cabina de vidrio de doble pantalla, hélice CS, frenos de aire y piloto automático, es el avión de entrenamiento o de viaje personal ideal.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -123,7 +124,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PPY.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Pipistrel SW 121 es un avión de 2 asientos con certificación EASA Type más avanzado y asequible de su categoría. Con su cómodo interior, cabina de vidrio de doble pantalla, hélice CS, frenos de aire y piloto automático, es el avión de entrenamiento o de viaje personal ideal.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -148,7 +150,8 @@ const aviones = [
       headerImage: "/src/assets/XB-CHW.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150G es conocido por su fiabilidad y eficiencia, ideal para vuelos cortos y entrenamiento de pilotos en formación.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -173,7 +176,8 @@ const aviones = [
       headerImage: "/src/assets/XB-MMF.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150K ofrece confiabilidad y desempeño excepcionales para entrenamiento de pilotos y vuelos personales.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -198,7 +202,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OXD.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150L destaca por su versatilidad y eficiencia en vuelos de entrenamiento y viajes personales.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -223,7 +228,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OMA.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150L destaca por su versatilidad y eficiencia en vuelos de entrenamiento y viajes personales.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -248,7 +254,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PHV.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150 redefine el vuelo privado con una mezcla perfecta de innovación tecnológica y confiabilidad, ideal para pilotos exigentes.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -273,7 +280,8 @@ const aviones = [
       headerImage: "/src/assets/XB-NTH.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Beechcraft D95A es un avión bimotor de 6 plazas, ideal para vuelos de corta y media distancia. Con su cabina espaciosa, asientos cómodos y avanzada tecnología a bordo, es la elección perfecta para viajes de negocios o placer.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -298,7 +306,8 @@ const aviones = [
       headerImage: "/src/assets/XB-OBA.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 172N es conocido por su confiabilidad y precisión, ofreciendo una experiencia de vuelo excepcional para pilotos y pasajeros.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -323,7 +332,8 @@ const aviones = [
       headerImage: "/src/assets/XB-POR.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 150 ofrece versatilidad y facilidad de manejo, siendo una excelente opción para pilotos que buscan un avión ligero y eficiente.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
@@ -348,7 +358,8 @@ const aviones = [
       headerImage: "/src/assets/XB-PPO.jpg",
       headerAlt: "iFly plane",
       alt: "Beechjet 400",
-      description: ["Acquired"],
+      description:
+        "El Cessna 172 es un avión clásico en el mundo de la aviación, utilizado tanto para entrenamiento como para vuelos recreativos debido a su gran maniobrabilidad.",
       hasRibbon: true,
       ribbonTitle: "acquired",
       ribbonColor: "bg-dark-blue",
