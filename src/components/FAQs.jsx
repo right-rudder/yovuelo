@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import parse from "html-react-parser";
 
-const FAQs = ({ faqs }) => {
+const FAQs = ({ faqs, lang }) => {
   const [openQuestions, setOpenQuestions] = useState(
     new Array(faqs.length).fill(false),
   );
@@ -15,7 +15,7 @@ const FAQs = ({ faqs }) => {
 
   return (
     <div className="flex flex-col gap-5 max-w-3xl mt-10 lg:mt-0">
-      <h3 className="text-3xl lg:text-4xl">Preguntas Frecuentes</h3>
+      <h3 className="text-3xl lg:text-4xl">{`${lang === "en" ? "Frequently Asked Questions" : "Preguntas Frecuentes"}`}</h3>
       <div className="flex flex-col gap-5 md:ml-10">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b border-main-black/30 pb-2">
