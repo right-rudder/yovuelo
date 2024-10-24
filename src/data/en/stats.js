@@ -1,19 +1,19 @@
 const stats = [
   {
     value: 14,
-    title: "Aviones",
+    title: "Airplanes",
   },
   {
     value: 5,
-    title: "Simuladores",
+    title: "Simulators",
   },
   {
     value: 1200,
-    title: "Testimoniales",
+    title: "Testimonials",
   },
   {
     value: 2800,
-    title: "Estudiantes graduados el último año",
+    title: "Students graduated last year",
   },
 ];
 

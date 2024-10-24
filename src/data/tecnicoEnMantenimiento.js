@@ -9,7 +9,6 @@ const tecnicoEnMantenimiento = {
       "Técnico en Mantenimiento Aeronáutico - iFly Universidad Aeronáutica",
     siteDescription:
       "Capacítate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
-    price: "$1350",
     intro: [
       "En esta carrera desarrollarás técnicas y habilidades, así como adquisición de conocimientos para desempeñar como técnico en mantenimiento de aeronaves ligeras de motor recíproco. La carrera te permitirá desempeñar como mecánico de aeronaves logrando mantener los estándares de seguridad y el óptimo funcionamiento de las aeronaves en relación con su tren motriz, estructura, sistemas y aviónica bajo los lineamientos y regulaciones aplicables.",
     ],

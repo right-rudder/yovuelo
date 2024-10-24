@@ -4,11 +4,11 @@ import HomepageHeader from "~/components/HomepageHeader.astro";
 import { Image } from "astro:assets";
 import students from "~/assets/cuatro-estudiantes-en-la-universidad-de-ifly.webp";
 import CounterCard from "~/components/CounterCard";
-import stats from "~/data/stats";
+import stats from "~/data/en/stats";
 import { FaCheck } from "react-icons/fa";
 import iflyStudents from "~/assets/estudiantes-de-ifly-recibiendo-medalla.webp";
 import graduatedStudents from "~/assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
-import programs from "~/data/programs";
+import programs from "~/data/en/programs";
 import ProgramCard from "~/components/ProgramCard.astro";
 import studentInHangar from "~/assets/estudiante-de-ifly-en-hangar.webp";
 import IndexForm from "~/components/IndexForm.astro";
@@ -26,21 +26,20 @@ import IndexForm from "~/components/IndexForm.astro";
     >
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h2 class="uppercase text-main-black/80 tracking-widest">
-          Bienvenido a iFly
+          Welcome to iFly
         </h2>
         <h3 class="text-4xl lg:text-5xl">
-          Somos la primera universidad aeronáutica para pilotos aviadores en
-          México
+          We are the first aeronautical university for aviators in Mexico
         </h3>
         <p class="text-main-black/70">
-          Te preparamos para ser un profesional en las alturas. Ya sea que optes
-          por nuestra carrera de Pro Pilot y obtengas un título de Técnico
-          Superior Universitario, o por la licenciatura en Aviation Management
-          (Gestión Aeronáutica) y obtengas un título de Licenciado. Al final de
-          las carreras obtendrás la licencia de Piloto Comercial de Ala Fija con
-          la que podrás laborar en cualquier área de la aviación civil.
+          We prepare you to become a professional in the skies. Whether you
+          choose our Pro Pilot program and earn a University Higher Technician
+          degree, or pursue a Bachelor’s in Aviation Management and obtain a
+          Bachelor's degree, you will graduate with a Fixed-Wing Commercial
+          Pilot license. This license allows you to work in any area of civil
+          aviation.
         </p>
-        <a href="/nosotros/historia" class="btn-primary">Sobre Nosotros</a>
+        <a href="/nosotros/historia" class="btn-primary">About Us</a>
       </div>
       <div class="flex-1 relative h-fit mr-5">
         <Image
@@ -90,17 +89,17 @@ import IndexForm from "~/components/IndexForm.astro";
       </div>
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h2 class="uppercase text-main-black/80 tracking-widest">
-          ¿Por qué estudiar en iFly?
+          Why study at iFly?
         </h2>
         <h3 class="lg:text-5xl">
-          Te ofrecemos una preparación formidable para cumplir tu sueño de volar
-          profesionalmente
+          We offer you exceptional training to fulfill your dream of flying
+          professionally
         </h3>
         <p class="text-main-black/70">
-          Si tu pasión está en los cielos, iFly es el lugar perfecto para ti.
-          Nuestros programas de estudio están diseñados para que te conviertas
-          en un piloto profesional y puedas trabajar en cualquier área de la
-          aviación civil. iFly te ofrece carreras en:
+          If your passion lies in the skies, iFly is the perfect place for you.
+          Our study programs are designed to help you become a professional
+          pilot, enabling you to work in any area of civil aviation. iFly offers
+          careers in:
         </p>
         <ul class="grid grid-cols-2 gap-4 text-main-black/70">
           <li class="flex gap-2 items-center">
@@ -125,19 +124,19 @@ import IndexForm from "~/components/IndexForm.astro";
             <div class="p-2 bg-main-black rounded-full">
               <FaCheck className="size-2 lg:size-3 text-white" />
             </div>
-            <p class="text-sm lg:text-base">Sobrecargo de aviación</p>
+            <p class="text-sm lg:text-base">Flight Attendant</p>
           </li>
           <li class="flex gap-2 items-center">
             <div class="p-2 bg-main-black rounded-full">
               <FaCheck className="size-2 lg:size-3 text-white" />
             </div>
-            <p class="text-sm lg:text-base">Oficial de operaciones</p>
+            <p class="text-sm lg:text-base">Operations Officer</p>
           </li>
           <li class="flex gap-2 items-center">
             <div class="p-2 bg-main-black rounded-full">
               <FaCheck className="size-2 lg:size-3 text-white" />
             </div>
-            <p class="text-sm lg:text-base">Técnico en mantenimiento</p>
+            <p class="text-sm lg:text-base">Maintenance Technician</p>
           </li>
         </ul>
       </div>
@@ -151,20 +150,18 @@ import IndexForm from "~/components/IndexForm.astro";
       <div class="flex justify-between items-end gap-20">
         <div class="flex justify-center flex-col gap-5 max-w-xl">
           <h2 class="uppercase text-main-black font-bold tracking-widest">
-            Nuestras Carreras
+            Our Programs
           </h2>
-          <h3 class="text-4xl lg:text-5xl">
-            Conoce nuestros programas de estudio
-          </h3>
+          <h3 class="text-4xl lg:text-5xl">Discover Our Study Programs</h3>
           <p class="lg:text-lg">
-            En iFly te ofrecemos programas de estudio para que te conviertas en
-            un profesional de la aviación civil. Conoce nuestros programas y
-            elige el que más se adapte a tus necesidades.
+            At iFly, we offer study programs to help you become a professional
+            in civil aviation. Explore our programs and choose the one that best
+            fits your needs.
           </p>
         </div>
         <a
           href="/por-que-ser-piloto#programas"
-          class="btn-secondary hidden lg:block">Ver Todos</a
+          class="btn-secondary hidden lg:block">See All</a
         >
       </div>
 
@@ -184,7 +181,7 @@ import IndexForm from "~/components/IndexForm.astro";
       </div>
       <a
         href="/por-que-ser-piloto#programas"
-        class="btn-secondary lg:hidden w-full max-w-lg">Ver Todos</a
+        class="btn-secondary lg:hidden w-full max-w-lg">See All</a
       >
     </div>
   </section>
@@ -206,30 +203,16 @@ import IndexForm from "~/components/IndexForm.astro";
         <h2 class="uppercase text-main-black/80 tracking-widest">
           Testimonial
         </h2>
-        <h3 class="text-lg sm:text-3xl lg:text-5xl">
-          Conoce la experiencia de nuestros estudiantes
-        </h3>
+        <h3 class="text-lg sm:text-3xl lg:text-5xl">What Our Students Say</h3>
         <quote class="text-main-black/70">
-          "iFly es la familia que me vió nacer como piloto aviador profesional y
-          me ayudó a cumplir uno de mis más grandes sueños, es para mí un placer
-          y un orgullo haberme formado en esta gran familia."
+          "iFly is the family that helped me grow into a professional pilot and
+          assisted me in achieving one of my greatest dreams. It is both a
+          pleasure and an honor to have trained in this great family."
         </quote>
-        <cite class="text-main-black/90"
-          >- Roberto Novelo Cicero (Piloto aviador)</cite
-        >
+        <cite class="text-main-black/90">- Roberto Novelo Cicero (Pilot)</cite>
       </div>
     </div>
   </section>
 
   <IndexForm />
 </BaseLayout>
-
-<!-- <script>
-  const userLang = navigator.language;
-
-  if (userLang.startsWith("en")) {
-    window.location.href = "/en";
-  } else {
-    window.location.href = "/";
-  }
-</script> -->

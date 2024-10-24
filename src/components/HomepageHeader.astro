@@ -1,6 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
+
+const esData = {
+  title: "La Universidad Principal de Formación de Pilotos de México",
+  subtitle: "Convierte tu amor por volar en una carrera profesional",
+  primaryButtonText: "Regístrate",
+  secondaryButtonText: "Más Información",
+};
+
+const enData = {
+  title: "Mexico's Premier Pilot Training University",
+  subtitle: "Turn your love for flying into a professional career",
+  primaryButtonText: "Register",
+  secondaryButtonText: "Learn More",
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
 ---
 
 <header
@@ -21,17 +37,19 @@ import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
       <h1
         class="text-4xl max-w-xl lg:text-7xl font-medium text-center lg:max-w-4xl"
       >
-        La Universidad Principal de Formación de Pilotos de México
+        {data.title}
       </h1>
       <h2
         class="text-xl max-w-xl lg:text-3xl text-center lg:max-w-2xl text-gray-200"
       >
-        Convierte tu amor por volar en una carrera profesional
+        {data.subtitle}
       </h2>
       <div class="flex gap-5 flex-col sm:flex-row">
-        <a href="/contacto" class="btn-primary w-full sm:w-fit">Regístrate</a>
+        <a href="/contacto" class="btn-primary w-full sm:w-fit"
+          >{data.primaryButtonText}</a
+        >
         <a href="#bienvenido" class="btn-secondary w-full sm:w-fit"
-          >Más Información</a
+          >{data.secondaryButtonText}</a
         >
       </div>
     </div>

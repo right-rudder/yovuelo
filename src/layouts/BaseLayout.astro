@@ -6,10 +6,11 @@ import "@fontsource/fira-sans";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription } = Astro.props;
+const lang = Astro.currentLocale === "en" ? "en" : "es";
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <BaseHead
       title={siteTitle || SITE_TITLE}
