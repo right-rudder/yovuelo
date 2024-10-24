@@ -3,7 +3,7 @@ const oficialDeOperaciones = {
     title: "Operations Officer (Dispatcher)",
     description:
       "Become an Operations Officer with iFly's specialized training. Manage flight safety and understand international regulations for professional development in civil aviation.",
-    url: "/careers/operations-officer",
+    url: "/en/careers/operations-officer",
     slug: "operations-officer",
     siteTitle: "Operations Officer - Professional Career in Air Safety",
     siteDescription:

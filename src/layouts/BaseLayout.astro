@@ -18,7 +18,7 @@ const lang = Astro.currentLocale === "en" ? "en" : "es";
     />
   </head>
   <body>
-    <Navbar pathname={pathname} client:load />
+    <Navbar pathname={pathname} lang={lang} client:load />
     <slot name="header" />
     <main>
       <slot />

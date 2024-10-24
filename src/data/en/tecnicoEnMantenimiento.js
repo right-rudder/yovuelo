@@ -3,7 +3,7 @@ const tecnicoEnMantenimiento = {
     title: "Maintenance Technician",
     description:
       "Train as an Aeronautical Maintenance Technician at iFly. Learn to maintain and repair aircraft following the highest safety standards.",
-    url: "/careers/maintenance-technician",
+    url: "/en/careers/maintenance-technician",
     slug: "maintenance-technician",
     siteTitle:
       "Aeronautical Maintenance Technician - iFly Aeronautical University",

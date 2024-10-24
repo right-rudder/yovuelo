@@ -3,7 +3,7 @@ const aviationManagement = {
     title: "Aviation Management (Bachelor's Degree)",
     description:
       "The Bachelor's in Aviation Management at iFly prepares you to become an expert in aeronautical management. Earn a Bachelor's degree in Aeronautical Administration and expand your career in civil aviation.",
-    url: "/careers/aviation-management",
+    url: "/en/careers/aviation-management",
     slug: "aviation-management",
     siteTitle:
       "Bachelor's in Aviation Management - iFly Aeronautical University",

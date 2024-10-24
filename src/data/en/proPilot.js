@@ -3,7 +3,7 @@ const proPilot = {
     title: "Pro Pilot (Higher Technician)",
     description:
       "Become a Professional Pilot with iFly's Pro Pilot program. Obtain your Fixed-Wing Commercial Pilot License and a Higher University Technician degree in Aviation.",
-    url: "/careers/pro-pilot",
+    url: "/en/careers/pro-pilot",
     slug: "pro-pilot",
     siteTitle: "Pro Pilot - Higher University Technician in Aviation",
     siteDescription:

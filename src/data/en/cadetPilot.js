@@ -3,7 +3,7 @@ const cadetPilot = {
     title: "Cadet Pilot (Private Pilot)",
     description:
       "The Cadet Pilot program at iFly prepares you to become a private pilot with professional training. Gain the necessary skills to fly and enjoy civil aviation on a personal level.",
-    url: "/careers/cadet-pilot",
+    url: "/en/careers/cadet-pilot",
     slug: "cadet-pilot",
     siteTitle: "Cadet Pilot - Private Pilot Training Program",
     siteDescription:

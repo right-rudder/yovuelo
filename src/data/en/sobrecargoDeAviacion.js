@@ -3,7 +3,7 @@ const sobrecargoDeAviacion = {
     title: "Aviation Flight Attendant",
     description:
       "Train as a Flight Attendant at iFly. Learn all safety procedures and regulations to become a certified flight attendant with both national and international recognition.",
-    url: "/careers/flight-attendant",
+    url: "/en/careers/flight-attendant",
     slug: "flight-attendant",
     siteTitle: "Flight Attendant Course - iFly Aeronautical University",
     siteDescription:

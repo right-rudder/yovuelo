@@ -1,5 +1,5 @@
-import { navbarLinks } from "../data/navbarLinks.js";
-import { mobileNavbarLinks } from "../data/mobileNavbarLinks.js";
+import { navbarLinks as esNavbarLinks } from "../data/navbarLinks.js";
+import { navbarLinks as enNavbarLinks } from "../data/en/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
@@ -15,7 +15,8 @@ import {
   EMAIL_ADDRESS,
 } from "../consts.ts";
 
-const Navbar = ({ pathname }) => {
+const Navbar = ({ pathname, lang }) => {
+  const navbarLinks = lang === "en" ? enNavbarLinks : esNavbarLinks;
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
