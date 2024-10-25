@@ -29,6 +29,8 @@ const esData = {
   careers: "Carreras",
   aboutUs: "Sobre iFly",
   contact: "Contacto",
+  rights: "Todos los derechos reservados.",
+  policy: "Aviso de Privacidad",
 };
 
 const enData = {
@@ -38,6 +40,8 @@ const enData = {
   careers: "Careers",
   aboutUs: "About iFly",
   contact: "Contact",
+  rights: "All rights reserved.",
+  policy: "Privacy Policy",
 };
 
 const lang = Astro.currentLocale === "en" ? "en" : "es";
@@ -231,9 +235,11 @@ const navbarLinks =
       <p class="text-xs">
         <span class="font-semibold">{SITE_TITLE}</span> &copy; {
           today.getFullYear()
-        }. Todos los derechos reservados. <a
+        }. {data.rights}
+        <a
           class="hover:underline"
-          href="/privacidad">Aviso de Privacidad</a
+          href={lang == "en" ? "/en/privacy-policy" : "/privacidad"}
+          >{data.policy}</a
         >
       </p>
       <p class="text-xs text-gray-400">

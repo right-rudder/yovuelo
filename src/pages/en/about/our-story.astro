@@ -1,0 +1,101 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import students from "~/assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import CounterCard from "~/components/CounterCard";
+import stats from "~/data/en/stats";
+
+const data = {
+  siteTitle: "Our Story - iFly Aeronautical University",
+  siteDescription:
+    "Learn about the history of iFly, the first aeronautical university in Mexico. With years of experience in training pilots and aviation professionals, we are leaders in aeronautical education.",
+  headerImage: "/src/assets/estudiantes-graduados-afuera-del-hangar.webp",
+  headerAlt: "iFly graduates",
+  title: "Discover Our Beginnings",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Welcome to iFly
+        </h2>
+        <h3 class="lg:text-5xl">
+          We are the first aeronautical university for aviator pilots in Mexico
+        </h3>
+        <quote
+          class="text-main-black/70 border-l-4 border-main-black pl-5 text-lg"
+        >
+          For me, it is a great honor to welcome you to this great aviation
+          family. We are pilots with dedication, love, and a "Passion for
+          Aviation"®.
+        </quote>
+        <p class="text-main-black/70">
+          At iFly Aeronautical University, we are committed to training
+          professional aviator pilots with the highest quality and excellence in
+          education so that our graduates become the best pilots in Mexico.
+        </p>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <CounterCard
+          client:only="react"
+          value={stat.value}
+          title={stat.title}
+        />
+      ))
+    }
+  </section>
+
+  <section class="bg-our-story text-white relative bg-fixed bg-cover">
+    <div class="absolute bg-main-black/80 w-full h-full z-0"></div>
+    <div class="max-w-3xl mx-auto px-5 py-24 flex items-center z-10 relative">
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase tracking-widest font-bold">About Us</h2>
+        <h3 class="text-4xl lg:text-5xl font-medium">Our Story</h3>
+        <p class="text-lg">
+          iFly Aeronautical University was founded on May 6, 2011, by Captain
+          Julián Esquivel Calvillo in Mérida, Yucatán, with the goal of training
+          the best aviator pilots in Mexico. Operations began with a team of 40
+          people, including directors, administrative staff, instructors,
+          captains, controllers, and maintenance technicians, all committed to
+          improving Mexican aviation.
+        </p>
+        <p class="text-lg">
+          In 2018, iFly received official recognition (RVOE) for the Aviation
+          Management degree, establishing itself as the first Aeronautical
+          University for aviator pilots in Mexico, as well as achieving
+          certification for our Airbus A320 simulator.
+        </p>
+        <p class="text-lg">
+          In December 2020, we renewed and expanded our fleet, acquiring
+          state-of-the-art aircraft directly from the factory in Europe, making
+          us the school with the largest fleet of Pipistrel Virus SW121 aircraft
+          in the Americas.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

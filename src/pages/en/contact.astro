@@ -1,0 +1,357 @@
+---
+import ContactUsHeader from "~/components/ContactUsHeader.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { FaRegMap } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
+import { MdOutlineEmail } from "react-icons/md";
+import studentInHangar from "~/assets/estudiante-de-ifly-en-hangar.webp";
+import {
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+  PHONE_NUMBER,
+  EMAIL_ADDRESS,
+} from "~/consts";
+import GeneralFAQs from "~/components/GeneralFAQs";
+const CONTACT_FORM_WEBHOOK_URL = import.meta.env.CONTACT_FORM_WEBHOOK_URL;
+
+const data = {
+  siteTitle: "Contact - iFly Aeronautical University",
+  siteDescription:
+    "Get in touch with iFly for more information about our programs and services. We are here to help you take off in your aviation career.",
+  headerImage: "/src/assets/avion-de-ifly-sobre-las-nubes.jpg",
+  headerAlt: "iFly airplane above the clouds",
+  title: "Contact Us",
+};
+
+const esData = {
+  acceptTerms:
+    "Acepto los términos y condiciones proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir mensajes de texto de iFly Universidad Aeronáutica.",
+  submit: "Enviar",
+  placeholders: {
+    firstName: "Nombre/s",
+    lastName: "Apellido/s",
+    email: "Email",
+    confirmEmail: "Confirmar email",
+    phone: "Teléfono",
+    comment: "Comentario",
+  },
+};
+
+const enData = {
+  acceptTerms:
+    "I accept the terms and conditions provided by the company. By providing my phone number, I agree to receive text messages from iFly Aeronautical University.",
+  submit: "Submit",
+  placeholders: {
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email",
+    confirmEmail: "Confirm email",
+    phone: "Phone",
+    comment: "Comment",
+  },
+};
+
+const lang = Astro.currentLocale === "en" ? "en" : "es";
+const formData = Astro.currentLocale === "en" ? enData : esData;
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <ContactUsHeader slot="header" data={data} />
+
+  <section class="relative lg:py-60 lg:bg-main-black/5">
+    <div
+      class="max-w-xl lg:max-w-6xl mx-auto text-main-black/90 rounded-2xl lg:shadow-md px-5 py-10 lg:p-20 lg:absolute bottom-24 left-10 right-10 bg-white"
+    >
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-0">
+        <div
+          class="lg:flex-1 flex flex-col gap-10 lg:pr-16 lg:border-r border-main-black/30"
+        >
+          <h2 class="font-medium text-5xl text-main-black/90">Get in Touch</h2>
+          <p class="text-lg text-main-black/70">
+            Are you interested in learning more about our study programs? Do you
+            want to know more about iFly and how we can help you achieve your
+            goals of becoming an aviator pilot? Contact us!
+          </p>
+
+          <ul class="flex flex-col gap-5">
+            <li>
+              <a
+                href="https://maps.app.goo.gl/xnquhkZFTguttGxo8"
+                target="_blank"
+                class="group flex gap-5"
+              >
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-main-blue/80 duration-300"
+                >
+                  <FaRegMap className="text-white size-6" />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Address
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {ADDRESS_LINE_1}
+                    <br />
+                    {ADDRESS_LINE_2}
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href=`tel:${PHONE_NUMBER}` class="group flex gap-5">
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-main-blue/80 duration-300"
+                >
+                  <FaPhone className="text-white size-6" />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Phone
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {PHONE_NUMBER}
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="flex gap-5">
+              <a href=`mailto:${EMAIL_ADDRESS}` class="group flex gap-5">
+                <div
+                  class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-main-blue/80 duration-300"
+                >
+                  <MdOutlineEmail className="text-white size-6" />
+                </div>
+                <div>
+                  <p
+                    class="text-main-black/80 text-2xl font-medium group-hover:text-main-blue duration-300"
+                  >
+                    Email
+                  </p>
+                  <p
+                    class="text-main-black/70 text-lg group-hover:text-main-blue/80 duration-300"
+                  >
+                    {EMAIL_ADDRESS}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:flex-1 lg:pl-16">
+          <form
+            id="form"
+            class="flex flex-col max-w-4xl mx-auto gap-5 my-5 lg:my-0 bg-white rounded-lg shadow-sm"
+          >
+            <div class="flex flex-col lg:flex-row gap-5">
+              <input
+                type="text"
+                name="first-name"
+                placeholder={formData.placeholders.firstName}
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+              <input
+                type="text"
+                name="last-name"
+                placeholder={formData.placeholders.lastName}
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+            </div>
+            <div class="flex flex-col lg:flex-row gap-5">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder={formData.placeholders.email}
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+              <input
+                type="email"
+                name="confirm-email"
+                placeholder="Confirm email"
+                class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder={formData.placeholders.phone}
+                class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+                required
+              />
+            </div>
+
+            <textarea
+              id="more-info"
+              name="more-info"
+              placeholder={formData.placeholders.comment}
+              required
+              class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-40"
+            ></textarea>
+
+            <div class="flex gap-3">
+              <input
+                type="checkbox"
+                name="agree-data-collection"
+                id="agree-data-collection"
+              />
+
+              <label
+                for="agree-data-collection"
+                class="text-gray-500 text-sm lg:text-base"
+              >
+                {formData.acceptTerms}
+              </label>
+            </div>
+            <button
+              id="submit-button"
+              disabled
+              type="submit"
+              class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+              >{formData.submit}</button
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-black/5">
+    <div class="max-w-7xl mx-auto flex justify-center">
+      <GeneralFAQs client:visible lang={lang} />
+    </div>
+  </section>
+
+  <section class="bg-main-black/5">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.313660567794!2d-89.62238082398032!3d21.020132088073378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5677ea05704dd9%3A0x1b8f1df0d8d348b!2siFly%20Universidad%20Aeron%C3%A1utica!5e0!3m2!1sen!2sgt!4v1729229190846!5m2!1sen!2sgt"
+      class="w-full h-[30rem] pt-20"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="bg-main-black/5">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row lg:-space-x-20 -space-y-20 lg:space-y-0 items-center"
+    >
+      <div class="flex-1">
+        <Image
+          src={studentInHangar}
+          alt="Estudiante en hangar de iFly"
+          class="rounded-xl z-10 relative lg:h-[34rem] object-cover"
+        />
+      </div>
+      <div
+        class="flex-1 flex justify-center flex-col gap-5 text-center mx-5 sm:mx-10 lg:mx-0 bg-white border-2 border-main-blue p-5 lg:p-14 rounded-xl z-10"
+      >
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Testimonial
+        </h2>
+        <h3 class="text-lg sm:text-3xl lg:text-5xl">
+          Discover the experience of our students
+        </h3>
+        <quote class="text-main-black/70">
+          "iFly is the family that saw me grow as a professional pilot and
+          helped me achieve one of my greatest dreams. It is a pleasure and an
+          honor for me to have been trained in this great family."
+        </quote>
+        <cite class="text-main-black/90">- Roberto Novelo Cicero (Pilot)</cite>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ CONTACT_FORM_WEBHOOK_URL, lang }}>
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    }
+  });
+
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const form = document.getElementById("form");
+
+    // Check if the contactUs form element exists
+    if (form !== null) {
+      // Add submit event listener to the contactUs form
+      form.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(form);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          form.action = CONTACT_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            if (lang === "en") {
+              window.location.href = "/en/contact-confirmation";
+            } else {
+              window.location.href = "/confirmacion-de-contacto";
+            }
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Form element not found.");
+    }
+  });
+</script>

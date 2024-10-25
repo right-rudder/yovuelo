@@ -1,0 +1,112 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import students from "~/assets/estudiantes-frente-a-hangares-de-ifly.webp";
+import CounterCard from "~/components/CounterCard";
+import stats from "~/data/en/stats";
+import tecnico1 from "~/assets/tecnico-en-mantenimiento-revisando-avion-de-ifly.webp";
+import tecnico2 from "~/assets/tecnico-haciendo-mantenimiento-a-avion-de-ifly.webp";
+import IndexForm from "~/components/IndexForm.astro";
+
+const data = {
+  siteTitle: "Campus - iFly Aeronautical University",
+  siteDescription:
+    "Discover the facilities of iFly Aeronautical University, where you will find the best training and aeronautical education. Our campus has the latest technology and the best facilities for your training.",
+  headerImage: "/src/assets/estudiantes-frente-a-hangares-de-ifly.webp",
+  headerAlt: "iFly students",
+  title: "Our Campus",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section class="bg-main-black/5">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">Campus</h2>
+        <h3 class="text-4xl lg:text-5xl">Our Facilities</h3>
+        <p class="text-main-black/70">
+          iFly Aeronautical University has state-of-the-art facilities where
+          students can take their theoretical courses and simulator training.
+          Additionally, we have three hangars and our own aeronautical workshop
+          that provides daily maintenance to the aircraft.
+        </p>
+        <a href="/en/about/our-story" class="btn-primary">About Us</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-black/5">
+    <div class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4">
+      {
+        stats.map((stat) => (
+          <CounterCard
+            client:only="react"
+            value={stat.value}
+            title={stat.title}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="pb-60 bg-main-black/5">
+    <div class="max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20">
+      <div class="flex-1 relative">
+        <Image
+          src={tecnico1}
+          alt="iFly technician"
+          class="rounded-xl z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover top-0 left-0"
+        />
+        <Image
+          src={tecnico2}
+          alt="iFly technician"
+          class="rounded-xl mt-10 lg:mt-0 z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover bottom-0 right-0"
+        />
+        <div
+          class="hidden lg:block lg:absolute inset-20 border-2 border-main-blue rounded-xl"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <div class="flex-1 flex justify-center flex-col gap-5">
+          <h2 class="uppercase text-main-black/80 tracking-widest">
+            Maintenance Workshop
+          </h2>
+          <h3 class="text-4xl lg:text-5xl">Our Maintenance Workshop</h3>
+          <p class="text-main-black/70">
+            For the safety of our students and instructors who conduct their
+            flight practices daily, we have a dedicated space for aircraft
+            maintenance and inspections.
+          </p>
+          <p class="text-main-black/70">
+            The workshop provides 50, 100, 200, and 1000-hour maintenance
+            services for aircraft in compliance with standards set by the
+            aviation authority as well as company procedures. It is staffed by
+            highly qualified personnel.
+          </p>
+          <a href="/en/careers/maintenance-technician" class="btn-primary">
+            Explore our Maintenance Technician Program
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <IndexForm />
+</BaseLayout>

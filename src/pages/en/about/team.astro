@@ -1,0 +1,27 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import personal from "~/data/personal";
+import TeamMemberCard from "~/components/TeamMemberCard.astro";
+
+const data = {
+  siteTitle: "Our Team - Aviation Instructors and Professionals",
+  siteDescription:
+    "Meet the team of experts at iFly. Instructors with extensive aviation experience, dedicated to providing you with quality training to achieve your professional goals in the aeronautical world.",
+  headerImage: "/src/assets/ifly-personal.jpg",
+  headerAlt: "iFly staff",
+  title: "Meet Our Team",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section class="bg-main-black/5">
+    <div
+      class="max-w-sm lg:max-w-6xl mx-auto px-5 pt-24 pb-12 grid lg:grid-cols-3 gap-x-6"
+    >
+      {personal.map((person) => <TeamMemberCard {...person} />)}
+    </div>
+  </section>
+</BaseLayout>

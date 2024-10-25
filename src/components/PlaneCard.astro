@@ -2,10 +2,14 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { IoIosArrowForward } from "react-icons/io";
+const lang = Astro.currentLocale === "en" ? "en" : "es";
 const { planeData } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
 );
+
+const urlPrefix = lang === "en" ? "/en/fleet/aircraft/" : "/flota/aviones/";
+
 if (!images[planeData.headerImage]) {
   throw new Error(
     `"${planeData.headerImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
@@ -14,7 +18,7 @@ if (!images[planeData.headerImage]) {
 ---
 
 <a
-  href={`/flota/aviones/${planeData.slug}`}
+  href={`${urlPrefix}${planeData.slug}`}
   class="flex flex-col group relative overflow-hidden rounded-xl text-white"
   id={planeData.name}
 >

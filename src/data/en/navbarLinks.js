@@ -50,8 +50,8 @@ export const navbarLinks = [
     name: "About Us",
     submenu: [
       {
-        name: "History",
-        link: "/en/about/history",
+        name: "Our Story",
+        link: "/en/about/our-story",
       },
       {
         name: "Team",

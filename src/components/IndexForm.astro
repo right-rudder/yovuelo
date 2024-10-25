@@ -45,6 +45,7 @@ const enData = {
 };
 
 const data = Astro.currentLocale === "en" ? enData : esData;
+const lang = Astro.currentLocale === "en" ? "en" : "es";
 ---
 
 <section class="py-24 px-5 scroll-my-24 bg-main-blue" id="sign-up-form">
@@ -161,7 +162,7 @@ const data = Astro.currentLocale === "en" ? enData : esData;
   </div>
 </section>
 
-<script define:vars={{ PROGRAM_FORM_WEBHOOK_URL }}>
+<script define:vars={{ PROGRAM_FORM_WEBHOOK_URL, lang }}>
   const checkbox = document.getElementById("agree-data-collection");
   const submitButton = document.getElementById("submit-button");
 
@@ -222,8 +223,11 @@ const data = Astro.currentLocale === "en" ? enData : esData;
         xhr.onload = function () {
           // Check if the request was successful (status 200)
           if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = "/confirmacion-de-contacto";
+            if (lang === "en") {
+              window.location.href = "/en/contact-confirmation";
+            } else {
+              window.location.href = "/confirmacion-de-contacto";
+            }
           } else {
             // Handle errors if any
             console.error("Form submission failed:", xhr.statusText);
