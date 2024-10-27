@@ -11,7 +11,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://www.ifly.com.mx/",
+  site: "http://www.yovuelo.com/",
   integrations: [mdx(), sitemap(), react(), tailwind(), partytown()],
   redirects: {
     "/aviones": "/flota/aviones",
