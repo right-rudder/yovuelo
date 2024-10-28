@@ -42,8 +42,8 @@ const enData = {
   },
 };
 
-const lang = Astro.currentLocale === "en" ? "en" : "es";
-const data = Astro.currentLocale === "en" ? enData : esData;
+const lang = Astro.currentLocale === "es" ? "es" : "en";
+const data = Astro.currentLocale === "es" ? esData : enData;
 ---
 
 <section class="py-24 px-5 lg:scroll-my-80 bg-main-blue" id="sign-up-form">

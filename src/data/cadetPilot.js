@@ -1,47 +1,47 @@
 const cadetPilot = {
   data: {
-    title: "Cadet Pilot (Piloto Privado)",
+    title: "Cadet Pilot (Private Pilot)",
     description:
-      "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
-    url: "/carreras/cadet-pilot",
+      "The Cadet Pilot program at iFly prepares you to become a private pilot with professional training. Gain the necessary skills to fly and enjoy civil aviation on a personal level.",
+    url: "/careers/cadet-pilot",
     slug: "cadet-pilot",
-    siteTitle: "Cadet Pilot - Carrera de Formación de Pilotos Privados",
+    siteTitle: "Cadet Pilot - Private Pilot Training Program",
     siteDescription:
-      "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+      "The Cadet Pilot program at iFly prepares you to become a private pilot with professional training. Gain the necessary skills to fly and enjoy civil aviation on a personal level.",
 
     intro: [
-      "Esta carrera te formará como piloto aviador privado de ala fija profesional con bases firmes de conocimientos teóricos y prácticos para operar una aeronave de manera eficiente y segura con fines privados, de transporte o recreativos siguiendo los reglamentos y manuales oficiales.",
+      "This program will train you as a professional fixed-wing private pilot with a solid foundation of theoretical and practical knowledge to operate an aircraft efficiently and safely for private, transport, or recreational purposes, following official regulations and manuals.",
     ],
     headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-3.webp",
-    headerAlt: "Piloto en cabina de avión de iFly",
+    headerAlt: "Pilot in iFly airplane cockpit",
     primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-4.jpg",
-    primaryAlt: "Piloto en cabina de avión de iFly",
+    primaryAlt: "Pilot in iFly airplane cockpit",
     prerequisites: [
-      "Ser mexicano/a",
-      "Mayor de 18 años",
-      "Comprobante de domicilio",
-      "Acta de nacimiento",
+      "Be Mexican",
+      "Over 18 years old",
+      "Proof of address",
+      "Birth certificate",
       "CURP",
-      "INE / Pasaporte (vigente)",
-      "Certificado de estudios de bachillerato",
-      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
-      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
+      "Valid ID (INE/Passport)",
+      "High school diploma",
+      "6 passport-sized color photos and 6 infant-sized color photos (with white shirt and black tie)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Psychophysical aptitude certificate Group I issued by the General Directorate of Transportation Protection and Preventive Medicine (SCT)</a>",
     ],
     faqs: [
       {
-        question: "¿Cuál es la duración de la carrera?",
+        question: "How long is the program?",
         answer:
-          "<p>4 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
+          "<p>4 months of theoretical coursework and, after completing the theory course:</p><ul className='list-disc ml-5'><li>41 flight hours</li><li>10 simulator hours</li></ul>",
       },
       {
-        question: "¿Qué incluye la carrera?",
+        question: "What does the program include?",
         answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>41 horas de vuelo</li><li>10 horas de simulador</li></ul>",
+          "<ul className='list-disc ml-5'><li>Theory</li><li>41 flight hours</li><li>10 simulator hours</li></ul>",
       },
       {
-        question: "¿Qué credencial obtengo al finalizar la carrera?",
+        question: "What credential will I obtain after completing the program?",
         answer:
-          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li></ul>",
+          "<ul className='list-disc ml-5'><li>Fixed-wing commercial pilot license</li></ul>",
       },
     ],
   },

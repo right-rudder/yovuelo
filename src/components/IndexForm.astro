@@ -1,8 +1,8 @@
 ---
-import esPrograms from "../data/programs.js";
-import enPrograms from "../data/en/programs.js";
+import esPrograms from "../data/es/programs.js";
+import enPrograms from "../data/programs.js";
 const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
-const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
+const programs = Astro.currentLocale === "es" ? esPrograms : enPrograms;
 
 const esData = {
   title: "Toma el primer paso...",
@@ -44,8 +44,8 @@ const enData = {
   },
 };
 
-const data = Astro.currentLocale === "en" ? enData : esData;
-const lang = Astro.currentLocale === "en" ? "en" : "es";
+const data = Astro.currentLocale === "es" ? esData : enData;
+const lang = Astro.currentLocale === "es" ? "es" : "en";
 ---
 
 <section class="py-24 px-5 scroll-my-24 bg-main-blue" id="sign-up-form">

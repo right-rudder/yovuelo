@@ -1,46 +1,46 @@
 const proPilot = {
   data: {
-    title: "Pro Pilot (Técnico Superior)",
+    title: "Pro Pilot (Higher Technician)",
     description:
-      "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
-    url: "/carreras/pro-pilot",
+      "Become a Professional Pilot with iFly's Pro Pilot program. Obtain your Fixed-Wing Commercial Pilot License and a Higher University Technician degree in Aviation.",
+    url: "/careers/pro-pilot",
     slug: "pro-pilot",
-    siteTitle: "Pro Pilot - Técnico Superior Universitario en Aviación",
+    siteTitle: "Pro Pilot - Higher University Technician in Aviation",
     siteDescription:
-      "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
+      "Become a Professional Pilot with iFly's Pro Pilot program. Obtain your Fixed-Wing Commercial Pilot License and a Higher University Technician degree in Aviation.",
     intro: [
-      "Esta carrera te formará como piloto aviador comercial de ala fija profesional que se guía por estándares altos y conocimientos precisos y actuales para operar una aeronave de manera eficiente y segura con fines privados o comerciales de acuerdo con los reglamentos oficiales vigentes.",
+      "This program will train you as a professional fixed-wing commercial pilot, guided by high standards and precise, up-to-date knowledge to operate an aircraft efficiently and safely for private or commercial purposes according to official regulations.",
     ],
     headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
-    headerAlt: "Piloto en cabina de avión de iFly",
+    headerAlt: "Pilot in iFly airplane cockpit",
     primaryImage: "/src/assets/pilotos-de-avion-en-cabina.jpg",
-    primaryAlt: "Piotos de avión en cabina preparándose para despegar",
+    primaryAlt: "Airplane pilots in cockpit preparing for takeoff",
     prerequisites: [
-      "Ser mexicano/a",
-      "Mayor de 18 años",
-      "Comprobante de domicilio",
-      "Acta de nacimiento",
+      "Be Mexican",
+      "Over 18 years old",
+      "Proof of address",
+      "Birth certificate",
       "CURP",
-      "INE / Pasaporte (vigente)",
-      "Certificado de estudios de bachillerato",
-      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
-      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
+      "Valid ID (INE/Passport)",
+      "High school diploma",
+      "6 passport-sized color photos and 6 infant-sized color photos (with white shirt and black tie)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Psychophysical aptitude certificate Group I issued by the General Directorate of Transportation Protection and Preventive Medicine (SCT)</a>",
     ],
     faqs: [
       {
-        question: "¿Cuál es la duración de la carrera?",
+        question: "How long is the program?",
         answer:
-          "<p>4 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>115 horas de vuelo visuales</li><li>15 horas de vuelo instrumentales</li><li>11 horas de vuelo bimotor</li><li>40 horas de simulador</li></ul>",
+          "<p>4 months of theoretical coursework and, after completing the theory course:</p><ul className='list-disc ml-5'><li>115 visual flight hours</li><li>15 instrument flight hours</li><li>11 multi-engine flight hours</li><li>40 simulator hours</li></ul>",
       },
       {
-        question: "¿Qué incluye la carrera?",
+        question: "What does the program include?",
         answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>141 horas de vuelo</li><li>40 horas de simulador</li></ul>",
+          "<ul className='list-disc ml-5'><li>Theory</li><li>141 flight hours</li><li>40 simulator hours</li></ul>",
       },
       {
-        question: "¿Qué credenciales obtengo al finalizar la carrera?",
+        question: "What credentials do I receive after completing the program?",
         answer:
-          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li><li>Título técnico superior universitario en piloto aviador comercial</li><li>Cédula profesional de piloto aviador comercial</li></ul>",
+          "<ul className='list-disc ml-5'><li>Fixed-wing commercial pilot license</li><li>Higher University Technician degree in commercial aviation</li><li>Professional license for commercial pilot aviator</li></ul>",
       },
     ],
   },

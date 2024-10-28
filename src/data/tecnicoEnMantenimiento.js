@@ -1,49 +1,49 @@
 const tecnicoEnMantenimiento = {
   data: {
-    title: "Técnico en Mantenimiento",
+    title: "Maintenance Technician",
     description:
-      "Fórmate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
-    url: "/carreras/tecnico-en-mantenimiento",
-    slug: "tecnico-en-mantenimiento",
+      "Train as an Aeronautical Maintenance Technician at iFly. Learn to maintain and repair aircraft following the highest safety standards.",
+    url: "/careers/maintenance-technician",
+    slug: "maintenance-technician",
     siteTitle:
-      "Técnico en Mantenimiento Aeronáutico - iFly Universidad Aeronáutica",
+      "Aeronautical Maintenance Technician - iFly Aeronautical University",
     siteDescription:
-      "Capacítate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
+      "Train as an Aeronautical Maintenance Technician at iFly. Learn to maintain and repair aircraft following the highest safety standards.",
     intro: [
-      "En esta carrera desarrollarás técnicas y habilidades, así como adquisición de conocimientos para desempeñar como técnico en mantenimiento de aeronaves ligeras de motor recíproco. La carrera te permitirá desempeñar como mecánico de aeronaves logrando mantener los estándares de seguridad y el óptimo funcionamiento de las aeronaves en relación con su tren motriz, estructura, sistemas y aviónica bajo los lineamientos y regulaciones aplicables.",
+      "In this program, you will develop techniques, skills, and acquire knowledge to become a light aircraft maintenance technician for reciprocating engines. The course will prepare you to work as an aircraft mechanic, ensuring aircraft safety standards and optimal performance regarding propulsion systems, structure, systems, and avionics in compliance with applicable regulations.",
     ],
     headerImage:
       "/src/assets/tecnico-de-mantenimiento-arreglando-un-cessna.jpg",
-    headerAlt: "Técnico de mantenimiento arreglando un Cessna",
+    headerAlt: "Maintenance technician repairing a Cessna",
     primaryImage:
       "/src/assets/tecnicos-de-mantenimiento-empujando-avion-hacia-el-hangar.jpg",
-    primaryAlt: "Técnicos de mantenimiento empujando avión hacia el hangar",
+    primaryAlt: "Maintenance technicians pushing an aircraft into the hangar",
     prerequisites: [
-      "Ser mexicano/a",
-      "Mayor de 18 años",
-      "Comprobante de domicilio",
-      "Acta de nacimiento",
+      "Be Mexican",
+      "Over 18 years old",
+      "Proof of address",
+      "Birth certificate",
       "CURP",
-      "INE / Pasaporte (vigente)",
-      "Certificado de estudios de bachillerato",
-      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
-      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
+      "Valid ID (INE/Passport)",
+      "High school diploma",
+      "6 passport-sized color photos and 6 infant-sized color photos (with white shirt and black tie)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Psychophysical aptitude certificate Group I issued by the General Directorate of Transportation Protection and Preventive Medicine (SCT)</a>",
     ],
     faqs: [
       {
-        question: "¿Cuál es la duración de la carrera?",
+        question: "How long is the program?",
         answer:
-          "<p>8 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>Prácticas profesionales con empresas aeronáuticas</li></ul>",
+          "<p>8 months of theoretical coursework and, after completing the theory course:</p><ul className='list-disc ml-5'><li>Professional internships with aeronautical companies</li></ul>",
       },
       {
-        question: "¿Qué incluye la carrera?",
+        question: "What does the program include?",
         answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>Prácticas profesionales con empresas aeronáuticas</li></ul>",
+          "<ul className='list-disc ml-5'><li>Theory</li><li>Professional internships with aeronautical companies</li></ul>",
       },
       {
-        question: "¿Qué credencial obtengo al finalizar la carrera?",
+        question: "What credential do I receive after completing the program?",
         answer:
-          "<ul className='list-disc ml-5'><li>Licencia de técnico en mantenimiento aeronáutico</li></ul>",
+          "<ul className='list-disc ml-5'><li>Aeronautical maintenance technician license</li></ul>",
       },
     ],
   },

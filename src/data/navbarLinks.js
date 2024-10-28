@@ -1,65 +1,65 @@
 export const navbarLinks = [
   {
-    name: "¿Por qué ser piloto?",
-    link: "/por-que-ser-piloto",
+    name: "Why Become a Pilot?",
+    link: "/why-become-a-pilot",
     submenu: [],
   },
   {
-    name: "Carreras",
+    name: "Careers",
     submenu: [
       {
-        name: "Aviation Management (Licenciatura)",
-        link: "/carreras/aviation-management",
+        name: "Aviation Management (Bachelor's Degree)",
+        link: "/careers/aviation-management",
       },
       {
-        name: "Pro Pilot (TSU)",
-        link: "/carreras/pro-pilot",
+        name: "Pro Pilot (Associate's Degree)",
+        link: "/careers/pro-pilot",
       },
       {
-        name: "Cadet Pilot (Piloto Privado)",
-        link: "/carreras/cadet-pilot",
+        name: "Cadet Pilot (Private Pilot)",
+        link: "/careers/cadet-pilot",
       },
       {
-        name: "Sobrecargo de Aviación",
-        link: "/carreras/sobrecargo-de-aviacion",
+        name: "Flight Attendant",
+        link: "/careers/flight-attendant",
       },
       {
-        name: "Oficial de Operaciones (Dispatcher)",
-        link: "/carreras/oficial-de-operaciones",
+        name: "Operations Officer (Dispatcher)",
+        link: "/careers/operations-officer",
       },
       {
-        name: "Técnico en Mantenimiento",
-        link: "/carreras/tecnico-en-mantenimiento",
+        name: "Maintenance Technician",
+        link: "/careers/maintenance-technician",
       },
     ],
   },
   {
-    name: "Flota",
+    name: "Fleet",
     submenu: [
       {
-        name: "Aviones",
-        link: "/flota/aviones",
+        name: "Aircraft",
+        link: "/fleet/aircraft",
       },
       {
-        name: "Simuladores",
-        link: "/flota/simuladores",
+        name: "Simulators",
+        link: "/fleet/simulators",
       },
     ],
   },
   {
-    name: "¿Quiénes somos?",
+    name: "About Us",
     submenu: [
       {
-        name: "Historia",
-        link: "/nosotros/historia",
+        name: "Our Story",
+        link: "/about/our-story",
       },
       {
-        name: "Equipo",
-        link: "/nosotros/equipo",
+        name: "Team",
+        link: "/about/team",
       },
       {
         name: "Campus",
-        link: "/nosotros/campus",
+        link: "/about/campus",
       },
       {
         name: "Blog",
@@ -68,8 +68,8 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Contacto",
-    link: "/contacto",
+    name: "Contact Us",
+    link: "/contact",
     submenu: [],
   },
 ];

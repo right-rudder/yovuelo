@@ -12,7 +12,7 @@ const enData = {
   secondaryButtonText: "View Details",
 };
 
-const data = Astro.currentLocale === "en" ? enData : esData;
+const data = Astro.currentLocale === "es" ? esData : enData;
 
 const { imagePath, title, url, description } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(

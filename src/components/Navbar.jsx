@@ -1,5 +1,5 @@
-import { navbarLinks as esNavbarLinks } from "../data/navbarLinks.js";
-import { navbarLinks as enNavbarLinks } from "../data/en/navbarLinks.js";
+import { navbarLinks as esNavbarLinks } from "../data/es/navbarLinks.js";
+import { navbarLinks as enNavbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
@@ -17,7 +17,7 @@ import {
 } from "../consts.ts";
 
 const Navbar = ({ pathname, lang }) => {
-  const navbarLinks = lang === "en" ? enNavbarLinks : esNavbarLinks;
+  const navbarLinks = lang === "es" ? esNavbarLinks : enNavbarLinks;
   const [openMobile, setOpenMobile] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
@@ -93,7 +93,7 @@ const Navbar = ({ pathname, lang }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <a href={`${lang === "en" ? "/en" : "/"}`}>
+              <a href={`${lang === "es" ? "/es" : "/"}`}>
                 <img
                   src={yoVueloLogoBicolor.src}
                   alt="iFly logo"
@@ -196,9 +196,9 @@ const Navbar = ({ pathname, lang }) => {
                 </ul>
                 <a
                   className="bg-main-blue font-bold text-main-black py-4 px-5 rounded-full duration-300 hover:text-white hover:bg-main-black"
-                  href="#"
+                  href={`${lang === "es" ? "/" : "/es"}`}
                 >
-                  Es
+                  {`${lang === "es" ? "En" : "Es"}`}
                 </a>
               </div>
             </div>
@@ -277,7 +277,7 @@ const Navbar = ({ pathname, lang }) => {
         </div>
 
         <a
-          href={`${lang === "en" ? "/en" : "/"}`}
+          href={`${lang === "es" ? "/es" : "/"}`}
           className="text-white px-10 w-fit block leading-none uppercase font-semibold text-lg z-40 relative"
         >
           <img src={whiteLogo.src} alt="iFly logo" className="w-32" />

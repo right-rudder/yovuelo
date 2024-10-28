@@ -34,8 +34,8 @@ const enData = {
     "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
 };
 
-const lang = Astro.currentLocale === "en" ? "en" : "es";
-const info = Astro.currentLocale === "en" ? enData : esData;
+const lang = Astro.currentLocale === "es" ? "es" : "en";
+const info = Astro.currentLocale === "es" ? esData : enData;
 ---
 
 <section class="py-12 px-5 bg-main-black/10 lg:pb-60">

@@ -1,48 +1,48 @@
 const sobrecargoDeAviacion = {
   data: {
-    title: "Sobrecargo de Aviación",
+    title: "Aviation Flight Attendant",
     description:
-      "Fórmate como Sobrecargo de Aviación en iFly. Aprende todos los procedimientos y normas de seguridad para ser un sobrecargo certificado, con reconocimiento nacional e internacional.",
-    url: "/carreras/sobrecargo-de-aviacion",
-    slug: "sobrecargo-de-aviacion",
-    siteTitle: "Curso de Sobrecargo de Aviación - iFly Universidad Aeronáutica",
+      "Train as a Flight Attendant at iFly. Learn all safety procedures and regulations to become a certified flight attendant with both national and international recognition.",
+    url: "/careers/flight-attendant",
+    slug: "flight-attendant",
+    siteTitle: "Flight Attendant Course - iFly Aeronautical University",
     siteDescription:
-      "Fórmate como Sobrecargo de Aviación en iFly. Aprende todos los procedimientos y normas de seguridad para ser un sobrecargo certificado, con reconocimiento nacional e internacional.",
+      "Train as a Flight Attendant at iFly. Learn all safety procedures and regulations to become a certified flight attendant with both national and international recognition.",
     price: "$1350",
     intro: [
-      "En esta carrera obtendrás los conocimientos y fundamentos para desempeñar como sobrecargo de aviación. La carrera te enseñará a desempeñar funciones como tripulante de cabina logrando mantener los estándares de seguridad y confort de los pasajeros en ámbito nacional e internacional bajo los lineamientos y regulaciones aplicables de forma eficiente y proactiva.",
+      "In this program, you will acquire the knowledge and skills needed to work as a flight attendant. You will learn to fulfill your cabin crew duties by maintaining high safety and comfort standards for passengers in both national and international environments, following applicable regulations proactively and efficiently.",
     ],
     headerImage: "/src/assets/piloto-con-sobrecargos-de-aviacion.jpg",
-    headerAlt: "Piloto con sobrecargos de aviación",
+    headerAlt: "Pilot with aviation flight attendants",
     primaryImage:
       "/src/assets/sobrecargo-de-aviacion-frente-a-un-pipistrel.jpg",
-    primaryAlt: "Sobrecargo de aviación frente a un Pipistrel",
+    primaryAlt: "Flight attendant in front of a Pipistrel",
     prerequisites: [
-      "Ser mexicano/a",
-      "Mayor de 18 años",
-      "Comprobante de domicilio",
-      "Acta de nacimiento",
+      "Be Mexican",
+      "Over 18 years old",
+      "Proof of address",
+      "Birth certificate",
       "CURP",
-      "INE / Pasaporte (vigente)",
-      "Certificado de estudios de bachillerato",
-      "6 fotografías tamaño infantil a color y 6 fotografías tamaño pasaporte a color (con camisa blanca y corbata negra)",
-      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Constancia de aptitud psicofísica grupo I expedida por la Dirección General de Protección y Medicina Preventiva del Transporte (SCT)</a>",
+      "Valid ID (INE/Passport)",
+      "High school diploma",
+      "6 passport-sized color photos and 6 infant-sized color photos (with white shirt and black tie)",
+      "<a href='http://www.sct.gob.mx/index.php?id=2306' target='_blank' class='hover:text-main-blue duration-300'>Psychophysical aptitude certificate Group I issued by the General Directorate of Transportation Protection and Preventive Medicine (SCT)</a>",
     ],
     faqs: [
       {
-        question: "¿Cuál es la duración de la carrera?",
+        question: "How long is the program?",
         answer:
-          "<p>3 meses de curso teórico y, al finalizar el curso teórico:</p><ul className='list-disc ml-5'><li>Practica de Ditching</li><li>Practica de Extinción de Incendios</li><li>Curso de Primeros Auxilios</li><li>Curso Aeromédico</li></ul>",
+          "<p>3 months of theoretical coursework and, after completing the theory course:</p><ul className='list-disc ml-5'><li>Ditching practice</li><li>Fire Extinguishing practice</li><li>First Aid Course</li><li>Aeromedical Course</li></ul>",
       },
       {
-        question: "¿Qué incluye la carrera?",
+        question: "What does the program include?",
         answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>Practica de Ditching</li><li>Practica de Extinción de Incendios</li><li>Curso de Primeros Auxilios</li><li>Curso Aeromédico</li></ul>",
+          "<ul className='list-disc ml-5'><li>Theory</li><li>Ditching practice</li><li>Fire Extinguishing practice</li><li>First Aid Course</li><li>Aeromedical Course</li></ul>",
       },
       {
-        question: "¿Qué credencial obtengo al finalizar la carrera?",
+        question: "What credential do I receive after completing the program?",
         answer:
-          "<ul className='list-disc ml-5'><li>Licencia de sobrecargo de aviación</li></ul>",
+          "<ul className='list-disc ml-5'><li>Flight Attendant License</li></ul>",
       },
     ],
   },

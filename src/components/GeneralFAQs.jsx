@@ -82,7 +82,7 @@ const GeneralFAQs = ({ lang }) => {
         FAQ's
       </h2>
       <h3 className="text-4xl lg:text-6xl mx-auto text-center mb-5">
-        {lang === "en" ? "Frequently Asked Questions" : "Preguntas Frecuentes"}
+        {lang === "es" ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
       </h3>
       <div className="flex flex-col gap-5 w-full">
         {faqs.map((faq, index) => (
