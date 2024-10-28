@@ -9,7 +9,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 import partytown from "@astrojs/partytown";
 
-// https://astro.build/config
 export default defineConfig({
   site: "http://www.yovuelo.com/",
   integrations: [mdx(), sitemap(), react(), tailwind(), partytown()],
@@ -25,8 +24,8 @@ export default defineConfig({
     "/pro-pilot": "/carreras/pro-pilot",
   },
   i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
+    defaultLocale: "en",
+    locales: ["en", "es"],
   },
   vite: {
     resolve: {

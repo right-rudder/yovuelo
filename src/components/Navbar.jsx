@@ -6,6 +6,7 @@ import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import blueLogo from "../assets/ifly-logo-azul.png";
 import whiteLogo from "../assets/ifly-logo-blanco.png";
+import yoVueloLogoBicolor from "../assets/yovuelo-logo-bicolor.png";
 
 import {
   FACEBOOK_URL,
@@ -83,21 +84,23 @@ const Navbar = ({ pathname, lang }) => {
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
         className={`${
-          navBar || openMobile
-            ? "bg-main-black/80 backdrop-blur border-main-black/80"
-            : "bg-transparent border-white/20"
-        } duration-300`}
+          navBar || openMobile ? "backdrop-blur" : ""
+        } duration-300 bg-white shadow-md`}
       >
         <div className="px-5 max-w-7xl mx-auto ">
           <div
-            className={`lg:h-28 relative flex h-20 items-center justify-between transition-all`}
+            className={`lg:h-32 relative flex h-20 items-center justify-between transition-all`}
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
               <a href={`${lang === "en" ? "/en" : "/"}`}>
-                <img src={blueLogo.src} alt="iFly logo" className="w-36" />
+                <img
+                  src={yoVueloLogoBicolor.src}
+                  alt="iFly logo"
+                  className="w-36"
+                />
               </a>
-              <div className="hidden lg:block">
+              <div className="hidden lg:flex gap-8 items-center">
                 <ul className="flex gap-5 xl:gap-10 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
@@ -113,12 +116,12 @@ const Navbar = ({ pathname, lang }) => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-white font-semibold text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap group-last:btn-primary group-last:hover:no-underline group-last:px-10"
+                          className="text-main-black font-semibold text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap group-last:btn-tertiary group-last:hover:no-underline group-last:px-10"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-semibold cursor-default text-white text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap">
+                        <span className="font-semibold cursor-default text-main-black text-lg duration-300 hover:underline decoration-main-blue decoration-2 underline-offset-[10px] py-12 border-main-blue whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -191,13 +194,19 @@ const Navbar = ({ pathname, lang }) => {
                     </li>
                   ))}
                 </ul>
+                <a
+                  className="bg-main-blue font-bold text-main-black py-4 px-5 rounded-full duration-300 hover:text-white hover:bg-main-black"
+                  href="#"
+                >
+                  Es
+                </a>
               </div>
             </div>
 
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
-                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
+                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-main-black"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={handleHamburgerClick}

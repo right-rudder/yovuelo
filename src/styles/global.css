@@ -9,6 +9,9 @@
   .btn-secondary {
     @apply block text-center font-bold py-4 px-10 bg-transparent w-fit border-white border text-white rounded-full duration-300 hover:bg-white/30;
   }
+  .btn-tertiary {
+    @apply block text-center font-bold py-4 px-10 bg-main-black w-fit text-white rounded-full duration-300 hover:bg-main-black/90 my-auto;
+  }
 }
 
 body {
