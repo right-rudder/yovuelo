@@ -1,0 +1,127 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+const headerData = {
+  title: "Privacy Policy",
+  headerImage: "/src/assets/sombrero-de-piloto.webp",
+  headerAlt: "Pilot hat",
+};
+---
+
+<BaseLayout
+  siteTitle="Aviso de Privacidad - iFly Universidad Aeronáutica"
+  siteDescription="Consulta nuestro Aviso de Privacidad para conocer cómo protegemos y manejamos tu información personal. Garantizamos la confidencialidad y el uso seguro de tus datos conforme a la normativa vigente"
+>
+  <Header slot="header" data={headerData} />
+
+  <div class="p-5 prose-xl">
+    <section class="flex flex-col items-center">
+      <div class="w-4/5 lg:w-3/5 py-10">
+        <h2>PRIVACY NOTICE</h2>
+        <p>
+          iFly Universidad Aeronáutica (“The Responsible Party”), with an
+          address at Calle 34 Interior No. 215-C, between 7 Av. Alfredo Barrera
+          and Calle 5C, Colonia Pensiones, C.P. 97219 Mérida, Yucatán, in
+          compliance with the Federal Law on the Protection of Personal Data
+          Held by Private Parties, its Regulations, and other applicable
+          provisions (hereinafter the “Law”), informs you that it is responsible
+          for collecting your personal data, the use given to them, and their
+          protection. This Privacy Notice is made available to you for that
+          purpose:
+        </p>
+
+        <h3>Information to be Collected</h3>
+        <p>
+          The data you provide as the data owner will be handled according to
+          the principles established by the Law (lawfulness, consent,
+          information, quality, purpose, loyalty, proportionality, and
+          responsibility).
+        </p>
+
+        <h4>
+          For the purposes indicated in this Privacy Notice, we will use the
+          following personal data:
+        </h4>
+
+        <h5>Contact Personal Data</h5>
+        <ul>
+          <li>Full Name</li>
+          <li>Email Address</li>
+          <li>Landline or Mobile Phone Number</li>
+        </ul>
+        <h5>Purposes of Processing Your Personal Data:</h5>
+        <ul>
+          <li>
+            To provide quotes for our services/products according to your needs.
+          </li>
+          <li>To conduct a statistical analysis.</li>
+          <li>
+            To send you information about promotions, personalized experiences,
+            campaigns, and brand services.
+          </li>
+          <li>
+            To create profiles based on the user's interests and preferences.
+          </li>
+        </ul>
+
+        <h3>Transfer of Your Personal Data</h3>
+        <p>
+          We inform you that your personal data will not be transferred or
+          processed by individuals or entities outside of those that form part
+          of the Responsible Party.
+        </p>
+
+        <h4>Exercising Your ARCO Rights</h4>
+        <p>
+          At any time, you have the right to ACCESS the personal data we possess
+          and details of its processing, as well as to RECTIFY it if it is
+          inaccurate or request its CANCELLATION if you consider it to be
+          excessive or unnecessary for the purposes that justified its
+          collection, or OBJECT to its processing. This can be done through a
+          free-form written request that complies with the requirements
+          established by the Law. If you need information regarding this
+          request, you may contact us by sending an email to:
+          contacto@ifly.com.mx
+        </p>
+        <p>
+          Once your request is received, we will inform you of the determination
+          made within the timeframe established by the Law and, if applicable,
+          it will be effective within the timeframe indicated by the same.
+        </p>
+        <p>
+          You can revoke the consent that, where applicable, you have given us
+          for processing your personal data. To revoke your consent, you must
+          submit a request under the same terms as the one for exercising your
+          ARCO Rights.
+        </p>
+
+        <h4>Limiting the Use and Disclosure of Your Data</h4>
+        <p>
+          The Responsible Party is committed to safeguarding your personal data
+          with strict physical, technical, and administrative security measures,
+          implemented according to the Regulations of the Federal Law on the
+          Protection of Personal Data Held by Private Parties and other
+          applicable legal provisions, to protect said personal data against any
+          damage, loss, alteration, destruction, unauthorized use, access, or
+          processing. Above all, we aim to ensure the confidentiality of the
+          data and minimize any risk or vulnerability that may arise.
+        </p>
+
+        <h4>Use of Cookies</h4>
+        <p>
+          We inform you that our websites use cookies, through which it is
+          possible to monitor your behavior as an Internet user, providing you
+          with a better service and user experience while navigating our
+          website. The personal data obtained from these tracking technologies
+          include browsing time, duration on our website, and sections visited.
+        </p>
+
+        <h4>Changes to the Privacy Notice</h4>
+        <p>
+          This Privacy Notice may be modified in the future. In any case, any
+          modification will be communicated to you via email notification.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

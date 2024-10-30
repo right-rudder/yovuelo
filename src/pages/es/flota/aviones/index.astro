@@ -1,0 +1,42 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import PlaneCard from "~/components/PlaneCard.astro";
+import aviones from "~/data/aviones";
+
+const data = {
+  siteTitle: "Nuestra Flota de Aviones - iFly Universidad Aeronáutica",
+  siteDescription:
+    "Descubre la flota de aviones de iFly para formación de pilotos. Volarás en aeronaves modernas y seguras, diseñadas para ofrecer la mejor experiencia educativa y operativa.",
+  headerImage: "/src/assets/flota.webp",
+  headerAlt: "Flota de iFly",
+  title: "Nuestra Flota de Aviones",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div class="max-w-7xl mx-auto px-5 py-24">
+      <div class="max-w-4xl flex flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          La flota de iFly
+        </h2>
+        <h3 class="lg:text-5xl">Explora nuestra flota de aviones</h3>
+        <p class="text-main-black/70">
+          En iFly contamos con una flota de aviones moderna y segura, diseñada
+          para ofrecer la mejor experiencia educativa y operativa a nuestros
+          estudiantes. Nuestros aviones están equipados con la última tecnología
+          y cumplen con los más altos estándares de seguridad.
+        </p>
+      </div>
+
+      <div
+        class="grid gap-8 mt-5 lg:grid-cols-2 xl:grid-cols-3 max-w-lg lg:max-w-none mx-auto"
+      >
+        {aviones.map((plane) => <PlaneCard planeData={plane.data} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

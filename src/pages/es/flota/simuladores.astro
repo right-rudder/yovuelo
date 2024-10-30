@@ -1,0 +1,201 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import cr12 from "~/assets/simulador-cr-12.jpg";
+import cat2 from "~/assets/simulador-pfc-cat-2.jpg";
+import a320 from "~/assets/simulador-airbus-a320.jpg";
+import solo from "~/assets/simulador-c-172-182.webp";
+import xalpha from "~/assets/simulador-x-alpha-200.webp";
+
+const data = {
+  siteTitle:
+    "Simuladores de Vuelo - Entrenamiento Avanzado para Pilotos - iFly Universidad Aeronáutica",
+  siteDescription:
+    "Entrena en simuladores de vuelo de última generación en iFly. Obtén una formación realista y segura para desarrollar tus habilidades como piloto aviador en diferentes situaciones de vuelo.",
+  headerImage: "/src/assets/simulador-airbus-a320.jpg",
+  headerAlt: "Estudiantes de iFly recibiendo medalla",
+  title: "Simuladores de Vuelo",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          Simulador CR-12
+        </h2>
+        <p class="text-main-black/70">
+          Somos la única universidad del sureste con autorización ante la
+          Agencia Federal de Aviación Civil para la certificación de tu examen
+          de titulación ante el Centro Internacional de Adiestramiento de
+          Aviación Civil y por la Federal Aviation Administration de Estados
+          Unidos como un entrenador avanzado.
+        </p>
+        <p class="text-main-black/70">
+          Puede ser operado como aeronave monomotor y multimotor en condiciones
+          de vuelo visual o condiciones por instrumentos, el instructor podrá
+          monitorear el progreso de la sesión y hacer una retroalimentación del
+          alumno sobre su desempeño de las maniobras realizadas en la sesión.
+        </p>
+        <a href="/contacto" class="btn-primary">Agenda una visita</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={cr12}
+          alt="Simulador CR-12"
+          class="rounded-xl z-10 relative h-96 object-cover w-[40rem]"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase tracking-widest text-2xl text-main-black/80">
+          Simulador PFC – CAT II
+        </h2>
+        <p class="">
+          El CAT II cuenta con la Certificación de la Federal Aviation
+          Administration de los Estados Unidos y la Agencia Federal de Aviación
+          Civil en México.
+        </p>
+        <p class="">
+          El entrenador fabricado por Precision Flight Control CAT II permite
+          simular el vuelo equivalente a una aeronave monomotor o bimotor de
+          baja velocidad con lo que nuestros alumnos podrán comenzar sus
+          prácticas bajo la supervisión y retroalimentación de instructores
+          especializados.
+        </p>
+        <a href="/contacto" class="btn-secondary">Agenda una visita</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={cat2}
+          alt="Simulador PFC – CAT II"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-white translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          SIMULADOR SINTÉTICO DE A320
+        </h2>
+        <p class="text-main-black/70">
+          Es el mejor entrenador en su tipo ya que cuenta con un sistema visual
+          tridimensional para que los pilotos puedan tener un ambiente sumamente
+          real durante su adiestramiento, además permite entender de manera
+          concisa el vuelo automatizado, la cabina de cristal y la simulación
+          exacta de los sistemas del A320 en ambas posiciones.
+        </p>
+        <p class="text-main-black/70">
+          Además contamos con cursos introductorios al simulador A320 que se
+          pueden tomar en parejas, al final de tu curso como Pro Pilot podrás
+          vivir la experiencia de volar un avión comercial.
+        </p>
+        <a href="/contacto" class="btn-primary">Agenda una visita</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={a320}
+          alt="Simulador Sintético De A320"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase tracking-widest text-2xl text-main-black/80">
+          Simulador SOLO C-182RG
+        </h2>
+        <p class="">
+          ¡Todo en uno! Cessna Flight Deck. El entrenamiento de vuelo nunca
+          había sido tan hermoso. Con sus tres pantallas y cabina idéntica
+          aumenta el realismo de vuelo adentrándote más en la experiencia.
+          Podrás volar un Cessna 172 o un 182 lo más real posible.
+        </p>
+        <p class="">
+          Este es un simulador de vuelo de última generación diseñado para
+          superar los requisitos de la FAA como un simulador certificado.
+        </p>
+        <p>¡Vuela como un verdadero piloto de Cessna 172 y 182!</p>
+        <a href="/contacto" class="btn-secondary">Agenda una visita</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={solo}
+          alt="Simulador SOLO C-182RG"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-white translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest text-2xl">
+          SIMULADOR X-ALPHA 200
+        </h2>
+        <p class="text-main-black/70">
+          El X-ALPHA es nuestro simulador de vuelo que funciona con lentes de
+          realidad virtual, que te permitirán tener una experiencia más
+          inmersiva en tu adiestramiento, fabricado en Eslovenia.
+        </p>
+        <p class="text-main-black/70">
+          Este simulador te preparará para poder volar de manera segura y
+          profesional cada uno de nuestros Pipistrel Virus SW 121.
+        </p>
+        <a href="/contacto" class="btn-primary">Agenda una visita</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={xalpha}
+          alt="Simulador X-ALPHA 200"
+          class="rounded-xl z-10 relative w-[40rem] h-96 object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

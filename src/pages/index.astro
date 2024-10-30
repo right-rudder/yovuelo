@@ -1,50 +1,220 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import HomepageHeader from "~/components/HomepageHeader.astro";
+import { Image } from "astro:assets";
+import students from "~/assets/cuatro-estudiantes-en-la-universidad-de-ifly.webp";
+import CounterCard from "~/components/CounterCard";
+import stats from "~/data/stats";
+import { FaCheck } from "react-icons/fa";
+import iflyStudents from "~/assets/estudiantes-de-ifly-recibiendo-medalla.webp";
+import graduatedStudents from "~/assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import programs from "~/data/programs";
+import ProgramCard from "~/components/ProgramCard.astro";
+import studentInHangar from "~/assets/estudiante-de-ifly-en-hangar.webp";
+import IndexForm from "~/components/IndexForm.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout
+  siteTitle="iFly Aeronautical University - Comprehensive Training for Pilots and Aviation Professionals"
+  siteDescription="Welcome to iFly, the first aeronautical university in Mexico. Prepare to achieve your dream of flying with programs for pilots, operations officers, flight attendants, and more. Get your Commercial Pilot License today!"
+>
+  <HomepageHeader slot="header" />
+
+  <section id="bienvenido" class="scroll-my-24">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Welcome to iFly
+        </h2>
+        <h3 class="text-4xl lg:text-5xl">
+          We are the first aeronautical university for aviators in Mexico
+        </h3>
+        <p class="text-main-black/70">
+          We prepare you to become a professional in the skies. Whether you
+          choose our Pro Pilot program and earn a University Higher Technician
+          degree, or pursue a Bachelor’s in Aviation Management and obtain a
+          Bachelor's degree, you will graduate with a Fixed-Wing Commercial
+          Pilot license. This license allows you to work in any area of civil
+          aviation.
+        </p>
+        <a href="/about/our-story" class="btn-primary">About Us</a>
+      </div>
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative"
+        />
+        <div
+          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4">
+      {
+        stats.map((stat) => (
+          <CounterCard
+            client:only="react"
+            value={stat.value}
+            title={stat.title}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="">
+    <div
+      class="max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row-reverse gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          src={iflyStudents}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover top-0 left-0"
+        />
+        <Image
+          src={graduatedStudents}
+          alt="Estudiante en iFly"
+          class="rounded-xl mt-10 lg:mt-0 z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover bottom-0 right-0"
+        />
+        <div
+          class="hidden lg:block lg:absolute inset-20 border-2 border-main-blue rounded-xl"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Why study at iFly Mexico?
+        </h2>
+        <h3 class="lg:text-5xl">
+          We offer you exceptional training to fulfill your dream of flying
+          professionally
+        </h3>
+        <p class="text-main-black/70">
+          If your passion lies in the skies, iFly is the perfect place for you.
+          Our study programs are designed to help you become a professional
+          pilot, enabling you to work in any area of civil aviation. iFly offers
+          careers in:
+        </p>
+        <ul class="grid grid-cols-2 gap-4 text-main-black/70">
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Aviation Management</p>
+          </li>
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Pro Pilot</p>
+          </li>
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Cadet Pilot</p>
+          </li>
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Flight Attendant</p>
+          </li>
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Operations Officer</p>
+          </li>
+          <li class="flex gap-2 items-center">
+            <div class="p-2 bg-main-black rounded-full">
+              <FaCheck className="size-2 lg:size-3 text-white" />
+            </div>
+            <p class="text-sm lg:text-base">Maintenance Technician</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue text-white">
+    <div
+      class="max-w-7xl mx-auto px-5 py-24 flex flex-col gap-20 items-center lg:items-stretch"
+    >
+      <div class="flex justify-between items-end gap-20">
+        <div class="flex justify-center flex-col gap-5 max-w-xl">
+          <h2 class="uppercase text-main-black font-bold tracking-widest">
+            Our Programs
+          </h2>
+          <h3 class="text-4xl lg:text-5xl">Discover Our Study Programs</h3>
+          <p class="lg:text-lg">
+            At iFly, we offer study programs to help you become a professional
+            in civil aviation. Explore our programs and choose the one that best
+            fits your needs.
+          </p>
+        </div>
+        <a
+          href="/por-que-ser-piloto#programas"
+          class="btn-secondary hidden lg:block">See All</a
+        >
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {
+          programs
+            .slice(0, 3)
+            .map((program) => (
+              <ProgramCard
+                title={program.data.title}
+                description={program.data.description}
+                imagePath={program.data.headerImage}
+                url={program.data.url}
+              />
+            ))
+        }
+      </div>
+      <a
+        href="/por-que-ser-piloto#programas"
+        class="btn-secondary lg:hidden w-full max-w-lg">See All</a
+      >
+    </div>
+  </section>
+
+  <section class="lg:pb-60">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row lg:-space-x-20 -space-y-20 lg:space-y-0 items-center"
+    >
+      <div class="flex-1">
+        <Image
+          src={studentInHangar}
+          alt="Estudiante en hangar de iFly"
+          class="rounded-xl z-10 relative lg:h-[34rem] object-cover"
+        />
+      </div>
+      <div
+        class="flex-1 flex justify-center flex-col gap-5 text-center mx-5 sm:mx-10 lg:mx-0 bg-white border-2 border-main-blue p-5 lg:p-14 rounded-xl z-10"
+      >
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Testimonial
+        </h2>
+        <h3 class="text-lg sm:text-3xl lg:text-5xl">What Our Students Say</h3>
+        <quote class="text-main-black/70">
+          "iFly is the family that helped me grow into a professional pilot and
+          assisted me in achieving one of my greatest dreams. It is both a
+          pleasure and an honor to have trained in this great family."
+        </quote>
+        <cite class="text-main-black/90">- Roberto Novelo Cicero (Pilot)</cite>
+      </div>
+    </div>
+  </section>
+
+  <IndexForm />
+</BaseLayout>

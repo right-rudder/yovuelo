@@ -1,0 +1,222 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import programs from "~/data/programs";
+import { Image } from "astro:assets";
+
+import femalePilot from "~/assets/female-pilot-on-ifly-hangar.webp";
+import { GiPlanetConquest } from "react-icons/gi";
+import { WiDaySunnyOvercast } from "react-icons/wi";
+import { TbPigMoney } from "react-icons/tb";
+import { GiMexico } from "react-icons/gi";
+import studentInHangar from "~/assets/estudiante-de-piloto-aviador.jpg";
+import ProgramCard from "~/components/ProgramCard.astro";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+import { PiCertificate } from "react-icons/pi";
+import { TbReportMedical } from "react-icons/tb";
+import { IoMdTimer } from "react-icons/io";
+import { SiTestcafe } from "react-icons/si";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { PiIdentificationCard } from "react-icons/pi";
+import yoVueloPilot from "~/assets/yovuelo-pilot-at-airplane-cockpit.jpg";
+
+const data = {
+  siteTitle: "Convert to FAA License | iFly Aeronautical University",
+  siteDescription: "",
+  headerImage: "/src/assets/yo-vuelo-pilots.jpg",
+  headerAlt: "Yovuelo pilots",
+  title:
+    "How to Convert Your Mexican Commercial Pilot License to an FAA License",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 relative h-full mr-5">
+        <Image
+          src={femalePilot}
+          alt="Female pilot on iFly hangar"
+          class="rounded-xl z-10 relative aspect-square object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue -translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5 text-main-black/80">
+        <ul class="flex flex-col gap-5">
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <PiCertificate className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 1: Verify foreign license with FAA
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Submit an application for license verification with FAA Form
+                  8060-71 via the IACRA system.
+                </li>
+                <li>
+                  Provide your Mexican CPL, medical certificate, and
+                  authorization from AFAC (Mexico's aviation authority).
+                </li>
+                <li>Processing can take 6-8 weeks</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <TbReportMedical className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 2: Obtain an FAA Medical Certificate
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Schedule a medical exam with an FAA-approved medical examiner
+                  (AME).
+                </li>
+                <li>
+                  You’ll need at least a 2nd Class Medical Certificate for
+                  commercial pilot operations​
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <IoMdTimer className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 3: Meet Flight Hour Requirements
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  FAA Commercial Pilot License (CPL) requires:
+                  <ul class="ml-5">
+                    <li>
+                      ○ 250 total flight hours (including 100 as
+                      pilot-in-command)
+                    </li>
+                    <li>○ 50 hours cross-country flying</li>
+                    <li>○ 10 hours instrument training</li>
+                    <li>
+                      ○ 5 hours in a complex aircraft (or a turbine or
+                      technically advanced aircraft)​
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If you do not meet these hours, you must accumulate the
+                  required flight experience at an FAA-certified flight school.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row-reverse gap-20 items-center"
+    >
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={yoVueloPilot}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative aspect-square object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue -translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5 text-main-black/80">
+        <ul class="flex flex-col gap-5">
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <SiTestcafe className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 4: Pass the FAA Written Knowledge Test
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Register for the CPL knowledge test at an FAA-approved testing
+                  center.
+                </li>
+                <li>
+                  Study FAA materials that cover topics like regulations,
+                  aerodynamics, weather, and navigation.
+                </li>
+                <li>Passing score: 70% or higher​</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <LiaCertificateSolid className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 5: Complete the FAA Checkride (Practical Test)
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Schedule a checkride with a Designated Pilot Examiner (DPE).
+                </li>
+                <li>
+                  The checkride includes both an oral exam and a practical
+                  flight test where you demonstrate your ability to perform
+                  maneuvers and procedures under FAA standards​
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <PiIdentificationCard className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">Step 6: Receive Your FAA CPL</p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  After passing the checkride, you will receive a temporary FAA
+                  CPL.
+                </li>
+                <li>
+                  The permanent license will arrive by mail within 6-8 weeks​
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
+
+const esData = {
+  title: "La Universidad Principal de Formación de Pilotos de México",
+  subtitle: "Convierte tu amor por volar en una carrera profesional",
+  primaryButtonText: "Regístrate",
+  secondaryButtonText: "Más Información",
+};
+
+const enData = {
+  title: "Mexico's Premier Pilot Training University",
+  subtitle: "Turn your love for flying into a professional career",
+  primaryButtonText: "Learn To Fly",
+  secondaryButtonText: "Is Pilot Training Right For Me?",
+};
+
+const data = Astro.currentLocale === "es" ? esData : enData;
+---
+
+<header
+  class="overflow-hidden h-[calc(100vh-5rem)] sm:h-[60vh] lg:min-h-[40rem] text-white flex
+    items-center relative mt-20 lg:mt-32"
+>
+  <div class="absolute inset-0 bottom-20 bg-main-blue -z-40"></div>
+  <div
+    class="max-w-lg mt-20 md:mt-0 md:max-w-7xl flex flex-col md:flex-row gap-10 mx-auto px-5 h-full w-full"
+  >
+    <div class="flex-1 flex w-full mx-auto">
+      <div class="flex flex-col gap-4 lg:gap-8 self-center">
+        <h1 class="text-4xl lg:text-6xl font-bold first-line:text-main-black">
+          {data.title}
+        </h1>
+        <h2 class="text-xl lg:text-2xl text-main-black">
+          {data.subtitle}
+        </h2>
+        <div class="flex gap-5 flex-col sm:flex-row">
+          <a href="/contacto" class="btn-tertiary w-full sm:w-fit sm:text-sm"
+            >{data.primaryButtonText}</a
+          >
+          <a href="#bienvenido" class="btn-secondary w-full sm:w-fit sm:text-sm"
+            >{data.secondaryButtonText}</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-[1.5_1.5_0] relative">
+      <Image
+        src={HeroImage}
+        alt="Estudiante en iFly"
+        class="md:absolute bottom-0 right-0 h-5/6 object-cover z-10"
+        quality={100}
+      />
+    </div>
+  </div>
+</header>

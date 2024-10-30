@@ -1,0 +1,246 @@
+---
+import esPrograms from "../data/es/programs.js";
+import enPrograms from "../data/programs.js";
+const PROGRAM_FORM_WEBHOOK_URL = import.meta.env.PROGRAM_FORM_WEBHOOK_URL;
+const programs = Astro.currentLocale === "es" ? esPrograms : enPrograms;
+
+const esData = {
+  title: "Toma el primer paso...",
+  firstParagraph:
+    "Empieza a estudiar hoy en iFly Universidad Aeronáutica y toma el primer paso en tu carrera.",
+  secondParagraph:
+    "Llena el formulario y un representante de iFly se pondrá en contacto contigo para darte más información sobre la carrera que te interesa.",
+  careerQuestion: "¿En qué carrera estás interesado?",
+  acceptTerms:
+    "Acepto los términos y condiciones proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir mensajes de texto de iFly Universidad Aeronáutica.",
+  submit: "Enviar",
+  placeholders: {
+    firstName: "Nombre/s",
+    lastName: "Apellido/s",
+    email: "Email",
+    confirmEmail: "Confirmar email",
+    phone: "Teléfono",
+    comment: "Comentario",
+  },
+};
+
+const enData = {
+  title: "Take the first step...",
+  firstParagraph:
+    "Start studying today at iFly Aeronautical University and take the first step in your career.",
+  secondParagraph:
+    "Fill out the form and an iFly representative will contact you to provide more information about the career you are interested in.",
+  careerQuestion: "What career are you interested in?",
+  acceptTerms:
+    "I accept the terms and conditions provided by the company. By providing my phone number, I agree to receive text messages from iFly Aeronautical University.",
+  submit: "Submit",
+  placeholders: {
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email",
+    confirmEmail: "Confirm email",
+    phone: "Phone",
+    comment: "Comment",
+  },
+};
+
+const data = Astro.currentLocale === "es" ? esData : enData;
+const lang = Astro.currentLocale === "es" ? "es" : "en";
+---
+
+<section class="py-24 px-5 scroll-my-24 bg-main-blue" id="sign-up-form">
+  <div class="max-w-xl lg:max-w-7xl mx-auto text-white">
+    <div class="flex flex-col lg:flex-row gap-10">
+      <div class="lg:flex-1 flex flex-col gap-5">
+        <h2 class="font-extrabold text-5xl text-main-black">
+          {data.title}
+        </h2>
+        <p class="text-lg">
+          {data.firstParagraph}
+        </p>
+        <p class="text-lg">
+          {data.secondParagraph}
+        </p>
+      </div>
+      <div class="lg:flex-1 relative">
+        <form
+          id="form"
+          class="flex flex-col max-w-4xl mx-auto gap-5 my-5 lg:my-0 bg-white p-10 rounded-xl shadow-md lg:absolute bottom-0 right-0"
+        >
+          <div class="flex flex-col lg:flex-row gap-5">
+            <input
+              type="text"
+              name="first-name"
+              placeholder={data.placeholders.firstName}
+              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              required
+            />
+            <input
+              type="text"
+              name="last-name"
+              placeholder={data.placeholders.lastName}
+              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              required
+            />
+          </div>
+          <div class="flex flex-col lg:flex-row gap-5">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder={data.placeholders.email}
+              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              required
+            />
+            <input
+              type="email"
+              name="confirm-email"
+              placeholder="Confirm email"
+              class="hidden px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder={data.placeholders.phone}
+              class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg"
+              required
+            />
+          </div>
+
+          <select
+            id="interested-in"
+            name="interested-in"
+            class="px-5 py-4 outline-1 w-full border-gray-400 border outline-gray-500 rounded-lg text-gray-600 bg-white"
+            required
+          >
+            <option value="" disabled selected>
+              {data.careerQuestion}
+            </option>
+            {
+              programs.map((program) => (
+                <option
+                  value={program.data.title}
+                  class="bg-white text-main-black"
+                >
+                  {program.data.title}
+                </option>
+              ))
+            }
+          </select>
+
+          <textarea
+            id="more-info"
+            name="more-info"
+            placeholder={data.placeholders.comment}
+            class="px-5 py-4 outline-1 border-gray-400 border outline-gray-500 rounded-lg min-h-24 text-main-black"
+            required></textarea>
+
+          <div class="flex gap-3">
+            <input
+              type="checkbox"
+              name="agree-data-collection"
+              id="agree-data-collection"
+            />
+
+            <label
+              for="agree-data-collection"
+              class="text-gray-500 text-sm lg:text-base"
+            >
+              {data.acceptTerms}
+            </label>
+          </div>
+          <button
+            id="submit-button"
+            disabled
+            type="submit"
+            class="btn-primary cursor-not-allowed bg-gray-400 hover:bg-gray-400"
+            >{data.submit}</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ PROGRAM_FORM_WEBHOOK_URL, lang }}>
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+      );
+    }
+  });
+
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const form = document.getElementById("form");
+
+    // Check if the contactUs form element exists
+    if (form !== null) {
+      // Add submit event listener to the contactUs form
+      form.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(form);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          form.action = PROGRAM_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            if (lang === "en") {
+              window.location.href = "/en/contact-confirmation";
+            } else {
+              window.location.href = "/confirmacion-de-contacto";
+            }
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Form element not found.");
+    }
+  });
+</script>

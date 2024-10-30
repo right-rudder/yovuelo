@@ -1,0 +1,59 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import aviones from "~/data/es/aviones";
+export function getStaticPaths() {
+  return aviones.map(({ data }) => {
+    return {
+      params: { slug: data.slug },
+      props: {
+        data,
+      },
+    };
+  });
+}
+
+const { data } = Astro.props;
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section class="bg-main-black/5">
+    <div class="max-w-3xl mx-auto px-5 py-24">
+      <div class="flex flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          {data.name}
+        </h2>
+        <h3 class="lg:text-5xl">{data.model}</h3>
+        <p class="text-main-black/70">
+          {data.description}
+        </p>
+      </div>
+
+      <div class="grid mt-10 bg-white">
+        <h4 class="bg-main-blue text-white p-5">Especificaciones</h4>
+        <div class="flex justify-between odd:bg-gray-300">
+          <h5 class="p-5">Velocidad Crucero Máxima</h5>
+          <p class="p-5">104 kts</p>
+        </div>
+        <div class="flex justify-between odd:bg-gray-300">
+          <h5 class="p-5">Alcance Máximo</h5>
+          <p class="p-5">490 nm</p>
+        </div>
+        <div class="flex justify-between odd:bg-gray-300">
+          <h5 class="p-5">Asientos</h5>
+          <p class="p-5">2</p>
+        </div>
+        <div class="flex justify-between odd:bg-gray-300">
+          <h5 class="p-5">Carga Útil</h5>
+          <p class="p-5">510 lbs</p>
+        </div>
+        <div class="flex justify-between odd:bg-gray-300">
+          <h5 class="p-5">Combustible Utilizable</h5>
+          <p class="p-5">22.5 gals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

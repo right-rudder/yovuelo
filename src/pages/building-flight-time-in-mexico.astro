@@ -1,0 +1,198 @@
+---
+import Header from "~/components/Header.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import programs from "~/data/programs";
+import { Image } from "astro:assets";
+
+import students from "~/assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import { GiPlanetConquest } from "react-icons/gi";
+import { WiDaySunnyOvercast } from "react-icons/wi";
+import { TbPigMoney } from "react-icons/tb";
+import { GiMexico } from "react-icons/gi";
+import studentInHangar from "~/assets/estudiante-de-piloto-aviador.jpg";
+import ProgramCard from "~/components/ProgramCard.astro";
+
+const data = {
+  siteTitle: "Building Flight Time in Mexico | iFly Aeronautical University",
+  siteDescription:
+    "Discover the advantages of studying at iFly Aeronautical University and the opportunities that await you upon graduation.",
+  headerImage: "/src/assets/pilotos-aviadores-enfrente-de-la-universidad.webp",
+  headerAlt: "Pilots in front of the iFly university",
+  title: "Building Flight Time in Mexico",
+};
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="header" data={data} />
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20 items-center"
+    >
+      <div class="flex-1 relative h-fit mr-5">
+        <Image
+          src={students}
+          alt="Estudiante en iFly"
+          class="rounded-xl z-10 relative aspect-square object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue -translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Welcome to iFly Mexico
+        </h2>
+        <h3 class="lg:text-5xl">
+          Why Earn Your Commercial Flying License in Mexico?
+        </h3>
+        <p class="text-main-black/70 text-lg">
+          Let's face it: becoming a commercial pilot is a big deal. It's an
+          investment in your future that's worth getting right. At iFly, we
+          believe Mexico offers unique advantages that can give your aviation
+          career a real boost.
+        </p>
+
+        <a href="/contact" class="btn-primary">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
+      <h2 class="text-4xl lg:text-5xl mb-10">4 Reasons to Train in Mexico</h2>
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <li class="flex flex-col gap-5">
+          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+            <TbPigMoney className="text-white size-6" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-main-black/80 text-2xl font-semibold">
+              Affordable Excellence
+            </p>
+            <p class="text-main-black/70 text-lg">
+              Train to professional standards without breaking the bank. Lower
+              tuition fees, operational costs, and living expenses in Mexico
+              mean you can focus on your training, not your budget. Enjoy
+              reduced housing and food costs, especially in vibrant cities like
+              Mérida where iFly is located. Your training budget goes further,
+              allowing for a comfortable lifestyle while you study.
+            </p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-5">
+          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+            <WiDaySunnyOvercast className="text-white size-6" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-main-black/80 text-2xl font-semibold">
+              Year-Round Flying Weather
+            </p>
+            <p class="text-main-black/70 text-lg">
+              Say goodbye to weather delays. Mexico's consistent climate allows
+              for uninterrupted training, helping you earn your license faster
+              than in regions with harsh winters.
+            </p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-5">
+          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+            <GiPlanetConquest className="text-white size-6" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-main-black/80 text-2xl font-semibold">
+              International Aviation Standards
+            </p>
+            <p class="text-main-black/70 text-lg">
+              Gain a global edge with ICAO-compliant instruction. You'll be
+              prepared to work within international aviation protocols from day
+              one of your career.
+            </p>
+          </div>
+        </li>
+        <li class="flex flex-col gap-5">
+          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+            <GiMexico className="text-white size-6" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="text-main-black/80 text-2xl font-semibold">
+              Cultural Immersion
+            </p>
+            <p class="text-main-black/70 text-lg">
+              Broaden your horizons beyond the cockpit. Living in Mexico offers
+              a rich cultural experience, building adaptability and
+              cross-cultural skills valuable in international aviation careers.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pb-12">
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row lg:-space-x-20 -space-y-20 lg:space-y-0 items-center"
+    >
+      <div
+        class="flex-1 flex justify-center flex-col gap-5 text-center mx-5 sm:mx-10 lg:mx-0 bg-white shadow-lg p-5 lg:p-14 rounded-xl z-10"
+      >
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Words from our students
+        </h2>
+        <h3 class="text-lg sm:text-3xl lg:text-5xl">
+          What do our students say?
+        </h3>
+        <quote class="text-main-black/70">
+          "Training as a pilot at iFly was one of the best decisions I've made
+          in my life and a great experience. If I were asked again, I would
+          choose it without hesitation, as it allowed me to lay a solid
+          foundation in my training as a pilot from both an academic and
+          personal perspective."
+        </quote>
+        <cite class="text-main-black/90"
+          >- Eduardo Lugán Aldaz (Piloto aviador)</cite
+        >
+      </div>
+      <div class="flex-1 translate-y-20 lg:translate-y-0 relative">
+        <Image
+          src={studentInHangar}
+          alt="Estudiante de piloto aviador"
+          class="rounded-xl relative lg:h-[34rem] object-cover"
+        />
+        <div
+          class="size-80 border-2 border-main-blue rounded-xl absolute -bottom-12 -left-28 -z-10 hidden lg:block"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-main-blue scroll-my-24" id="programas">
+    <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
+      <div class="text-center flex flex-col gap-5 max-w-3xl mx-auto text-white">
+        <h2 class="uppercase text-main-black/80 tracking-widest">
+          Our Programs
+        </h2>
+        <h3 class="text-4xl lg:text-6xl">Explore Our Study Programs</h3>
+        <p class="lg:text-lg">
+          At iFly, we offer study programs to help you become a professional in
+          aviation. Discover our programs and choose the one that best suits
+          your needs.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 w-fit mx-auto">
+        {
+          programs.map((program) => (
+            <ProgramCard
+              title={program.data.title}
+              description={program.data.description}
+              imagePath={program.data.headerImage}
+              url={program.data.url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
