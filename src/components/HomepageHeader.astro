@@ -12,8 +12,8 @@ const esData = {
 const enData = {
   title: "Mexico's Premier Pilot Training University",
   subtitle: "Turn your love for flying into a professional career",
-  primaryButtonText: "Register",
-  secondaryButtonText: "Learn More",
+  primaryButtonText: "Learn To Fly",
+  secondaryButtonText: "Is Pilot Training Right For Me?",
 };
 
 const data = Astro.currentLocale === "es" ? esData : enData;
@@ -36,10 +36,10 @@ const data = Astro.currentLocale === "es" ? esData : enData;
           {data.subtitle}
         </h2>
         <div class="flex gap-5 flex-col sm:flex-row">
-          <a href="/contacto" class="btn-tertiary w-full sm:w-fit"
+          <a href="/contacto" class="btn-tertiary w-full sm:w-fit sm:text-sm"
             >{data.primaryButtonText}</a
           >
-          <a href="#bienvenido" class="btn-secondary w-full sm:w-fit"
+          <a href="#bienvenido" class="btn-secondary w-full sm:w-fit sm:text-sm"
             >{data.secondaryButtonText}</a
           >
         </div>

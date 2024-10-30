@@ -1,7 +1,12 @@
 export const navbarLinks = [
   {
-    name: "Why Become a Pilot?",
-    link: "/why-become-a-pilot",
+    name: "Building Flight Time in Mexico",
+    link: "/building-flight-time-in-mexico",
+    submenu: [],
+  },
+  {
+    name: " Convert to FAA License",
+    link: "/convert-to-faa-license",
     submenu: [],
   },
   {
@@ -46,27 +51,27 @@ export const navbarLinks = [
       },
     ],
   },
-  {
-    name: "About Us",
-    submenu: [
-      {
-        name: "Our Story",
-        link: "/about/our-story",
-      },
-      {
-        name: "Team",
-        link: "/about/team",
-      },
-      {
-        name: "Campus",
-        link: "/about/campus",
-      },
-      {
-        name: "Blog",
-        link: "/blog",
-      },
-    ],
-  },
+  // {
+  //   name: "About Us",
+  //   submenu: [
+  //     {
+  //       name: "Our Story",
+  //       link: "/about/our-story",
+  //     },
+  //     {
+  //       name: "Team",
+  //       link: "/about/team",
+  //     },
+  //     {
+  //       name: "Campus",
+  //       link: "/about/campus",
+  //     },
+  //     {
+  //       name: "Blog",
+  //       link: "/blog",
+  //     },
+  //   ],
+  // },
   {
     name: "Contact Us",
     link: "/contact",

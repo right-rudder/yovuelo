@@ -22,7 +22,7 @@ import IndexForm from "~/components/IndexForm.astro";
 
   <section id="bienvenido" class="scroll-my-24">
     <div
-      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row-reverse gap-20 items-center"
     >
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h2 class="uppercase text-main-black/80 tracking-widest">
@@ -70,7 +70,9 @@ import IndexForm from "~/components/IndexForm.astro";
   </section>
 
   <section class="">
-    <div class="max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20">
+    <div
+      class="max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row-reverse gap-20"
+    >
       <div class="flex-1 relative">
         <Image
           src={iflyStudents}
@@ -89,7 +91,7 @@ import IndexForm from "~/components/IndexForm.astro";
       </div>
       <div class="flex-1 flex justify-center flex-col gap-5">
         <h2 class="uppercase text-main-black/80 tracking-widest">
-          Why study at iFly?
+          Why study at iFly Mexico?
         </h2>
         <h3 class="lg:text-5xl">
           We offer you exceptional training to fulfill your dream of flying
