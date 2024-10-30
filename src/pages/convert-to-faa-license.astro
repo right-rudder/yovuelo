@@ -4,20 +4,30 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import programs from "~/data/programs";
 import { Image } from "astro:assets";
 
-import students from "~/assets/estudiantes-graduados-de-la-universidad-de-ifly.webp";
+import femalePilot from "~/assets/female-pilot-on-ifly-hangar.webp";
 import { GiPlanetConquest } from "react-icons/gi";
 import { WiDaySunnyOvercast } from "react-icons/wi";
 import { TbPigMoney } from "react-icons/tb";
 import { GiMexico } from "react-icons/gi";
 import studentInHangar from "~/assets/estudiante-de-piloto-aviador.jpg";
 import ProgramCard from "~/components/ProgramCard.astro";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+import { PiCertificate } from "react-icons/pi";
+import { TbReportMedical } from "react-icons/tb";
+import { IoMdTimer } from "react-icons/io";
+import { SiTestcafe } from "react-icons/si";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { PiIdentificationCard } from "react-icons/pi";
+import yoVueloPilot from "~/assets/yovuelo-pilot-at-airplane-cockpit.jpg";
 
 const data = {
   siteTitle: "Convert to FAA License | iFly Aeronautical University",
   siteDescription: "",
-  headerImage: "/src/assets/yovuelo-pilot-at-airplane-cockpit.jpg",
-  headerAlt: "Yovuelo pilot at airplane cockpit",
-  title: "How to Convert Your Commercial Pilot License to an FAA License",
+  headerImage: "/src/assets/yo-vuelo-pilots.jpg",
+  headerAlt: "Yovuelo pilots",
+  title:
+    "How to Convert Your Mexican Commercial Pilot License to an FAA License",
 };
 ---
 
@@ -28,9 +38,109 @@ const data = {
     <div
       class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20 items-center"
     >
+      <div class="flex-1 relative h-full mr-5">
+        <Image
+          src={femalePilot}
+          alt="Female pilot on iFly hangar"
+          class="rounded-xl z-10 relative aspect-square object-cover"
+        />
+        <div
+          class="absolute border-2 border-main-blue -translate-x-5 -translate-y-5 rounded-xl inset-0"
+        >
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center flex-col gap-5 text-main-black/80">
+        <ul class="flex flex-col gap-5">
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <PiCertificate className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 1: Verify foreign license with FAA
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Submit an application for license verification with FAA Form
+                  8060-71 via the IACRA system.
+                </li>
+                <li>
+                  Provide your Mexican CPL, medical certificate, and
+                  authorization from AFAC (Mexico's aviation authority).
+                </li>
+                <li>Processing can take 6-8 weeks</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <TbReportMedical className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 2: Obtain an FAA Medical Certificate
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Schedule a medical exam with an FAA-approved medical examiner
+                  (AME).
+                </li>
+                <li>
+                  You’ll need at least a 2nd Class Medical Certificate for
+                  commercial pilot operations​
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <IoMdTimer className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 3: Meet Flight Hour Requirements
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  FAA Commercial Pilot License (CPL) requires:
+                  <ul class="ml-5">
+                    <li>
+                      ○ 250 total flight hours (including 100 as
+                      pilot-in-command)
+                    </li>
+                    <li>○ 50 hours cross-country flying</li>
+                    <li>○ 10 hours instrument training</li>
+                    <li>
+                      ○ 5 hours in a complex aircraft (or a turbine or
+                      technically advanced aircraft)​
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If you do not meet these hours, you must accumulate the
+                  required flight experience at an FAA-certified flight school.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row-reverse gap-20 items-center"
+    >
       <div class="flex-1 relative h-fit mr-5">
         <Image
-          src={students}
+          src={yoVueloPilot}
           alt="Estudiante en iFly"
           class="rounded-xl z-10 relative aspect-square object-cover"
         />
@@ -39,158 +149,73 @@ const data = {
         >
         </div>
       </div>
-      <div class="flex-1 flex justify-center flex-col gap-5">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
-          Welcome to iFly Mexico
-        </h2>
-        <h3 class="lg:text-5xl">
-          Why Earn Your Commercial Flying License in Mexico?
-        </h3>
-        <p class="text-main-black/70 text-lg">
-          Let's face it: becoming a commercial pilot is a big deal. It's an
-          investment in your future that's worth getting right. At iFly, we
-          believe Mexico offers unique advantages that can give your aviation
-          career a real boost.
-        </p>
-
-        <a href="/contact" class="btn-primary">Register</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
-      <h2 class="text-4xl lg:text-5xl mb-10">4 Reasons to Train in Mexico</h2>
-      <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <li class="flex flex-col gap-5">
-          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-            <TbPigMoney className="text-white size-6" />
-          </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-main-black/80 text-2xl font-semibold">
-              Affordable Excellence
-            </p>
-            <p class="text-main-black/70 text-lg">
-              Train to professional standards without breaking the bank. Lower
-              tuition fees, operational costs, and living expenses in Mexico
-              mean you can focus on your training, not your budget. Enjoy
-              reduced housing and food costs, especially in vibrant cities like
-              Mérida where iFly is located. Your training budget goes further,
-              allowing for a comfortable lifestyle while you study.
-            </p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-5">
-          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-            <WiDaySunnyOvercast className="text-white size-6" />
-          </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-main-black/80 text-2xl font-semibold">
-              Year-Round Flying Weather
-            </p>
-            <p class="text-main-black/70 text-lg">
-              Say goodbye to weather delays. Mexico's consistent climate allows
-              for uninterrupted training, helping you earn your license faster
-              than in regions with harsh winters.
-            </p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-5">
-          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-            <GiPlanetConquest className="text-white size-6" />
-          </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-main-black/80 text-2xl font-semibold">
-              International Aviation Standards
-            </p>
-            <p class="text-main-black/70 text-lg">
-              Gain a global edge with ICAO-compliant instruction. You'll be
-              prepared to work within international aviation protocols from day
-              one of your career.
-            </p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-5">
-          <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
-            <GiMexico className="text-white size-6" />
-          </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-main-black/80 text-2xl font-semibold">
-              Cultural Immersion
-            </p>
-            <p class="text-main-black/70 text-lg">
-              Broaden your horizons beyond the cockpit. Living in Mexico offers
-              a rich cultural experience, building adaptability and
-              cross-cultural skills valuable in international aviation careers.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="pb-12">
-    <div
-      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row lg:-space-x-20 -space-y-20 lg:space-y-0 items-center"
-    >
-      <div
-        class="flex-1 flex justify-center flex-col gap-5 text-center mx-5 sm:mx-10 lg:mx-0 bg-white shadow-lg p-5 lg:p-14 rounded-xl z-10"
-      >
-        <h2 class="uppercase text-main-black/80 tracking-widest">
-          Words from our students
-        </h2>
-        <h3 class="text-lg sm:text-3xl lg:text-5xl">
-          What do our students say?
-        </h3>
-        <quote class="text-main-black/70">
-          "Training as a pilot at iFly was one of the best decisions I've made
-          in my life and a great experience. If I were asked again, I would
-          choose it without hesitation, as it allowed me to lay a solid
-          foundation in my training as a pilot from both an academic and
-          personal perspective."
-        </quote>
-        <cite class="text-main-black/90"
-          >- Eduardo Lugán Aldaz (Piloto aviador)</cite
-        >
-      </div>
-      <div class="flex-1 translate-y-20 lg:translate-y-0 relative">
-        <Image
-          src={studentInHangar}
-          alt="Estudiante de piloto aviador"
-          class="rounded-xl relative lg:h-[34rem] object-cover"
-        />
-        <div
-          class="size-80 border-2 border-main-blue rounded-xl absolute -bottom-12 -left-28 -z-10 hidden lg:block"
-        >
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-main-blue scroll-my-24" id="programas">
-    <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
-      <div class="text-center flex flex-col gap-5 max-w-3xl mx-auto text-white">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
-          Our Programs
-        </h2>
-        <h3 class="text-4xl lg:text-6xl">Explore Our Study Programs</h3>
-        <p class="lg:text-lg">
-          At iFly, we offer study programs to help you become a professional in
-          aviation. Discover our programs and choose the one that best suits
-          your needs.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 w-fit mx-auto">
-        {
-          programs.map((program) => (
-            <ProgramCard
-              title={program.data.title}
-              description={program.data.description}
-              imagePath={program.data.headerImage}
-              url={program.data.url}
-            />
-          ))
-        }
+      <div class="flex-1 flex justify-center flex-col gap-5 text-main-black/80">
+        <ul class="flex flex-col gap-5">
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <SiTestcafe className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 4: Pass the FAA Written Knowledge Test
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Register for the CPL knowledge test at an FAA-approved testing
+                  center.
+                </li>
+                <li>
+                  Study FAA materials that cover topics like regulations,
+                  aerodynamics, weather, and navigation.
+                </li>
+                <li>Passing score: 70% or higher​</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <LiaCertificateSolid className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">
+                Step 5: Complete the FAA Checkride (Practical Test)
+              </p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  Schedule a checkride with a Designated Pilot Examiner (DPE).
+                </li>
+                <li>
+                  The checkride includes both an oral exam and a practical
+                  flight test where you demonstrate your ability to perform
+                  maneuvers and procedures under FAA standards​
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-col gap-3">
+            <div class="flex items-center gap-5">
+              <div class="p-3 bg-main-blue w-fit h-fit rounded-full">
+                <PiIdentificationCard className="text-white size-6" />
+              </div>
+              <p class="text-2xl font-semibold">Step 6: Receive Your FAA CPL</p>
+            </div>
+            <div class="sm:ml-16">
+              <ul class="flex flex-col list-disc ml-5 text-lg">
+                <li>
+                  After passing the checkride, you will receive a temporary FAA
+                  CPL.
+                </li>
+                <li>
+                  The permanent license will arrive by mail within 6-8 weeks​
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>

@@ -38,19 +38,19 @@ export const navbarLinks = [
       },
     ],
   },
-  {
-    name: "Fleet",
-    submenu: [
-      {
-        name: "Aircraft",
-        link: "/fleet/aircraft",
-      },
-      {
-        name: "Simulators",
-        link: "/fleet/simulators",
-      },
-    ],
-  },
+  // {
+  //   name: "Fleet",
+  //   submenu: [
+  //     {
+  //       name: "Aircraft",
+  //       link: "/fleet/aircraft",
+  //     },
+  //     {
+  //       name: "Simulators",
+  //       link: "/fleet/simulators",
+  //     },
+  //   ],
+  // },
   // {
   //   name: "About Us",
   //   submenu: [

@@ -13,7 +13,7 @@ import {
   SITE_TITLE,
 } from "../consts";
 import { Image } from "astro:assets";
-import whiteLogo from "../assets/ifly-logo-blanco.png";
+import whiteLogo from "~/assets/yovuelo-white-logo.png";
 
 import { navbarLinks as esNavbarLinks } from "../data/es/navbarLinks";
 import { navbarLinks as enNavbarLinks } from "../data/navbarLinks";
@@ -59,7 +59,7 @@ const navbarLinks =
           href={`${lang === "es" ? "/es" : "/"}`}
           class="text-4xl font-bold uppercase"
         >
-          <Image src={whiteLogo} alt="iFly Logo" class="w-40" />
+          <Image src={whiteLogo} alt="iFly Logo" class="w-48" />
         </a>
         <p class="text-gray-400 font-medium max-w-xl">
           {data.summary}

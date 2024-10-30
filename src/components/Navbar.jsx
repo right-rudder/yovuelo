@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import blueLogo from "../assets/ifly-logo-azul.png";
-import whiteLogo from "../assets/ifly-logo-blanco.png";
+import whiteLogo from "../assets/yovuelo-white-logo.png";
 import yoVueloLogoBicolor from "../assets/yovuelo-logo-bicolor.png";
 
 import {
@@ -97,7 +97,7 @@ const Navbar = ({ pathname, lang }) => {
                 <img
                   src={yoVueloLogoBicolor.src}
                   alt="iFly logo"
-                  className="w-36"
+                  className="w-44"
                 />
               </a>
               <div className="hidden lg:flex gap-8 items-center">
@@ -280,7 +280,7 @@ const Navbar = ({ pathname, lang }) => {
           href={`${lang === "es" ? "/es" : "/"}`}
           className="text-white px-10 w-fit block leading-none uppercase font-semibold text-lg z-40 relative"
         >
-          <img src={whiteLogo.src} alt="iFly logo" className="w-32" />
+          <img src={whiteLogo.src} alt="iFly logo" className="w-40" />
         </a>
 
         <div
